@@ -1,0 +1,32 @@
+{
+
+  
+  "HomePage": {
+    "title": "Internationalization Example",
+    "description": "Welcome to the Internationalization (i18n) Example using next-intl and Next.js"
+  },
+  "Breadcrumbs": {
+    "dashboard": "Home",
+    "orders": "About",
+    "recentOrders": "Contact"
+  },
+  "SearchBar": {
+    "placeholder": "Search for Orders"
+  },
+  "FirstCard": {
+    "title": "Your Orders",
+    "description": "Introducing Our Dynamic Orders Dashboard for Seamless Management and Insightful Analysis.",
+    "button": "Create New Order"
+  },
+  "SecondCard": {
+    "title": "This week",
+    "money": "$1,329",
+    "description": "+25% from last week"
+  },
+  "ThirdCard": {
+    "title": "This month",
+    "money": "$5,329",
+    "description": "+10% from last month"
+  }
+}
+

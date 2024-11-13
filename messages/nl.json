@@ -1,0 +1,30 @@
+{
+  "HomePage": {
+    "title": "Voorbeeld van internationalisering",
+    "description": "Welkom bij het voorbeeld van internationalisering (i18n) met next-intl en Next.js"
+  },
+  "Breadcrumbs": {
+    "dashboard": "Home",
+    "orders": "Over",
+    "recentOrders": "Contact"
+  },
+  "SearchBar": {
+    "placeholder": "Zoek naar bestellingen"
+  },
+  "FirstCard": {
+    "title": "Uw bestellingen",
+    "description": "Introductie van ons dynamische bestellingsdashboard voor naadloos beheer en inzichtelijke analyse.",
+    "button": "Nieuwe bestelling maken"
+  },
+  "SecondCard": {
+    "title": "Deze week",
+    "money": "$1,329",
+    "description": "+25% ten opzichte van vorige week"
+  },
+  "ThirdCard": {
+    "title": "Deze maand",
+    "money": "$5,329",
+    "description": "+10% ten opzichte van vorige maand"
+  }
+}
+

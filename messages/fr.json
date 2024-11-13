@@ -1,0 +1,30 @@
+{
+  "HomePage": {
+    "title": "Exemple d'internationalisation",
+    "description": "Bienvenue dans l'exemple d'internationalisation (i18n) utilisant next-intl et Next.js"
+  },
+  "Breadcrumbs": {
+    "dashboard": "Accueil",
+    "orders": "À propos",
+    "recentOrders": "Contact"
+  },
+  "SearchBar": {
+    "placeholder": "Rechercher des commandes"
+  },
+  "FirstCard": {
+    "title": "Vos commandes",
+    "description": "Présentation de notre tableau de bord dynamique des commandes pour une gestion fluide et une analyse perspicace.",
+    "button": "Créer une nouvelle commande"
+  },
+  "SecondCard": {
+    "title": "Cette semaine",
+    "money": "1 329 $",
+    "description": "+25% par rapport à la semaine dernière"
+  },
+  "ThirdCard": {
+    "title": "Ce mois-ci",
+    "money": "5 329 $",
+    "description": "+10% par rapport au mois dernier"
+  }
+}
+
