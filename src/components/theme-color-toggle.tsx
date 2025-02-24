@@ -14,8 +14,9 @@ import {
 import { cn } from "./../lib/utils";
 import { useThemeContext } from "./../context/theme-data-provider";
 import ThemeModeToggle from "./theme-mode-toggle";
+import { Palette } from "lucide-react";
 
-const availableThemeColors = [
+export const availableThemeColors = [
   { name: "Orange", light: "bg-orange-500", dark: "bg-orange-700" },
   { name: "Slate", light: "bg-slate-500", dark: "bg-slate-700" },
   { name: "Gray", light: "bg-gray-500", dark: "bg-gray-700" },
@@ -40,7 +41,7 @@ const availableThemeColors = [
   { name: "Rose", light: "bg-rose-500", dark: "bg-rose-700" },
 ];
 
-export function ThemeColorToggle() {
+export function ThemeColorToggle({ className }: { className?: string }) {
   const { themeColor, setThemeColor } = useThemeContext();
   const { theme } = useTheme();
 
@@ -67,12 +68,18 @@ export function ThemeColorToggle() {
         onValueChange={(value) => setThemeColor(value as ThemeColors)}
         defaultValue={themeColor}
       >
-        <SelectTrigger className="w-[100px] ring-offset-transparent focus:ring-transparent">
+        <SelectTrigger
+          className={cn(
+            "w-[] ring-offset-transparent focus:ring-transparent",
+            className,
+          )}
+        >
           <SelectValue placeholder="Select Color">
             {
               availableThemeColors.find((color) => color.name === themeColor)
                 ?.name
             }
+            {/* <Palette className="w-5 h-5 mr-2" /> */}
           </SelectValue>
         </SelectTrigger>
         <SelectContent className="w-[500px]">

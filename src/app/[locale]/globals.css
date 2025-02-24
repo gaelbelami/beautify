@@ -64,3 +64,69 @@ body {
 
   
 }
+
+
+
+
+html {
+  scroll-behavior: smooth; /* Enables smooth scrolling */
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+
+
+main {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Full viewport height */
+  overflow-y: scroll; /* Enable vertical scroll */
+  scroll-snap-type: y mandatory; /* Enables vertical snap scrolling */
+}
+
+main > section {
+  scroll-snap-align: start; /* Each section aligns at the start of the viewport */
+  /* scroll-snap-stop: always; */
+  height: 100vh; /* Each section takes full viewport height */
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* Progress Bar */
+/* .progress {
+  position: fixed;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: #4ff0b7;
+  bottom: 20px;
+  transform: scaleX(0);
+} */
+
+.tag {
+      @apply text-sm inline-flex border border-primary/10 px-3 py-1 rounded-lg tracking-tight
+    }
+
+    @keyframes pulse-slow {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.15; }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 6s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.animate-bounce {
+  animation: bounce 2s infinite;
+}

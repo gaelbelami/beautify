@@ -36,7 +36,7 @@ interface Themes {
         dark: ThemeColor;
     };
 }
-const themes: Themes = {
+export const themes: Themes = {
   
   Orange: {
   light: {

@@ -1,32 +1,100 @@
 {
-
-  
-  "HomePage": {
-    "title": "Internationalization Example",
-    "description": "Welcome to the Internationalization (i18n) Example using next-intl and Next.js"
+  "Hero": {
+    "versionBadge": "Version 1.0 is here",
+    "titlePart1": "The",
+    "titlePart2": "Ultimate",
+    "titlePart3": "Starter Kit",
+    "description": "Accelerate development with enterprise-grade architecture, pre-configured workflows, and modular design system.",
+    "ctaPrimary": "Get Started",
+    "ctaSecondary": "Live Demo",
+    "features": {
+      "language": {
+        "title": "Multi-Lingual Support",
+        "description": "Supports 15+ languages with automatic locale detection"
+      },
+      "theme": {
+        "title": "Dynamic Theming",
+        "description": "Custom color schemes with real-time preview"
+      },
+      "darkMode": {
+        "title": "Dark Mode",
+        "description": "Auto-adaptive dark/light mode with system sync"
+      },
+      "auth": {
+        "title": "Auth Ready",
+        "description": "Pre-built authentication flows with social logins"
+      },
+      "security": {
+        "title": "Security",
+        "description": "Encrypted sessions and CSRF protection"
+      },
+      "more": {
+        "title": "And More",
+        "description": "State management, API layers, and premium support"
+      }
+    },
+    "hoverPrompt": "Explore features above to learn more",
+    "scrollAria": {
+      "partOne": "Scroll",
+      "partTwo": "down"
+    }
   },
-  "Breadcrumbs": {
-    "dashboard": "Home",
-    "orders": "About",
-    "recentOrders": "Contact"
+  "Header": {
+    "nav": {
+      "features": "Features",
+      "docs": "Documentation",
+      "pricing": "Pricing",
+      "blog": "Blog"
+    },
+    "login": "Login",
+    "getStarted": "Get Started"
   },
-  "SearchBar": {
-    "placeholder": "Search for Orders"
+  "SectionThree": {
+      "secureAuth": "Secure Authentication",
+      "welcomeBack": "Welcome Back!",
+      "secureUserAccess": "Secure User Access",
+      "descriptionAuthenticated": "You're now accessing privileged features with enterprise-grade security. Manage your session and account settings below.",
+      "descriptionUnauthenticated": "Experience secure, seamless authentication with our identity management system. Protect your data with military-grade encryption and real-time session monitoring.",
+      "features": {
+        "encryptedSessions": "End-to-end encrypted sessions",
+        "roleAccess": "Role-based access control"
+      },
+      "signInToContinue": "Sign In to Continue",
+      "chooseAuthMethod": "Choose your authentication method",
+      "continueSecureId": "Continue with Secure ID",
+      "orUseDemo": "Or use demo credentials",
+      "demoAccount": "Try our demo account:",
+      "demoUser": "user: demo@example.com",
+      "logoutSession": "Logout Session",
+      "sessionExpires": "Session expires in 24 hours",
+      "activeSession": "Active Session"
+    },
+  "SectionFour": {
+  "headerLabel": "Dynamic Control Center",
+  "title": "Seamless Theme & State Management",
+  "description": "Experience the perfect harmony between design and functionality. Our intuitive controls demonstrate real-time state synchronization across components while maintaining pixel-perfect aesthetics.",
+  "features": {
+    "themeSwitching": "Instant theme switching with zero layout shift",
+    "stateManagement": "Persistent state management across sessions"
   },
-  "FirstCard": {
-    "title": "Your Orders",
-    "description": "Introducing Our Dynamic Orders Dashboard for Seamless Management and Insightful Analysis.",
-    "button": "Create New Order"
+  "Counter": {
+    "title": "Live Counter Demo",
+    "subtitle": "Async state updates with persistence",
+    "persistenceText": "Counter state persists across page reloads and theme changes"
   },
-  "SecondCard": {
-    "title": "This week",
-    "money": "$1,329",
-    "description": "+25% from last week"
-  },
-  "ThirdCard": {
-    "title": "This month",
-    "money": "$5,329",
-    "description": "+10% from last month"
+  "Theme": {
+    "title": "Theme Customization",
+    "subtitle": "Real-time theme preview"
   }
+},
+"sectionTwo": {
+  "multiLanguageSupport": "Multi-language Support",
+  "globalExperienceLocalized": "Global Experience, Localized",
+  "breakLanguageBarriers": "Break language barriers with real-time localization. Switch between multiple languages instantly while maintaining perfect UI layout and typography across all locales.",
+  "supportForRtlLtr": "Support for RTL/LTR writing systems",
+  "automaticLocaleDetection": "Automatic locale detection available",
+  "languagePreferences": "Language Preferences",
+  "selectPreferredLanguage": "Select your preferred interface language",
+  "combinedWith": "Combined with"
 }
-
+}

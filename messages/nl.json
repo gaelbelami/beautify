@@ -1,30 +1,100 @@
 {
-  "HomePage": {
-    "title": "Voorbeeld van internationalisering",
-    "description": "Welkom bij het voorbeeld van internationalisering (i18n) met next-intl en Next.js"
+  "Hero": {
+    "versionBadge": "Versie 1.0 is hier",
+    "titlePart1": "De",
+    "titlePart2": "Ultieme",
+    "titlePart3": "Starterskit",
+    "description": "Versnel ontwikkeling met enterprise-architectuur, vooraf geconfigureerde workflows en een modulair ontwerpsysteem.",
+    "ctaPrimary": "Aan de slag",
+    "ctaSecondary": "Live Demo",
+    "features": {
+      "language": {
+        "title": "Meertalige ondersteuning",
+        "description": "Ondersteunt 15+ talen met automatische taaldetectie"
+      },
+      "theme": {
+        "title": "Dynamische thema's",
+        "description": "Aangepaste kleurenschema's met realtime voorbeeld"
+      },
+      "darkMode": {
+        "title": "Donkere modus",
+        "description": "Automatische donkere/lichte modus met systeemsynchronisatie"
+      },
+      "auth": {
+        "title": "Authenticatie",
+        "description": "Voorgebouwde authenticatieflows met sociale logins"
+      },
+      "security": {
+        "title": "Beveiliging",
+        "description": "Versleutelde sessies en CSRF-bescherming"
+      },
+      "more": {
+        "title": "En Meer",
+        "description": "Staatbeheer, API-lagen en premium ondersteuning"
+      }
+    },
+    "hoverPrompt": "Beweeg over functies om meer te leren",
+    "scrollAria": {
+      "partOne": "",
+      "partTwo": ""
+    }
   },
-  "Breadcrumbs": {
-    "dashboard": "Home",
-    "orders": "Over",
-    "recentOrders": "Contact"
+  "Header": {
+    "nav": {
+      "features": "Functies",
+      "docs": "Documentatie",
+      "pricing": "Prijzen",
+      "blog": "Blog"
+    },
+    "login": "Inloggen",
+    "getStarted": "Aan de slag"
   },
-  "SearchBar": {
-    "placeholder": "Zoek naar bestellingen"
+  "SectionThree": {
+  "secureAuth": "Beveiligde Authenticatie",
+  "welcomeBack": "Welkom terug!",
+  "secureUserAccess": "Beveiligde Gebruikerstoegang",
+  "descriptionAuthenticated": "U heeft nu toegang tot geprivilegieerde functies met enterprise-grade beveiliging. Beheer uw sessie en accountinstellingen hieronder.",
+  "descriptionUnauthenticated": "Ervaar veilige, naadloze authenticatie met ons identiteitsbeheersysteem. Bescherm uw gegevens met militaire encryptie en real-time sessiebewaking.",
+  "features": {
+    "encryptedSessions": "End-to-end versleutelde sessies",
+    "roleAccess": "Rolgebaseerd toegangsbeheer"
   },
-  "FirstCard": {
-    "title": "Uw bestellingen",
-    "description": "Introductie van ons dynamische bestellingsdashboard voor naadloos beheer en inzichtelijke analyse.",
-    "button": "Nieuwe bestelling maken"
+  "signInToContinue": "Inloggen om door te gaan",
+  "chooseAuthMethod": "Kies uw authenticatiemethode",
+  "continueSecureId": "Doorgaan met Beveiligde ID",
+  "orUseDemo": "Of gebruik demo-referenties",
+  "demoAccount": "Probeer ons demo-account:",
+  "demoUser": "gebruiker: demo@voorbeeld.nl",
+  "logoutSession": "Uitloggen",
+  "sessionExpires": "Sessie verloopt over 24 uur",
+  "activeSession": "Actieve Sessie"
   },
-  "SecondCard": {
-    "title": "Deze week",
-    "money": "$1,329",
-    "description": "+25% ten opzichte van vorige week"
-  },
-  "ThirdCard": {
-    "title": "Deze maand",
-    "money": "$5,329",
-    "description": "+10% ten opzichte van vorige maand"
-  }
+  "SectionFour": {
+      "headerLabel": "Dynamisch controlecentrum",
+      "title": "Naadloos thema- en statusbeheer",
+      "description": "Ervaar de perfecte harmonie tussen design en functionaliteit. Onze intuïtieve bedieningselementen demonstreren realtime status-synchronisatie tussen componenten en behouden tegelijkertijd een pixel-perfecte esthetiek.",
+      "features": {
+        "themeSwitching": "Direct schakelen van thema zonder lay-out verschuiving",
+        "stateManagement": "Persistente statusbeheer over sessies heen"
+      },
+      "Counter": {
+        "title": "Live Teller Demo",
+        "subtitle": "Asynchrone statusupdates met persistentie",
+        "persistenceText": "Tellerstatus blijft behouden bij het herladen van de pagina en themawijzigingen"
+      },
+      "Theme": {
+        "title": "Thema-aanpassing",
+        "subtitle": "Realtime thema preview"
+      }
+    },
+    "sectionTwo": {
+  "multiLanguageSupport": "Meertalige ondersteuning",
+  "globalExperienceLocalized": "Wereldwijde ervaring, gelokaliseerd",
+  "breakLanguageBarriers": "Doorbreek taalbarrières met real-time lokalisatie. Schakel direct tussen meerdere talen terwijl je een perfecte lay-out en typografie behoudt in alle talen.",
+  "supportForRtlLtr": "Ondersteuning voor RTL/LTR-schrijfssystemen",
+  "automaticLocaleDetection": "Automatische lokale detectie beschikbaar",
+  "languagePreferences": "Taalvoorkeuren",
+  "selectPreferredLanguage": "Selecteer uw voorkeurstaal voor de interface",
+  "combinedWith": "Gecombineerd met"
 }
-
+}

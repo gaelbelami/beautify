@@ -1,30 +1,100 @@
 {
-  "HomePage": {
-    "title": "Internationalisierungsbeispiel",
-    "description": "Willkommen zum Internationalisierungsbeispiel (i18n) mit next-intl und Next.js"
+  "Hero": {
+    "versionBadge": "Version 1.0 ist da",
+    "titlePart1": "Das",
+    "titlePart2": "Ultimative",
+    "titlePart3": "Starter-Kit",
+    "description": "Beschleunigen Sie die Entwicklung mit Enterprise-Architektur, vorkonfigurierten Workflows und modularem Designsystem.",
+    "ctaPrimary": "Loslegen",
+    "ctaSecondary": "Live-Demo",
+    "features": {
+      "language": {
+        "title": "Mehrsprachiger Support",
+        "description": "Unterstützt 15+ Sprachen mit automatischer Spracherkennung"
+      },
+      "theme": {
+        "title": "Dynamische Themes",
+        "description": "Benutzerdefinierte Farbschemata mit Echtzeitvorschau"
+      },
+      "darkMode": {
+        "title": "Dunkler Modus",
+        "description": "Automatischer Dunkel-/Hellmodus mit System-Synchronisierung"
+      },
+      "auth": {
+        "title": "Authentifizierung",
+        "description": "Vorgefertigte Authentifizierungsabläufe mit Social Logins"
+      },
+      "security": {
+        "title": "Sicherheit",
+        "description": "Verschlüsselte Sitzungen und CSRF-Schutz"
+      },
+      "more": {
+        "title": "Und Mehr",
+        "description": "Statusverwaltung, API-Schichten und Premium-Support"
+      }
+    },
+    "hoverPrompt": "Bewegen Sie die Maus über Funktionen, um mehr zu erfahren",
+    "scrollAria": {
+      "partOne": "",
+      "partTwo": ""
+    }
   },
-  "Breadcrumbs": {
-    "dashboard": "Startseite",
-    "orders": "Über",
-    "recentOrders": "Kontakt"
+  "Header": {
+    "nav": {
+      "features": "Funktionen",
+      "docs": "Dokumentation",
+      "pricing": "Preise",
+      "blog": "Blog"
+    },
+    "login": "Anmelden",
+    "getStarted": "Loslegen"
   },
-  "SearchBar": {
-    "placeholder": "Nach Bestellungen suchen"
+  "SectionThree": {
+      "secureAuth": "Sichere Authentifizierung",
+      "welcomeBack": "Willkommen zurück!",
+      "secureUserAccess": "Sicherer Benutzerzugang",
+      "descriptionAuthenticated": "Sie haben jetzt Zugriff auf privilegierte Funktionen mit erstklassiger Sicherheit. Verwalten Sie Ihre Sitzung und Kontoeinstellungen unten.",
+      "descriptionUnauthenticated": "Erleben Sie sichere, nahtlose Authentifizierung mit unserem Identitätsmanagementsystem. Schützen Sie Ihre Daten mit militärischer Verschlüsselung und Echtzeit-Sitzungsüberwachung.",
+      "features": {
+        "encryptedSessions": "Ende-zu-Ende-verschlüsselte Sitzungen",
+        "roleAccess": "Rollenbasierte Zugriffskontrolle"
+      },
+      "signInToContinue": "Melden Sie sich an, um fortzufahren",
+      "chooseAuthMethod": "Wählen Sie Ihre Authentifizierungsmethode",
+      "continueSecureId": "Mit Secure ID fortfahren",
+      "orUseDemo": "Oder verwenden Sie Demo-Zugangsdaten",
+      "demoAccount": "Testen Sie unser Demo-Konto:",
+      "demoUser": "Benutzer: demo@example.com",
+      "logoutSession": "Sitzung beenden",
+      "sessionExpires": "Sitzung läuft in 24 Stunden ab",
+      "activeSession": "Aktive Sitzung"
+    },
+  "SectionFour": {
+  "headerLabel": "Dynamisches Kontrollzentrum",
+  "title": "Nahtloses Design- & Zustandsmanagement",
+  "description": "Erleben Sie die perfekte Harmonie zwischen Design und Funktionalität. Unsere intuitiven Steuerelemente demonstrieren die Echtzeit-Synchronisierung des Zustands über Komponenten hinweg bei gleichbleibender pixelgenauer Ästhetik.",
+  "features": {
+    "themeSwitching": "Sofortiger Themenwechsel ohne Layoutverschiebung",
+    "stateManagement": "Dauerhafte Zustandsverwaltung über Sitzungen hinweg"
   },
-  "FirstCard": {
-    "title": "Ihre Bestellungen",
-    "description": "Einführung unseres dynamischen Bestell-Dashboards für nahtlose Verwaltung und aufschlussreiche Analysen.",
-    "button": "Neue Bestellung erstellen"
+  "Counter": {
+    "title": "Live-Zähler-Demo",
+    "subtitle": "Asynchrone Zustandsaktualisierungen mit Persistenz",
+    "persistenceText": "Zählerstatus bleibt bei Seitenneuladungen und Designänderungen erhalten"
   },
-  "SecondCard": {
-    "title": "Diese Woche",
-    "money": "$1,329",
-    "description": "+25% seit letzter Woche"
-  },
-  "ThirdCard": {
-    "title": "Diesen Monat",
-    "money": "$5,329",
-    "description": "+10% seit letztem Monat"
+  "Theme": {
+    "title": "Design-Anpassung",
+    "subtitle": "Echtzeit-Designvorschau"
   }
+},
+"sectiontwo": {
+  "multiLanguageSupport": "Mehrsprachige Unterstützung",
+  "globalExperienceLocalized": "Globale Erfahrung, lokalisiert",
+  "breakLanguageBarriers": "Überwinden Sie Sprachbarrieren mit Echtzeit-Lokalisierung. Wechseln Sie sofort zwischen mehreren Sprachen und bewahren Sie dabei das perfekte UI-Layout und die Typografie in allen Sprachen bei.",
+  "supportForRtlLtr": "Unterstützung für RTL/LTR-Schreibsysteme",
+  "automaticLocaleDetection": "Automatische Lokalisierungserkennung verfügbar",
+  "languagePreferences": "Spracheinstellungen",
+  "selectPreferredLanguage": "Wählen Sie Ihre bevorzugte Sprache für die Benutzeroberfläche",
+  "combinedWith": "Kombiniert mit"
 }
-  
+}

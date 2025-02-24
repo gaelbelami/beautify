@@ -1,0 +1,100 @@
+{
+  "Hero": {
+    "versionBadge": "1.0 版本已发布",
+    "titlePart1": "终极",
+    "titlePart2": "开发",
+    "titlePart3": "入门套件",
+    "description": "通过企业级架构、预配置工作流和模块化设计系统加速开发。",
+    "ctaPrimary": "开始使用",
+    "ctaSecondary": "现场演示",
+    "features": {
+      "language": {
+        "title": "多语言支持",
+        "description": "支持15种以上语言，自动检测区域设置"
+      },
+      "theme": {
+        "title": "动态主题",
+        "description": "实时预览自定义配色方案"
+      },
+      "darkMode": {
+        "title": "深色模式",
+        "description": "自动适应系统深浅模式"
+      },
+      "auth": {
+        "title": "身份验证",
+        "description": "预建社交登录验证流程"
+      },
+      "security": {
+        "title": "安全",
+        "description": "加密会话和CSRF保护"
+      },
+      "more": {
+        "title": "更多功能",
+        "description": "状态管理、API层和高级支持"
+      }
+    },
+    "hoverPrompt": "悬停查看功能详情",
+    "scrollAria": {
+      "partOne": "",
+      "partTwo": ""
+    }
+  },
+  "Header": {
+    "nav": {
+      "features": "功能",
+      "docs": "文档",
+      "pricing": "定价",
+      "blog": "博客"
+    },
+    "login": "登录",
+    "getStarted": "开始使用"
+  },
+  "SectionThree": {
+  "secureAuth": "安全认证",
+  "welcomeBack": "欢迎回来！",
+  "secureUserAccess": "安全用户访问",
+  "descriptionAuthenticated": "您正在使用企业级安全保护访问特权功能。请在下方管理您的会话和账户设置。",
+  "descriptionUnauthenticated": "体验安全无缝的身份管理系统认证。通过军用级加密和实时会话监控保护您的数据。",
+  "features": {
+    "encryptedSessions": "端到端加密会话",
+    "roleAccess": "基于角色的访问控制"
+  },
+  "signInToContinue": "登录以继续",
+  "chooseAuthMethod": "选择您的认证方式",
+  "continueSecureId": "使用安全ID继续",
+  "orUseDemo": "或使用演示凭证",
+  "demoAccount": "试用我们的演示账户：",
+  "demoUser": "用户: demo@example.com",
+  "logoutSession": "退出登录",
+  "sessionExpires": "会话将在24小时后过期",
+  "activeSession": "活跃会话"
+  },
+  "SectionFour": {
+      "headerLabel": "动态控制中心",
+      "title": "无缝主题与状态管理",
+      "description": "体验设计与功能的完美融合。我们直观的控制面板展示了组件间的实时状态同步，同时保持像素级的完美美学。",
+      "features": {
+        "themeSwitching": "即时主题切换，无布局偏移",
+        "stateManagement": "会话持久化状态管理"
+      },
+      "Counter": {
+        "title": "实时计数器演示",
+        "subtitle": "异步状态更新与持久化",
+        "persistenceText": "计数器状态在页面刷新和主题更改后仍然保持"
+      },
+      "Theme": {
+        "title": "主题自定义",
+        "subtitle": "实时主题预览"
+      }
+    },
+    "sectionTwo": {
+  "multiLanguageSupport": "多语言支持",
+  "globalExperienceLocalized": "全球体验，本地化",
+  "breakLanguageBarriers": "通过实时本地化打破语言障碍。在保持完美UI布局和排版的同时，轻松切换多种语言。",
+  "supportForRtlLtr": "支持RTL/LTR书写系统",
+  "automaticLocaleDetection": "提供自动语言检测",
+  "languagePreferences": "语言偏好",
+  "selectPreferredLanguage": "选择您首选的界面语言",
+  "combinedWith": "与...结合使用"
+}
+}

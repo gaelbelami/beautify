@@ -1,30 +1,103 @@
 {
-  "HomePage": {
-    "title": "Exemple d'internationalisation",
-    "description": "Bienvenue dans l'exemple d'internationalisation (i18n) utilisant next-intl et Next.js"
+  "Hero": {
+    "versionBadge": "Version 1.0 disponible",
+    "titlePart1": "Le",
+    "titlePart2": "Ultime",
+    "titlePart3": "Starter Kit",
+    "description": "Accélérez le développement avec une architecture d'entreprise, des workflows préconfigurés et un système de design modulaire.",
+    "ctaPrimary": "Commencer",
+    "ctaSecondary": "Démo Live",
+    "features": {
+      "language": {
+        "title": "Support multilingue",
+        "description": "Prend en charge 15+ langues avec détection automatique de la langue"
+      },
+      "theme": {
+        "title": "Thèmes dynamiques",
+        "description": "Schémas de couleurs personnalisables avec prévisualisation en temps réel"
+      },
+      "darkMode": {
+        "title": "Mode sombre",
+        "description": "Mode clair/sombre automatique synchronisé avec le système"
+      },
+      "auth": {
+        "title": "Authentification prête",
+        "description": "Flux d'authentification prédéfinis avec connexions sociales"
+      },
+      "security": {
+        "title": "Sécurité",
+        "description": "Sessions chiffrées et protection CSRF"
+      },
+      "more": {
+        "title": "Et plus encore",
+        "description": "Gestion d'état, couches API et support premium"
+      }
+    },
+    "hoverPrompt": "Survolez les fonctionnalités pour en savoir plus",
+    "scrollAria": {
+      "partOne": "",
+      "partTwo": ""
+    }
+    
   },
-  "Breadcrumbs": {
-    "dashboard": "Accueil",
-    "orders": "À propos",
-    "recentOrders": "Contact"
+  "Header": {
+    "nav": {
+      "features": "Caractéristiques",
+      "docs": "Documentation",
+      "pricing": "Prix",
+      "blog": "Blog"
+    },
+    "login": "Se connecter",
+    "getStarted": "Commencer"
   },
-  "SearchBar": {
-    "placeholder": "Rechercher des commandes"
+  
+  "SectionThree": {
+      "secureAuth": "Authentification sécurisée",
+      "welcomeBack": "Bon retour !",
+      "secureUserAccess": "Accès utilisateur sécurisé",
+      "descriptionAuthenticated": "Vous accédez désormais à des fonctionnalités privilégiées avec une sécurité de niveau entreprise. Gérez votre session et les paramètres de votre compte ci-dessous.",
+      "descriptionUnauthenticated": "Profitez d'une authentification fluide et sécurisée avec notre système de gestion des identités. Protégez vos données grâce au chiffrement de niveau militaire et au suivi de session en temps réel.",
+      "features": {
+        "encryptedSessions": "Sessions chiffrées de bout en bout",
+        "roleAccess": "Contrôle d'accès basé sur les rôles"
+      },
+      "signInToContinue": "Connectez-vous pour continuer",
+      "chooseAuthMethod": "Choisissez votre méthode d'authentification",
+      "continueSecureId": "Continuer avec Secure ID",
+      "orUseDemo": "Ou utilisez des identifiants de démonstration",
+      "demoAccount": "Essayez notre compte de démonstration :",
+      "demoUser": "Utilisateur : demo@example.com",
+      "logoutSession": "Déconnexion de la session",
+      "sessionExpires": "La session expire dans 24 heures",
+      "activeSession": "Session active"
+    },
+  "SectionFour": {
+  "headerLabel": "Centre de contrôle dynamique",
+  "title": "Gestion transparente des thèmes et des états",
+  "description": "Expérimentez l'harmonie parfaite entre design et fonctionnalité. Nos contrôles intuitifs démontrent une synchronisation d'état en temps réel entre les composants tout en maintenant une esthétique pixel-parfaite.",
+  "features": {
+    "themeSwitching": "Changement de thème instantané sans modification de mise en page",
+    "stateManagement": "Gestion d'état persistante entre les sessions"
   },
-  "FirstCard": {
-    "title": "Vos commandes",
-    "description": "Présentation de notre tableau de bord dynamique des commandes pour une gestion fluide et une analyse perspicace.",
-    "button": "Créer une nouvelle commande"
+  "Counter": {
+    "title": "Démo de compteur en direct",
+    "subtitle": "Mises à jour d'état asynchrones avec persistance",
+    "persistenceText": "L'état du compteur persiste lors des rechargements de page et changements de thème"
   },
-  "SecondCard": {
-    "title": "Cette semaine",
-    "money": "1 329 $",
-    "description": "+25% par rapport à la semaine dernière"
-  },
-  "ThirdCard": {
-    "title": "Ce mois-ci",
-    "money": "5 329 $",
-    "description": "+10% par rapport au mois dernier"
+  "Theme": {
+    "title": "Personnalisation du thème",
+    "subtitle": "Aperçu du thème en temps réel"
   }
+},
+"sectionTwo": {
+  "multiLanguageSupport": "Support multilingue",
+  "globalExperienceLocalized": "Expérience mondiale, localisée",
+  "breakLanguageBarriers": "Brisez les barrières linguistiques avec la localisation en temps réel. Passez instantanément d'une langue à l'autre tout en maintenant une mise en page et une typographie parfaites dans toutes les langues.",
+  "supportForRtlLtr": "Support des systèmes d'écriture RTL/LTR",
+  "automaticLocaleDetection": "Détection automatique de la langue disponible",
+  "languagePreferences": "Préférences de langue",
+  "selectPreferredLanguage": "Sélectionnez votre langue d'interface préférée",
+  "combinedWith": "Combiné avec"
 }
 
+}
