@@ -96,5 +96,38 @@
   "languagePreferences": "Taalvoorkeuren",
   "selectPreferredLanguage": "Selecteer uw voorkeurstaal voor de interface",
   "combinedWith": "Gecombineerd met"
+},
+"auth": {
+  "validation": {
+    "firstname": {
+      "min": "Voornaam moet minimaal 3 tekens bevatten"
+    },
+    "lastname": {
+      "min": "Achternaam moet minimaal 3 tekens bevatten"
+    },
+    "email": "Geef een geldig e-mailadres op",
+    "password": {
+      "min": "Wachtwoord moet minimaal 8 tekens lang zijn",
+      "max": "Wachtwoord mag maximaal 64 tekens lang zijn",
+      "pattern": "Wachtwoord mag alleen letters en cijfers bevatten"
+    },
+    "confirmPassword": {
+      "match": "Wachtwoorden komen niet overeen"
+    }
+  },
+  "signin": {
+    "title": "Welkom terug",
+    "description": "Log in om verder te gaan",
+    "emailLabel": "E-mailadres",
+    "emailPlaceholder": "gebruiker@voorbeeld.nl",
+    "passwordLabel": "Wachtwoord",
+    "passwordPlaceholder": "••••••••",
+    "submitButton": "Inloggen",
+    "forgotPassword": "Wachtwoord vergeten?",
+    "socialLoginLabel": "Of ga verder met",
+    "signupPrompt": "Nog geen account?",
+    "signupLink": "Account aanmaken",
+    "loading": "Bezig met inloggen..."
+  }
 }
 }

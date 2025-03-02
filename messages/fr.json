@@ -98,6 +98,39 @@
   "languagePreferences": "Préférences de langue",
   "selectPreferredLanguage": "Sélectionnez votre langue d'interface préférée",
   "combinedWith": "Combiné avec"
+},
+"auth": {
+  "validation": {
+    "firstname": {
+      "min": "Le prénom doit contenir au moins 3 caractères"
+    },
+    "lastname": {
+      "min": "Le nom doit contenir au moins 3 caractères"
+    },
+    "email": "Veuillez fournir une adresse e-mail valide",
+    "password": {
+      "min": "Le mot de passe doit contenir au moins 8 caractères",
+      "max": "Le mot de passe ne peut dépasser 64 caractères",
+      "pattern": "Le mot de passe ne doit contenir que des lettres et des chiffres"
+    },
+    "confirmPassword": {
+      "match": "Les mots de passe ne correspondent pas"
+    }
+  },
+  "signin": {
+    "title": "Bienvenue",
+    "description": "Connectez-vous pour continuer",
+    "emailLabel": "Adresse e-mail",
+    "emailPlaceholder": "vous@exemple.fr",
+    "passwordLabel": "Mot de passe",
+    "passwordPlaceholder": "••••••••",
+    "submitButton": "Se connecter",
+    "forgotPassword": "Mot de passe oublié ?",
+    "socialLoginLabel": "Ou continuer avec",
+    "signupPrompt": "Pas de compte ?",
+    "signupLink": "Créer un compte",
+    "loading": "Authentification en cours..."
+  }
 }
 
 }

@@ -96,5 +96,38 @@
   "languagePreferences": "语言偏好",
   "selectPreferredLanguage": "选择您首选的界面语言",
   "combinedWith": "与...结合使用"
+},
+"auth": {
+  "validation": {
+    "firstname": {
+      "min": "名字必须至少包含3个字符"
+    },
+    "lastname": {
+      "min": "姓氏必须至少包含3个字符"
+    },
+    "email": "请输入有效的电子邮件地址",
+    "password": {
+      "min": "密码长度至少为8个字符",
+      "max": "密码长度不能超过64个字符",
+      "pattern": "密码只能包含字母和数字"
+    },
+    "confirmPassword": {
+      "match": "密码不匹配"
+    }
+  },
+  "signin": {
+    "title": "欢迎回来",
+    "description": "登录以继续访问您的账户",
+    "emailLabel": "电子邮件地址",
+    "emailPlaceholder": "示例@example.com",
+    "passwordLabel": "密码",
+    "passwordPlaceholder": "••••••••",
+    "submitButton": "登录",
+    "forgotPassword": "忘记密码？",
+    "socialLoginLabel": "或使用其他方式登录",
+    "signupPrompt": "没有账户？",
+    "signupLink": "立即注册",
+    "loading": "正在验证..."
+  }
 }
 }

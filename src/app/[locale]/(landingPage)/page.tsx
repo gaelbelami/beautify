@@ -1,12 +1,12 @@
 "use client";
 import React from "react";
 import { motion, useScroll, useSpring } from "framer-motion";
-import { Header } from "./sections/Header";
-import { Hero } from "./sections/SectionOne";
-import { SectionTwo } from "./sections/SectionTwo";
-import { SectionThree } from "./sections/SectionThree";
-import { SectionFour } from "./sections/SectionFour";
-import { SectionFive } from "./sections/SectionFive";
+import { Header } from "./(sections)/Header";
+import { Hero } from "./(sections)/SectionOne";
+import { SectionFour } from "./(sections)/SectionFour";
+import { SectionThree } from "./(sections)/SectionThree";
+import { SectionTwo } from "./(sections)/SectionTwo";
+import { SectionFive } from "./(sections)/SectionFive";
 
 function HomePage() {
   // Get the scroll progress using framer-motion's `useScroll` hook

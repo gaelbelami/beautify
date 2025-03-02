@@ -7,9 +7,9 @@ import {
   NavigationMenuList,
 } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
-import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/routing";
 
 export const Header = () => {
   const translate = useTranslations("Header");
@@ -32,7 +32,7 @@ export const Header = () => {
       </div> */}
       <div className="container max-w-7xl mx-auto py-5">
         <div className="flex items-center justify-between">
-          <div className="border p-1 rounded-xl border-primary">
+          <div className="ç">
             <GrapeIcon className="h-8 w-8 text-primary" />
           </div>
           <MenuSquareIcon className="h-5 w-5 md:hidden" />
@@ -70,9 +70,9 @@ export const Header = () => {
 
           {/* Auth Actions */}
           <div className="hidden md:flex items-center gap-4">
-            <Button variant="ghost" className="text-foreground/60">
+            <Link href={"/login"} className="text-foreground/60">
               {translate("login")}
-            </Button>
+            </Link>
             <Button className="rounded-full px-6">
               {translate("getStarted")}
             </Button>

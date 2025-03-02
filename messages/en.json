@@ -86,7 +86,7 @@
     "title": "Theme Customization",
     "subtitle": "Real-time theme preview"
   }
-},
+  },
 "sectionTwo": {
   "multiLanguageSupport": "Multi-language Support",
   "globalExperienceLocalized": "Global Experience, Localized",
@@ -96,5 +96,40 @@
   "languagePreferences": "Language Preferences",
   "selectPreferredLanguage": "Select your preferred interface language",
   "combinedWith": "Combined with"
-}
+  },
+
+
+  "auth": {
+    "validation": {
+        "firstname": {
+          "min": "First name must be at least 3 characters"
+        },
+        "lastname": {
+          "min": "Last name must be at least 3 characters"
+        },
+        "email": "You must give a valid email",
+        "password": {
+          "min": "Your password must be at least 8 characters long",
+          "max": "Your password cannot be longer than 64 characters",
+          "pattern": "Password should contain only alphabets and numbers"
+        },
+        "confirmPassword": {          
+          "match": "Passwords do not match"
+        }
+      },
+    "signin": {
+      "title": "Welcome Back",
+      "description": "Sign in to continue to your account",
+      "emailLabel": "Email Address",
+      "emailPlaceholder": "you@example.com",
+      "passwordLabel": "Password",
+      "passwordPlaceholder": "••••••••",
+      "submitButton": "Sign In",
+      "forgotPassword": "Forgot your password?",
+      "socialLoginLabel": "Or continue with",
+      "signupPrompt": "Don't have an account?",
+      "signupLink": "Create account",
+      "loading": "Authenticating..."
+    }
+  }
 }
