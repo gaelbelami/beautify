@@ -38,7 +38,6 @@
       "partOne": "",
       "partTwo": ""
     }
-    
   },
   "Header": {
     "nav": {
@@ -50,87 +49,137 @@
     "login": "Se connecter",
     "getStarted": "Commencer"
   },
-  
+
   "SectionThree": {
-      "secureAuth": "Authentification sécurisée",
-      "welcomeBack": "Bon retour !",
-      "secureUserAccess": "Accès utilisateur sécurisé",
-      "descriptionAuthenticated": "Vous accédez désormais à des fonctionnalités privilégiées avec une sécurité de niveau entreprise. Gérez votre session et les paramètres de votre compte ci-dessous.",
-      "descriptionUnauthenticated": "Profitez d'une authentification fluide et sécurisée avec notre système de gestion des identités. Protégez vos données grâce au chiffrement de niveau militaire et au suivi de session en temps réel.",
-      "features": {
-        "encryptedSessions": "Sessions chiffrées de bout en bout",
-        "roleAccess": "Contrôle d'accès basé sur les rôles"
-      },
-      "signInToContinue": "Connectez-vous pour continuer",
-      "chooseAuthMethod": "Choisissez votre méthode d'authentification",
-      "continueSecureId": "Continuer avec Secure ID",
-      "orUseDemo": "Ou utilisez des identifiants de démonstration",
-      "demoAccount": "Essayez notre compte de démonstration :",
-      "demoUser": "Utilisateur : demo@example.com",
-      "logoutSession": "Déconnexion de la session",
-      "sessionExpires": "La session expire dans 24 heures",
-      "activeSession": "Session active"
+    "secureAuth": "Authentification sécurisée",
+    "welcomeBack": "Bon retour !",
+    "secureUserAccess": "Accès utilisateur sécurisé",
+    "descriptionAuthenticated": "Vous accédez désormais à des fonctionnalités privilégiées avec une sécurité de niveau entreprise. Gérez votre session et les paramètres de votre compte ci-dessous.",
+    "descriptionUnauthenticated": "Profitez d'une authentification fluide et sécurisée avec notre système de gestion des identités. Protégez vos données grâce au chiffrement de niveau militaire et au suivi de session en temps réel.",
+    "features": {
+      "encryptedSessions": "Sessions chiffrées de bout en bout",
+      "roleAccess": "Contrôle d'accès basé sur les rôles"
     },
+    "signInToContinue": "Connectez-vous pour continuer",
+    "chooseAuthMethod": "Choisissez votre méthode d'authentification",
+    "continueSecureId": "Continuer avec Secure ID",
+    "orUseDemo": "Ou utilisez des identifiants de démonstration",
+    "demoAccount": "Essayez notre compte de démonstration :",
+    "demoUser": "Utilisateur : demo@example.com",
+    "logoutSession": "Déconnexion de la session",
+    "sessionExpires": "La session expire dans 24 heures",
+    "activeSession": "Session active"
+  },
   "SectionFour": {
-  "headerLabel": "Centre de contrôle dynamique",
-  "title": "Gestion transparente des thèmes et des états",
-  "description": "Expérimentez l'harmonie parfaite entre design et fonctionnalité. Nos contrôles intuitifs démontrent une synchronisation d'état en temps réel entre les composants tout en maintenant une esthétique pixel-parfaite.",
-  "features": {
-    "themeSwitching": "Changement de thème instantané sans modification de mise en page",
-    "stateManagement": "Gestion d'état persistante entre les sessions"
-  },
-  "Counter": {
-    "title": "Démo de compteur en direct",
-    "subtitle": "Mises à jour d'état asynchrones avec persistance",
-    "persistenceText": "L'état du compteur persiste lors des rechargements de page et changements de thème"
-  },
-  "Theme": {
-    "title": "Personnalisation du thème",
-    "subtitle": "Aperçu du thème en temps réel"
-  }
-},
-"sectionTwo": {
-  "multiLanguageSupport": "Support multilingue",
-  "globalExperienceLocalized": "Expérience mondiale, localisée",
-  "breakLanguageBarriers": "Brisez les barrières linguistiques avec la localisation en temps réel. Passez instantanément d'une langue à l'autre tout en maintenant une mise en page et une typographie parfaites dans toutes les langues.",
-  "supportForRtlLtr": "Support des systèmes d'écriture RTL/LTR",
-  "automaticLocaleDetection": "Détection automatique de la langue disponible",
-  "languagePreferences": "Préférences de langue",
-  "selectPreferredLanguage": "Sélectionnez votre langue d'interface préférée",
-  "combinedWith": "Combiné avec"
-},
-"auth": {
-  "validation": {
-    "firstname": {
-      "min": "Le prénom doit contenir au moins 3 caractères"
+    "headerLabel": "Centre de contrôle dynamique",
+    "title": "Gestion transparente des thèmes et des états",
+    "description": "Expérimentez l'harmonie parfaite entre design et fonctionnalité. Nos contrôles intuitifs démontrent une synchronisation d'état en temps réel entre les composants tout en maintenant une esthétique pixel-parfaite.",
+    "features": {
+      "themeSwitching": "Changement de thème instantané sans modification de mise en page",
+      "stateManagement": "Gestion d'état persistante entre les sessions"
     },
-    "lastname": {
-      "min": "Le nom doit contenir au moins 3 caractères"
+    "Counter": {
+      "title": "Démo de compteur en direct",
+      "subtitle": "Mises à jour d'état asynchrones avec persistance",
+      "persistenceText": "L'état du compteur persiste lors des rechargements de page et changements de thème"
     },
-    "email": "Veuillez fournir une adresse e-mail valide",
-    "password": {
-      "min": "Le mot de passe doit contenir au moins 8 caractères",
-      "max": "Le mot de passe ne peut dépasser 64 caractères",
-      "pattern": "Le mot de passe ne doit contenir que des lettres et des chiffres"
-    },
-    "confirmPassword": {
-      "match": "Les mots de passe ne correspondent pas"
+    "Theme": {
+      "title": "Personnalisation du thème",
+      "subtitle": "Aperçu du thème en temps réel"
     }
   },
-  "signin": {
-    "title": "Bienvenue",
-    "description": "Connectez-vous pour continuer",
-    "emailLabel": "Adresse e-mail",
-    "emailPlaceholder": "vous@exemple.fr",
-    "passwordLabel": "Mot de passe",
-    "passwordPlaceholder": "••••••••",
-    "submitButton": "Se connecter",
-    "forgotPassword": "Mot de passe oublié ?",
-    "socialLoginLabel": "Ou continuer avec",
-    "signupPrompt": "Pas de compte ?",
-    "signupLink": "Créer un compte",
-    "loading": "Authentification en cours..."
+  "sectionTwo": {
+    "multiLanguageSupport": "Support multilingue",
+    "globalExperienceLocalized": "Expérience mondiale, localisée",
+    "breakLanguageBarriers": "Brisez les barrières linguistiques avec la localisation en temps réel. Passez instantanément d'une langue à l'autre tout en maintenant une mise en page et une typographie parfaites dans toutes les langues.",
+    "supportForRtlLtr": "Support des systèmes d'écriture RTL/LTR",
+    "automaticLocaleDetection": "Détection automatique de la langue disponible",
+    "languagePreferences": "Préférences de langue",
+    "selectPreferredLanguage": "Sélectionnez votre langue d'interface préférée",
+    "combinedWith": "Combiné avec"
+  },
+  "auth": {
+    "validation": {
+      "firstname": {
+        "min": "Le prénom doit contenir au moins 3 caractères"
+      },
+      "lastname": {
+        "min": "Le nom doit contenir au moins 3 caractères"
+      },
+      "email": "Veuillez fournir une adresse e-mail valide",
+      "password": {
+        "min": "Le mot de passe doit contenir au moins 8 caractères",
+        "max": "Le mot de passe ne peut dépasser 64 caractères",
+        "pattern": "Le mot de passe ne doit contenir que des lettres et des chiffres"
+      },
+      "confirmPassword": {
+        "match": "Les mots de passe ne correspondent pas"
+      }
+    },
+    "signin": {
+      "title": "Bienvenue",
+      "description": "Connectez-vous pour continuer",
+      "emailLabel": "Adresse e-mail",
+      "emailPlaceholder": "vous@exemple.fr",
+      "passwordLabel": "Mot de passe",
+      "passwordPlaceholder": "••••••••",
+      "submitButton": "Se connecter",
+      "forgotPassword": "Mot de passe oublié ?",
+      "socialLoginLabel": "Ou continuer avec",
+      "signupPrompt": "Pas de compte ?",
+      "signupLink": "Créer un compte",
+      "loading": "Authentification en cours..."
+    },
+    "signup": {
+      "headline": "S'inscrire",
+      "subheadline": "Bienvenue !",
+      "description": "Créez un compte pour accéder à votre tableau de bord, gérer vos événements et interagir avec votre communauté.",
+      "submitButton": "S'inscrire avec l'e-mail",
+      "generateCode": "Générer un code",
+      "verifying": "Inscription avec e-mail",
+      "or": "OU CONTINUER AVEC",
+      "socialSignupLabel": "Continuer avec Google",
+      "otpPlaceholder": "Entrez votre code de vérification",
+      "loginPrompt": "Vous avez déjà un compte ?",
+      "loginLink": "Se connecter",
+      "firstnamePlaceholder": "Prénom",
+      "lastnamePlaceholder": "Nom de famille",
+      "emailPlaceholder": "E-mail",
+      "passwordPlaceholder": "••••••••",
+      "confirmPasswordPlaceholder": "••••••••",
+      "placeholder": {
+        "role": {
+          "label": "Rôle",
+          "options": {
+            "creator": "Créateur de contenu",
+            "learner": "Apprenant"
+          }
+        }
+      }
+    },
+    "forgotpassword": {
+      "title": "Réinitialiser le mot de passe",
+      "description": "Entrez votre e-mail",
+      "emailPlaceholder": "votre@email.fr",
+      "submitButton": "Envoyer le lien",
+      "loading": "Envoi en cours...",
+      "successMessage": "E-mail envoyé !",
+      "checkEmail": "Vérifiez votre boîte de réception",
+      "rememberPassword": "Retrouvé votre mot de passe ?",
+      "loginLink": "Se connecter ici"
+    },
+    "resetpassword": {
+      "title": "Réinitialiser le mot de passe",
+      "description": "Entrez votre nouveau mot de passe",
+      "emailPlaceholder": "votre@email.fr",
+      "newPasswordPlaceholder": "Nouveau mot de passe",
+      "confirmPasswordPlaceholder": "Confirmer le mot de passe",
+      "submitButton": "Réinitialiser",
+      "loading": "Mise à jour...",
+      "successMessage": "Mot de passe mis à jour !",
+      "successDescription": "Vous pouvez maintenant vous connecter avec votre nouveau mot de passe",
+      "rememberPassword": "Retour à la connexion ?",
+      "loginLink": "Se connecter ici"
+    }
   }
-}
-
 }

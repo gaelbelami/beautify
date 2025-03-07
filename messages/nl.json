@@ -50,84 +50,135 @@
     "getStarted": "Aan de slag"
   },
   "SectionThree": {
-  "secureAuth": "Beveiligde Authenticatie",
-  "welcomeBack": "Welkom terug!",
-  "secureUserAccess": "Beveiligde Gebruikerstoegang",
-  "descriptionAuthenticated": "U heeft nu toegang tot geprivilegieerde functies met enterprise-grade beveiliging. Beheer uw sessie en accountinstellingen hieronder.",
-  "descriptionUnauthenticated": "Ervaar veilige, naadloze authenticatie met ons identiteitsbeheersysteem. Bescherm uw gegevens met militaire encryptie en real-time sessiebewaking.",
-  "features": {
-    "encryptedSessions": "End-to-end versleutelde sessies",
-    "roleAccess": "Rolgebaseerd toegangsbeheer"
-  },
-  "signInToContinue": "Inloggen om door te gaan",
-  "chooseAuthMethod": "Kies uw authenticatiemethode",
-  "continueSecureId": "Doorgaan met Beveiligde ID",
-  "orUseDemo": "Of gebruik demo-referenties",
-  "demoAccount": "Probeer ons demo-account:",
-  "demoUser": "gebruiker: demo@voorbeeld.nl",
-  "logoutSession": "Uitloggen",
-  "sessionExpires": "Sessie verloopt over 24 uur",
-  "activeSession": "Actieve Sessie"
+    "secureAuth": "Beveiligde Authenticatie",
+    "welcomeBack": "Welkom terug!",
+    "secureUserAccess": "Beveiligde Gebruikerstoegang",
+    "descriptionAuthenticated": "U heeft nu toegang tot geprivilegieerde functies met enterprise-grade beveiliging. Beheer uw sessie en accountinstellingen hieronder.",
+    "descriptionUnauthenticated": "Ervaar veilige, naadloze authenticatie met ons identiteitsbeheersysteem. Bescherm uw gegevens met militaire encryptie en real-time sessiebewaking.",
+    "features": {
+      "encryptedSessions": "End-to-end versleutelde sessies",
+      "roleAccess": "Rolgebaseerd toegangsbeheer"
+    },
+    "signInToContinue": "Inloggen om door te gaan",
+    "chooseAuthMethod": "Kies uw authenticatiemethode",
+    "continueSecureId": "Doorgaan met Beveiligde ID",
+    "orUseDemo": "Of gebruik demo-referenties",
+    "demoAccount": "Probeer ons demo-account:",
+    "demoUser": "gebruiker: demo@voorbeeld.nl",
+    "logoutSession": "Uitloggen",
+    "sessionExpires": "Sessie verloopt over 24 uur",
+    "activeSession": "Actieve Sessie"
   },
   "SectionFour": {
-      "headerLabel": "Dynamisch controlecentrum",
-      "title": "Naadloos thema- en statusbeheer",
-      "description": "Ervaar de perfecte harmonie tussen design en functionaliteit. Onze intuïtieve bedieningselementen demonstreren realtime status-synchronisatie tussen componenten en behouden tegelijkertijd een pixel-perfecte esthetiek.",
-      "features": {
-        "themeSwitching": "Direct schakelen van thema zonder lay-out verschuiving",
-        "stateManagement": "Persistente statusbeheer over sessies heen"
-      },
-      "Counter": {
-        "title": "Live Teller Demo",
-        "subtitle": "Asynchrone statusupdates met persistentie",
-        "persistenceText": "Tellerstatus blijft behouden bij het herladen van de pagina en themawijzigingen"
-      },
-      "Theme": {
-        "title": "Thema-aanpassing",
-        "subtitle": "Realtime thema preview"
-      }
+    "headerLabel": "Dynamisch controlecentrum",
+    "title": "Naadloos thema- en statusbeheer",
+    "description": "Ervaar de perfecte harmonie tussen design en functionaliteit. Onze intuïtieve bedieningselementen demonstreren realtime status-synchronisatie tussen componenten en behouden tegelijkertijd een pixel-perfecte esthetiek.",
+    "features": {
+      "themeSwitching": "Direct schakelen van thema zonder lay-out verschuiving",
+      "stateManagement": "Persistente statusbeheer over sessies heen"
     },
-    "sectionTwo": {
-  "multiLanguageSupport": "Meertalige ondersteuning",
-  "globalExperienceLocalized": "Wereldwijde ervaring, gelokaliseerd",
-  "breakLanguageBarriers": "Doorbreek taalbarrières met real-time lokalisatie. Schakel direct tussen meerdere talen terwijl je een perfecte lay-out en typografie behoudt in alle talen.",
-  "supportForRtlLtr": "Ondersteuning voor RTL/LTR-schrijfssystemen",
-  "automaticLocaleDetection": "Automatische lokale detectie beschikbaar",
-  "languagePreferences": "Taalvoorkeuren",
-  "selectPreferredLanguage": "Selecteer uw voorkeurstaal voor de interface",
-  "combinedWith": "Gecombineerd met"
-},
-"auth": {
-  "validation": {
-    "firstname": {
-      "min": "Voornaam moet minimaal 3 tekens bevatten"
+    "Counter": {
+      "title": "Live Teller Demo",
+      "subtitle": "Asynchrone statusupdates met persistentie",
+      "persistenceText": "Tellerstatus blijft behouden bij het herladen van de pagina en themawijzigingen"
     },
-    "lastname": {
-      "min": "Achternaam moet minimaal 3 tekens bevatten"
-    },
-    "email": "Geef een geldig e-mailadres op",
-    "password": {
-      "min": "Wachtwoord moet minimaal 8 tekens lang zijn",
-      "max": "Wachtwoord mag maximaal 64 tekens lang zijn",
-      "pattern": "Wachtwoord mag alleen letters en cijfers bevatten"
-    },
-    "confirmPassword": {
-      "match": "Wachtwoorden komen niet overeen"
+    "Theme": {
+      "title": "Thema-aanpassing",
+      "subtitle": "Realtime thema preview"
     }
   },
-  "signin": {
-    "title": "Welkom terug",
-    "description": "Log in om verder te gaan",
-    "emailLabel": "E-mailadres",
-    "emailPlaceholder": "gebruiker@voorbeeld.nl",
-    "passwordLabel": "Wachtwoord",
-    "passwordPlaceholder": "••••••••",
-    "submitButton": "Inloggen",
-    "forgotPassword": "Wachtwoord vergeten?",
-    "socialLoginLabel": "Of ga verder met",
-    "signupPrompt": "Nog geen account?",
-    "signupLink": "Account aanmaken",
-    "loading": "Bezig met inloggen..."
+  "sectionTwo": {
+    "multiLanguageSupport": "Meertalige ondersteuning",
+    "globalExperienceLocalized": "Wereldwijde ervaring, gelokaliseerd",
+    "breakLanguageBarriers": "Doorbreek taalbarrières met real-time lokalisatie. Schakel direct tussen meerdere talen terwijl je een perfecte lay-out en typografie behoudt in alle talen.",
+    "supportForRtlLtr": "Ondersteuning voor RTL/LTR-schrijfssystemen",
+    "automaticLocaleDetection": "Automatische lokale detectie beschikbaar",
+    "languagePreferences": "Taalvoorkeuren",
+    "selectPreferredLanguage": "Selecteer uw voorkeurstaal voor de interface",
+    "combinedWith": "Gecombineerd met"
+  },
+  "auth": {
+    "validation": {
+      "firstname": {
+        "min": "Voornaam moet minimaal 3 tekens bevatten"
+      },
+      "lastname": {
+        "min": "Achternaam moet minimaal 3 tekens bevatten"
+      },
+      "email": "Geef een geldig e-mailadres op",
+      "password": {
+        "min": "Wachtwoord moet minimaal 8 tekens lang zijn",
+        "max": "Wachtwoord mag maximaal 64 tekens lang zijn",
+        "pattern": "Wachtwoord mag alleen letters en cijfers bevatten"
+      },
+      "confirmPassword": {
+        "match": "Wachtwoorden komen niet overeen"
+      }
+    },
+    "signin": {
+      "title": "Welkom terug",
+      "description": "Log in om verder te gaan",
+      "emailLabel": "E-mailadres",
+      "emailPlaceholder": "gebruiker@voorbeeld.nl",
+      "passwordLabel": "Wachtwoord",
+      "passwordPlaceholder": "••••••••",
+      "submitButton": "Inloggen",
+      "forgotPassword": "Wachtwoord vergeten?",
+      "socialLoginLabel": "Of ga verder met",
+      "signupPrompt": "Nog geen account?",
+      "signupLink": "Account aanmaken",
+      "loading": "Bezig met inloggen..."
+    },
+    "signup": {
+      "headline": "Registreren",
+      "subheadline": "Welkom!",
+      "description": "Maak een account aan om toegang te krijgen tot uw dashboard, evenementen te beheren en verbinding te maken met uw community.",
+      "submitButton": "Registreren met e-mail",
+      "generateCode": "Code genereren",
+      "verifying": "Registreren met e-mail",
+      "or": "OF GA VERDER MET",
+      "socialSignupLabel": "Doorgaan met Google",
+      "otpPlaceholder": "Voer uw verificatiecode in",
+      "loginPrompt": "Hebt u al een account?",
+      "loginLink": "Inloggen",
+      "firstnamePlaceholder": "Voornaam",
+      "lastnamePlaceholder": "Achternaam",
+      "emailPlaceholder": "E-mail",
+      "passwordPlaceholder": "••••••••",
+      "confirmPasswordPlaceholder": "••••••••",
+      "placeholder": {
+        "role": {
+          "label": "Rol",
+          "options": {
+            "creator": "Contentmaker",
+            "learner": "Leerling"
+          }
+        }
+      }
+    },
+    "forgotpassword": {
+      "title": "Wachtwoord resetten",
+      "description": "Voer uw e-mailadres in",
+      "emailPlaceholder": "uw@email.nl",
+      "submitButton": "Verstuur link",
+      "loading": "Verzenden...",
+      "successMessage": "E-mail verstuurd!",
+      "checkEmail": "Controleer uw inbox",
+      "rememberPassword": "Wachtwoord onthouden?",
+      "loginLink": "Hier inloggen"
+    },
+    "resetpassword": {
+      "title": "Wachtwoord resetten",
+      "description": "Voer uw nieuwe wachtwoord in",
+      "emailPlaceholder": "uw@email.nl",
+      "newPasswordPlaceholder": "Nieuw wachtwoord",
+      "confirmPasswordPlaceholder": "Bevestig wachtwoord",
+      "submitButton": "Wachtwoord resetten",
+      "loading": "Bezig met updaten...",
+      "successMessage": "Wachtwoord bijgewerkt!",
+      "successDescription": "U kunt nu inloggen met uw nieuwe wachtwoord",
+      "rememberPassword": "Terug naar login?",
+      "loginLink": "Hier inloggen"
+    }
   }
-}
 }

@@ -50,84 +50,135 @@
     "getStarted": "Loslegen"
   },
   "SectionThree": {
-      "secureAuth": "Sichere Authentifizierung",
-      "welcomeBack": "Willkommen zurück!",
-      "secureUserAccess": "Sicherer Benutzerzugang",
-      "descriptionAuthenticated": "Sie haben jetzt Zugriff auf privilegierte Funktionen mit erstklassiger Sicherheit. Verwalten Sie Ihre Sitzung und Kontoeinstellungen unten.",
-      "descriptionUnauthenticated": "Erleben Sie sichere, nahtlose Authentifizierung mit unserem Identitätsmanagementsystem. Schützen Sie Ihre Daten mit militärischer Verschlüsselung und Echtzeit-Sitzungsüberwachung.",
-      "features": {
-        "encryptedSessions": "Ende-zu-Ende-verschlüsselte Sitzungen",
-        "roleAccess": "Rollenbasierte Zugriffskontrolle"
-      },
-      "signInToContinue": "Melden Sie sich an, um fortzufahren",
-      "chooseAuthMethod": "Wählen Sie Ihre Authentifizierungsmethode",
-      "continueSecureId": "Mit Secure ID fortfahren",
-      "orUseDemo": "Oder verwenden Sie Demo-Zugangsdaten",
-      "demoAccount": "Testen Sie unser Demo-Konto:",
-      "demoUser": "Benutzer: demo@example.com",
-      "logoutSession": "Sitzung beenden",
-      "sessionExpires": "Sitzung läuft in 24 Stunden ab",
-      "activeSession": "Aktive Sitzung"
+    "secureAuth": "Sichere Authentifizierung",
+    "welcomeBack": "Willkommen zurück!",
+    "secureUserAccess": "Sicherer Benutzerzugang",
+    "descriptionAuthenticated": "Sie haben jetzt Zugriff auf privilegierte Funktionen mit erstklassiger Sicherheit. Verwalten Sie Ihre Sitzung und Kontoeinstellungen unten.",
+    "descriptionUnauthenticated": "Erleben Sie sichere, nahtlose Authentifizierung mit unserem Identitätsmanagementsystem. Schützen Sie Ihre Daten mit militärischer Verschlüsselung und Echtzeit-Sitzungsüberwachung.",
+    "features": {
+      "encryptedSessions": "Ende-zu-Ende-verschlüsselte Sitzungen",
+      "roleAccess": "Rollenbasierte Zugriffskontrolle"
     },
+    "signInToContinue": "Melden Sie sich an, um fortzufahren",
+    "chooseAuthMethod": "Wählen Sie Ihre Authentifizierungsmethode",
+    "continueSecureId": "Mit Secure ID fortfahren",
+    "orUseDemo": "Oder verwenden Sie Demo-Zugangsdaten",
+    "demoAccount": "Testen Sie unser Demo-Konto:",
+    "demoUser": "Benutzer: demo@example.com",
+    "logoutSession": "Sitzung beenden",
+    "sessionExpires": "Sitzung läuft in 24 Stunden ab",
+    "activeSession": "Aktive Sitzung"
+  },
   "SectionFour": {
-  "headerLabel": "Dynamisches Kontrollzentrum",
-  "title": "Nahtloses Design- & Zustandsmanagement",
-  "description": "Erleben Sie die perfekte Harmonie zwischen Design und Funktionalität. Unsere intuitiven Steuerelemente demonstrieren die Echtzeit-Synchronisierung des Zustands über Komponenten hinweg bei gleichbleibender pixelgenauer Ästhetik.",
-  "features": {
-    "themeSwitching": "Sofortiger Themenwechsel ohne Layoutverschiebung",
-    "stateManagement": "Dauerhafte Zustandsverwaltung über Sitzungen hinweg"
-  },
-  "Counter": {
-    "title": "Live-Zähler-Demo",
-    "subtitle": "Asynchrone Zustandsaktualisierungen mit Persistenz",
-    "persistenceText": "Zählerstatus bleibt bei Seitenneuladungen und Designänderungen erhalten"
-  },
-  "Theme": {
-    "title": "Design-Anpassung",
-    "subtitle": "Echtzeit-Designvorschau"
-  }
-},
-"sectiontwo": {
-  "multiLanguageSupport": "Mehrsprachige Unterstützung",
-  "globalExperienceLocalized": "Globale Erfahrung, lokalisiert",
-  "breakLanguageBarriers": "Überwinden Sie Sprachbarrieren mit Echtzeit-Lokalisierung. Wechseln Sie sofort zwischen mehreren Sprachen und bewahren Sie dabei das perfekte UI-Layout und die Typografie in allen Sprachen bei.",
-  "supportForRtlLtr": "Unterstützung für RTL/LTR-Schreibsysteme",
-  "automaticLocaleDetection": "Automatische Lokalisierungserkennung verfügbar",
-  "languagePreferences": "Spracheinstellungen",
-  "selectPreferredLanguage": "Wählen Sie Ihre bevorzugte Sprache für die Benutzeroberfläche",
-  "combinedWith": "Kombiniert mit"
-},
-"auth": {
-  "validation": {
-    "firstname": {
-      "min": "Vorname muss mindestens 3 Zeichen enthalten"
+    "headerLabel": "Dynamisches Kontrollzentrum",
+    "title": "Nahtloses Design- & Zustandsmanagement",
+    "description": "Erleben Sie die perfekte Harmonie zwischen Design und Funktionalität. Unsere intuitiven Steuerelemente demonstrieren die Echtzeit-Synchronisierung des Zustands über Komponenten hinweg bei gleichbleibender pixelgenauer Ästhetik.",
+    "features": {
+      "themeSwitching": "Sofortiger Themenwechsel ohne Layoutverschiebung",
+      "stateManagement": "Dauerhafte Zustandsverwaltung über Sitzungen hinweg"
     },
-    "lastname": {
-      "min": "Nachname muss mindestens 3 Zeichen enthalten"
+    "Counter": {
+      "title": "Live-Zähler-Demo",
+      "subtitle": "Asynchrone Zustandsaktualisierungen mit Persistenz",
+      "persistenceText": "Zählerstatus bleibt bei Seitenneuladungen und Designänderungen erhalten"
     },
-    "email": "Bitte geben Sie eine gültige E-Mail-Adresse an",
-    "password": {
-      "min": "Passwort muss mindestens 8 Zeichen lang sein",
-      "max": "Passwort darf maximal 64 Zeichen lang sein",
-      "pattern": "Passwort darf nur Buchstaben und Zahlen enthalten"
-    },
-    "confirmPassword": {
-      "match": "Passwörter stimmen nicht überein"
+    "Theme": {
+      "title": "Design-Anpassung",
+      "subtitle": "Echtzeit-Designvorschau"
     }
   },
-  "signin": {
-    "title": "Willkommen zurück",
-    "description": "Melden Sie sich an, um fortzufahren",
-    "emailLabel": "E-Mail-Adresse",
-    "emailPlaceholder": "beispiel@email.de",
-    "passwordLabel": "Passwort",
-    "passwordPlaceholder": "••••••••",
-    "submitButton": "Anmelden",
-    "forgotPassword": "Passwort vergessen?",
-    "socialLoginLabel": "Oder fortfahren mit",
-    "signupPrompt": "Kein Konto?",
-    "signupLink": "Konto erstellen",
-    "loading": "Anmeldung wird durchgeführt..."
+  "sectiontwo": {
+    "multiLanguageSupport": "Mehrsprachige Unterstützung",
+    "globalExperienceLocalized": "Globale Erfahrung, lokalisiert",
+    "breakLanguageBarriers": "Überwinden Sie Sprachbarrieren mit Echtzeit-Lokalisierung. Wechseln Sie sofort zwischen mehreren Sprachen und bewahren Sie dabei das perfekte UI-Layout und die Typografie in allen Sprachen bei.",
+    "supportForRtlLtr": "Unterstützung für RTL/LTR-Schreibsysteme",
+    "automaticLocaleDetection": "Automatische Lokalisierungserkennung verfügbar",
+    "languagePreferences": "Spracheinstellungen",
+    "selectPreferredLanguage": "Wählen Sie Ihre bevorzugte Sprache für die Benutzeroberfläche",
+    "combinedWith": "Kombiniert mit"
+  },
+  "auth": {
+    "validation": {
+      "firstname": {
+        "min": "Vorname muss mindestens 3 Zeichen enthalten"
+      },
+      "lastname": {
+        "min": "Nachname muss mindestens 3 Zeichen enthalten"
+      },
+      "email": "Bitte geben Sie eine gültige E-Mail-Adresse an",
+      "password": {
+        "min": "Passwort muss mindestens 8 Zeichen lang sein",
+        "max": "Passwort darf maximal 64 Zeichen lang sein",
+        "pattern": "Passwort darf nur Buchstaben und Zahlen enthalten"
+      },
+      "confirmPassword": {
+        "match": "Passwörter stimmen nicht überein"
+      }
+    },
+    "signin": {
+      "title": "Willkommen zurück",
+      "description": "Melden Sie sich an, um fortzufahren",
+      "emailLabel": "E-Mail-Adresse",
+      "emailPlaceholder": "beispiel@email.de",
+      "passwordLabel": "Passwort",
+      "passwordPlaceholder": "••••••••",
+      "submitButton": "Anmelden",
+      "forgotPassword": "Passwort vergessen?",
+      "socialLoginLabel": "Oder fortfahren mit",
+      "signupPrompt": "Kein Konto?",
+      "signupLink": "Konto erstellen",
+      "loading": "Anmeldung wird durchgeführt..."
+    },
+    "signup": {
+      "headline": "Registrieren",
+      "subheadline": "Willkommen!",
+      "description": "Erstellen Sie ein Konto, um auf Ihr Dashboard zuzugreifen, Ihre Veranstaltungen zu verwalten und sich mit Ihrer Community zu verbinden.",
+      "submitButton": "Mit E-Mail registrieren",
+      "generateCode": "Code generieren",
+      "verifying": "Mit E-Mail registrieren",
+      "or": "ODER FORTFAHREN MIT",
+      "socialSignupLabel": "Mit Google fortfahren",
+      "otpPlaceholder": "Bestätigungscode eingeben",
+      "loginPrompt": "Haben Sie bereits ein Konto?",
+      "loginLink": "Anmelden",
+      "firstnamePlaceholder": "Vorname",
+      "lastnamePlaceholder": "Nachname",
+      "emailPlaceholder": "E-Mail",
+      "passwordPlaceholder": "••••••••",
+      "confirmPasswordPlaceholder": "••••••••",
+      "placeholder": {
+        "role": {
+          "label": "Rolle",
+          "options": {
+            "creator": "Inhaltsersteller",
+            "learner": "Lernender"
+          }
+        }
+      }
+    },
+    "forgotpassword": {
+      "title": "Passwort zurücksetzen",
+      "description": "Geben Sie Ihre E-Mail-Adresse ein",
+      "emailPlaceholder": "ihre@email.de",
+      "submitButton": "Link senden",
+      "loading": "Wird gesendet...",
+      "successMessage": "E-Mail gesendet!",
+      "checkEmail": "Überprüfen Sie Ihren Posteingang",
+      "rememberPassword": "Passwort eingefallen?",
+      "loginLink": "Hier anmelden"
+    },
+    "resetpassword": {
+      "title": "Passwort zurücksetzen",
+      "description": "Geben Sie Ihr neues Passwort ein",
+      "newPasswordPlaceholder": "Neues Passwort",
+      "emailPlaceholder": "ihre@email.de",
+      "confirmPasswordPlaceholder": "Passwort bestätigen",
+      "submitButton": "Passwort zurücksetzen",
+      "loading": "Wird aktualisiert...",
+      "successMessage": "Passwort aktualisiert!",
+      "successDescription": "Sie können sich jetzt mit dem neuen Passwort anmelden",
+      "rememberPassword": "Zurück zur Anmeldung?",
+      "loginLink": "Hier anmelden"
+    }
   }
-}
 }

@@ -50,73 +50,73 @@
     "getStarted": "Get Started"
   },
   "SectionThree": {
-      "secureAuth": "Secure Authentication",
-      "welcomeBack": "Welcome Back!",
-      "secureUserAccess": "Secure User Access",
-      "descriptionAuthenticated": "You're now accessing privileged features with enterprise-grade security. Manage your session and account settings below.",
-      "descriptionUnauthenticated": "Experience secure, seamless authentication with our identity management system. Protect your data with military-grade encryption and real-time session monitoring.",
-      "features": {
-        "encryptedSessions": "End-to-end encrypted sessions",
-        "roleAccess": "Role-based access control"
-      },
-      "signInToContinue": "Sign In to Continue",
-      "chooseAuthMethod": "Choose your authentication method",
-      "continueSecureId": "Continue with Secure ID",
-      "orUseDemo": "Or use demo credentials",
-      "demoAccount": "Try our demo account:",
-      "demoUser": "user: demo@example.com",
-      "logoutSession": "Logout Session",
-      "sessionExpires": "Session expires in 24 hours",
-      "activeSession": "Active Session"
+    "secureAuth": "Secure Authentication",
+    "welcomeBack": "Welcome Back!",
+    "secureUserAccess": "Secure User Access",
+    "descriptionAuthenticated": "You're now accessing privileged features with enterprise-grade security. Manage your session and account settings below.",
+    "descriptionUnauthenticated": "Experience secure, seamless authentication with our identity management system. Protect your data with military-grade encryption and real-time session monitoring.",
+    "features": {
+      "encryptedSessions": "End-to-end encrypted sessions",
+      "roleAccess": "Role-based access control"
     },
+    "signInToContinue": "Sign In to Continue",
+    "chooseAuthMethod": "Choose your authentication method",
+    "continueSecureId": "Continue with Secure ID",
+    "orUseDemo": "Or use demo credentials",
+    "demoAccount": "Try our demo account:",
+    "demoUser": "user: demo@example.com",
+    "logoutSession": "Logout Session",
+    "sessionExpires": "Session expires in 24 hours",
+    "activeSession": "Active Session"
+  },
   "SectionFour": {
-  "headerLabel": "Dynamic Control Center",
-  "title": "Seamless Theme & State Management",
-  "description": "Experience the perfect harmony between design and functionality. Our intuitive controls demonstrate real-time state synchronization across components while maintaining pixel-perfect aesthetics.",
-  "features": {
-    "themeSwitching": "Instant theme switching with zero layout shift",
-    "stateManagement": "Persistent state management across sessions"
+    "headerLabel": "Dynamic Control Center",
+    "title": "Seamless Theme & State Management",
+    "description": "Experience the perfect harmony between design and functionality. Our intuitive controls demonstrate real-time state synchronization across components while maintaining pixel-perfect aesthetics.",
+    "features": {
+      "themeSwitching": "Instant theme switching with zero layout shift",
+      "stateManagement": "Persistent state management across sessions"
+    },
+    "Counter": {
+      "title": "Live Counter Demo",
+      "subtitle": "Async state updates with persistence",
+      "persistenceText": "Counter state persists across page reloads and theme changes"
+    },
+    "Theme": {
+      "title": "Theme Customization",
+      "subtitle": "Real-time theme preview"
+    }
   },
-  "Counter": {
-    "title": "Live Counter Demo",
-    "subtitle": "Async state updates with persistence",
-    "persistenceText": "Counter state persists across page reloads and theme changes"
-  },
-  "Theme": {
-    "title": "Theme Customization",
-    "subtitle": "Real-time theme preview"
-  }
-  },
-"sectionTwo": {
-  "multiLanguageSupport": "Multi-language Support",
-  "globalExperienceLocalized": "Global Experience, Localized",
-  "breakLanguageBarriers": "Break language barriers with real-time localization. Switch between multiple languages instantly while maintaining perfect UI layout and typography across all locales.",
-  "supportForRtlLtr": "Support for RTL/LTR writing systems",
-  "automaticLocaleDetection": "Automatic locale detection available",
-  "languagePreferences": "Language Preferences",
-  "selectPreferredLanguage": "Select your preferred interface language",
-  "combinedWith": "Combined with"
+  "sectionTwo": {
+    "multiLanguageSupport": "Multi-language Support",
+    "globalExperienceLocalized": "Global Experience, Localized",
+    "breakLanguageBarriers": "Break language barriers with real-time localization. Switch between multiple languages instantly while maintaining perfect UI layout and typography across all locales.",
+    "supportForRtlLtr": "Support for RTL/LTR writing systems",
+    "automaticLocaleDetection": "Automatic locale detection available",
+    "languagePreferences": "Language Preferences",
+    "selectPreferredLanguage": "Select your preferred interface language",
+    "combinedWith": "Combined with"
   },
 
 
   "auth": {
     "validation": {
-        "firstname": {
-          "min": "First name must be at least 3 characters"
-        },
-        "lastname": {
-          "min": "Last name must be at least 3 characters"
-        },
-        "email": "You must give a valid email",
-        "password": {
-          "min": "Your password must be at least 8 characters long",
-          "max": "Your password cannot be longer than 64 characters",
-          "pattern": "Password should contain only alphabets and numbers"
-        },
-        "confirmPassword": {          
-          "match": "Passwords do not match"
-        }
+      "firstname": {
+        "min": "First name must be at least 3 characters"
       },
+      "lastname": {
+        "min": "Last name must be at least 3 characters"
+      },
+      "email": "You must give a valid email",
+      "password": {
+        "min": "Your password must be at least 8 characters long",
+        "max": "Your password cannot be longer than 64 characters",
+        "pattern": "Password should contain only alphabets and numbers"
+      },
+      "confirmPassword": {
+        "match": "Passwords do not match"
+      }
+    },
     "signin": {
       "title": "Welcome Back",
       "description": "Sign in to continue to your account",
@@ -130,6 +130,57 @@
       "signupPrompt": "Don't have an account?",
       "signupLink": "Create account",
       "loading": "Authenticating..."
+    },
+    "signup": {
+      "headline": "Sign Up",
+      "subheadline": "Welcome!",
+      "description": "Create an account to access your dashboard, manage your events, and connect with your community.",
+      "submitButton": "Sign up with email",
+      "generateCode": "Generate Code",
+      "verifying": "Sign Up with Email",
+      "or": "OR CONTINUE WITH",
+      "socialSignupLabel": "Continue with Google",
+      "otpPlaceholder": "Enter your verification code",
+      "loginPrompt": "Already have an account?",
+      "loginLink": "Log in",
+      "firstnamePlaceholder": "First Name",
+      "lastnamePlaceholder": "Last Name",
+      "emailPlaceholder": "Email",
+      "passwordPlaceholder": "••••••••",
+      "confirmPasswordPlaceholder": "••••••••",
+      "placeholder": {
+        "role": {
+          "label": "Role",
+          "options": {
+            "creator": "Content creator",
+            "learner": "Learner"
+          }
+        }
+      }
+    },
+    "forgotpassword": {
+      "title": "Reset Password",
+      "description": "Enter your email to reset your password",
+      "emailPlaceholder": "your@email.com",
+      "submitButton": "Send Reset Link",
+      "loading": "Sending...",
+      "successMessage": "Email Sent!",
+      "checkEmail": "Check your inbox for further instructions",
+      "rememberPassword": "Remember your password?",
+      "loginLink": "Log in here"
+    },
+    "resetpassword": {
+      "title": "Reset Password",
+      "description": "Enter your new password",
+      "emailPlaceholder": "your@email.com",
+      "newPasswordPlaceholder": "New Password",
+      "confirmPasswordPlaceholder": "Confirm New Password",
+      "submitButton": "Reset Password",
+      "loading": "Updating...",
+      "successMessage": "Password Updated!",
+      "successDescription": "You can now login with your new password",
+      "rememberPassword": "Back to login?",
+      "loginLink": "Log in here"
     }
   }
 }

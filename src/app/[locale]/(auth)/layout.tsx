@@ -6,7 +6,10 @@ export default function AuthLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background to-black">
+    <div
+      className="flex items-center justify-center min-h-screen bg-gradient-to-br from-background
+        to-black"
+    >
       <div className="container relative min-h-screen flex items-center justify-center">
         <Spotlight />
         {children}

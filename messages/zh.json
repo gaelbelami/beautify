@@ -50,84 +50,135 @@
     "getStarted": "开始使用"
   },
   "SectionThree": {
-  "secureAuth": "安全认证",
-  "welcomeBack": "欢迎回来！",
-  "secureUserAccess": "安全用户访问",
-  "descriptionAuthenticated": "您正在使用企业级安全保护访问特权功能。请在下方管理您的会话和账户设置。",
-  "descriptionUnauthenticated": "体验安全无缝的身份管理系统认证。通过军用级加密和实时会话监控保护您的数据。",
-  "features": {
-    "encryptedSessions": "端到端加密会话",
-    "roleAccess": "基于角色的访问控制"
-  },
-  "signInToContinue": "登录以继续",
-  "chooseAuthMethod": "选择您的认证方式",
-  "continueSecureId": "使用安全ID继续",
-  "orUseDemo": "或使用演示凭证",
-  "demoAccount": "试用我们的演示账户：",
-  "demoUser": "用户: demo@example.com",
-  "logoutSession": "退出登录",
-  "sessionExpires": "会话将在24小时后过期",
-  "activeSession": "活跃会话"
+    "secureAuth": "安全认证",
+    "welcomeBack": "欢迎回来！",
+    "secureUserAccess": "安全用户访问",
+    "descriptionAuthenticated": "您正在使用企业级安全保护访问特权功能。请在下方管理您的会话和账户设置。",
+    "descriptionUnauthenticated": "体验安全无缝的身份管理系统认证。通过军用级加密和实时会话监控保护您的数据。",
+    "features": {
+      "encryptedSessions": "端到端加密会话",
+      "roleAccess": "基于角色的访问控制"
+    },
+    "signInToContinue": "登录以继续",
+    "chooseAuthMethod": "选择您的认证方式",
+    "continueSecureId": "使用安全ID继续",
+    "orUseDemo": "或使用演示凭证",
+    "demoAccount": "试用我们的演示账户：",
+    "demoUser": "用户: demo@example.com",
+    "logoutSession": "退出登录",
+    "sessionExpires": "会话将在24小时后过期",
+    "activeSession": "活跃会话"
   },
   "SectionFour": {
-      "headerLabel": "动态控制中心",
-      "title": "无缝主题与状态管理",
-      "description": "体验设计与功能的完美融合。我们直观的控制面板展示了组件间的实时状态同步，同时保持像素级的完美美学。",
-      "features": {
-        "themeSwitching": "即时主题切换，无布局偏移",
-        "stateManagement": "会话持久化状态管理"
-      },
-      "Counter": {
-        "title": "实时计数器演示",
-        "subtitle": "异步状态更新与持久化",
-        "persistenceText": "计数器状态在页面刷新和主题更改后仍然保持"
-      },
-      "Theme": {
-        "title": "主题自定义",
-        "subtitle": "实时主题预览"
-      }
+    "headerLabel": "动态控制中心",
+    "title": "无缝主题与状态管理",
+    "description": "体验设计与功能的完美融合。我们直观的控制面板展示了组件间的实时状态同步，同时保持像素级的完美美学。",
+    "features": {
+      "themeSwitching": "即时主题切换，无布局偏移",
+      "stateManagement": "会话持久化状态管理"
     },
-    "sectionTwo": {
-  "multiLanguageSupport": "多语言支持",
-  "globalExperienceLocalized": "全球体验，本地化",
-  "breakLanguageBarriers": "通过实时本地化打破语言障碍。在保持完美UI布局和排版的同时，轻松切换多种语言。",
-  "supportForRtlLtr": "支持RTL/LTR书写系统",
-  "automaticLocaleDetection": "提供自动语言检测",
-  "languagePreferences": "语言偏好",
-  "selectPreferredLanguage": "选择您首选的界面语言",
-  "combinedWith": "与...结合使用"
-},
-"auth": {
-  "validation": {
-    "firstname": {
-      "min": "名字必须至少包含3个字符"
+    "Counter": {
+      "title": "实时计数器演示",
+      "subtitle": "异步状态更新与持久化",
+      "persistenceText": "计数器状态在页面刷新和主题更改后仍然保持"
     },
-    "lastname": {
-      "min": "姓氏必须至少包含3个字符"
-    },
-    "email": "请输入有效的电子邮件地址",
-    "password": {
-      "min": "密码长度至少为8个字符",
-      "max": "密码长度不能超过64个字符",
-      "pattern": "密码只能包含字母和数字"
-    },
-    "confirmPassword": {
-      "match": "密码不匹配"
+    "Theme": {
+      "title": "主题自定义",
+      "subtitle": "实时主题预览"
     }
   },
-  "signin": {
-    "title": "欢迎回来",
-    "description": "登录以继续访问您的账户",
-    "emailLabel": "电子邮件地址",
-    "emailPlaceholder": "示例@example.com",
-    "passwordLabel": "密码",
-    "passwordPlaceholder": "••••••••",
-    "submitButton": "登录",
-    "forgotPassword": "忘记密码？",
-    "socialLoginLabel": "或使用其他方式登录",
-    "signupPrompt": "没有账户？",
-    "signupLink": "立即注册",
-    "loading": "正在验证..."
+  "sectionTwo": {
+    "multiLanguageSupport": "多语言支持",
+    "globalExperienceLocalized": "全球体验，本地化",
+    "breakLanguageBarriers": "通过实时本地化打破语言障碍。在保持完美UI布局和排版的同时，轻松切换多种语言。",
+    "supportForRtlLtr": "支持RTL/LTR书写系统",
+    "automaticLocaleDetection": "提供自动语言检测",
+    "languagePreferences": "语言偏好",
+    "selectPreferredLanguage": "选择您首选的界面语言",
+    "combinedWith": "与...结合使用"
+  },
+  "auth": {
+    "validation": {
+      "firstname": {
+        "min": "名字必须至少包含3个字符"
+      },
+      "lastname": {
+        "min": "姓氏必须至少包含3个字符"
+      },
+      "email": "请输入有效的电子邮件地址",
+      "password": {
+        "min": "密码长度至少为8个字符",
+        "max": "密码长度不能超过64个字符",
+        "pattern": "密码只能包含字母和数字"
+      },
+      "confirmPassword": {
+        "match": "密码不匹配"
+      }
+    },
+    "signin": {
+      "title": "欢迎回来",
+      "description": "登录以继续访问您的账户",
+      "emailLabel": "电子邮件地址",
+      "emailPlaceholder": "示例@example.com",
+      "passwordLabel": "密码",
+      "passwordPlaceholder": "••••••••",
+      "submitButton": "登录",
+      "forgotPassword": "忘记密码？",
+      "socialLoginLabel": "或使用其他方式登录",
+      "signupPrompt": "没有账户？",
+      "signupLink": "立即注册",
+      "loading": "正在验证..."
+    },
+    "signup": {
+      "headline": "注册",
+      "subheadline": "欢迎！",
+      "description": "创建账户以访问您的仪表板、管理活动并与社区联系。",
+      "submitButton": "使用邮箱注册",
+      "generateCode": "生成验证码",
+      "verifying": "邮箱验证中",
+      "or": "或继续使用",
+      "socialSignupLabel": "继续使用谷歌",
+      "otpPlaceholder": "输入验证码",
+      "loginPrompt": "已有账户？",
+      "loginLink": "登录",
+      "firstnamePlaceholder": "名字",
+      "lastnamePlaceholder": "姓氏",
+      "emailPlaceholder": "邮箱",
+      "passwordPlaceholder": "••••••••",
+      "confirmPasswordPlaceholder": "••••••••",
+      "placeholder": {
+        "role": {
+          "label": "角色",
+          "options": {
+            "creator": "内容创作者",
+            "learner": "学习者"
+          }
+        }
+      }
+    },
+    "forgotpassword": {
+      "title": "重置密码",
+      "description": "输入您的电子邮件",
+      "emailPlaceholder": "你的邮箱@example.com",
+      "submitButton": "发送重置链接",
+      "loading": "发送中...",
+      "successMessage": "邮件已发送！",
+      "checkEmail": "请检查您的收件箱以获取进一步说明",
+      "rememberPassword": "想起密码了？",
+      "loginLink": "立即登录"
+    },
+    "resetpassword": {
+      "title": "重设密码",
+      "description": "输入您的新密码",
+      "emailPlaceholder": "你的邮箱@example.com",
+      "newPasswordPlaceholder": "新密码",
+      "confirmPasswordPlaceholder": "确认新密码",
+      "submitButton": "重设密码",
+      "loading": "更新中...",
+      "successMessage": "密码更新成功！",
+      "successDescription": "您现在可以使用新密码登录",
+      "rememberPassword": "返回登录？",
+      "loginLink": "立即登录"
+    }
   }
-}
 }

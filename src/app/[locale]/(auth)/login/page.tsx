@@ -2,6 +2,7 @@
 import SignInForm from "@/components/forms/sign-in";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { Link } from "@/i18n/routing";
 import {
   IconBrandGithubFilled,
   IconBrandGoogleFilled,
@@ -9,14 +10,16 @@ import {
 
 import { AtSign, Grape, KeyRound, Mail } from "lucide-react";
 import { useTranslations } from "next-intl";
-import Link from "next/link";
 import React from "react";
 
 export default function LoginPage() {
   const t = useTranslations("auth.signin");
 
   return (
-    <div className="min-h-[calc(100vh-160px)] mx-auto px-4 flex items-center justify-center relative">
+    <div
+      className="min-h-[calc(100vh-160px)] max-w-7xl mx-auto px-4 flex items-center
+        justify-center relative"
+    >
       {/* Enhanced Background Pattern */}
       <div className="absolute inset-0 -z-10 opacity-15">
         <div

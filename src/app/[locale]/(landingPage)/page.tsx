@@ -23,18 +23,18 @@ function HomePage() {
     <div id="home-page">
       <main>
         {/* Scrollable container with snap scroll */}
-        <section id="section-1">
+        <section id="section-1" className="items-center justify-center">
           <Header />
           <Hero />
         </section>
         <section id="section-2">
-          <SectionFour />
+          <SectionTwo />
         </section>
         <section id="section-3">
           <SectionThree />
         </section>
         <section id="section-4">
-          <SectionTwo />
+          <SectionFour />
         </section>
         <section id="section-5">
           <SectionFive />

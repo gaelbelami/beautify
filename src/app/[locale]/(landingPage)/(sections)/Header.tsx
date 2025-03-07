@@ -30,9 +30,9 @@ export const Header = () => {
           <ArrowRight className="h-4 w-4 inline-flex justify-center items-center" />
         </div>
       </div> */}
-      <div className="container max-w-7xl mx-auto py-5">
+      <div className="container mx-auto py-5">
         <div className="flex items-center justify-between">
-          <div className="ç">
+          <div className="">
             <GrapeIcon className="h-8 w-8 text-primary" />
           </div>
           <MenuSquareIcon className="h-5 w-5 md:hidden" />
