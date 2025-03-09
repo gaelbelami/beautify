@@ -9,6 +9,7 @@ import { useAuthSignUp } from "@/hooks/authentication";
 import { useTranslations } from "next-intl";
 import dynamic from "next/dynamic";
 import { Loader } from "@/components/global/loader";
+import { useRouter } from "next/navigation";
 
 const OtpInput = dynamic(
   () =>
@@ -35,6 +36,7 @@ const SignUpForm = () => {
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
+    const router = useRouter();
     e.preventDefault();
     setIsLoading(true);
 
@@ -50,6 +52,7 @@ const SignUpForm = () => {
       name: getValues("firstname"),
       email: getValues("email"),
     });
+    router.push("/dashboard");
     setIsLoading(false);
   };
 

@@ -182,5 +182,16 @@
       "rememberPassword": "Back to login?",
       "loginLink": "Log in here"
     }
+  },
+  "sidebar": {
+    "home": "Home",
+    "settings": "Settings",
+    "profile": "Profile",
+    "events": "Events",
+    "logout": "Log Out"
+  },
+  "dashboard": {
+    "welcome": "Welcome to Your Dashboard",
+    "description": "Manage your account and activities here"
   }
 }
