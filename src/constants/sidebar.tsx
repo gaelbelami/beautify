@@ -4,34 +4,32 @@ import {
   IconSettings,
   IconUserBolt,
 } from "@tabler/icons-react";
-import { Calendar, Home, Inbox, Search, Settings } from "lucide-react";
 
-// Menu items.
 export const MenuItems = [
   {
-    label: "Dashboard",
-    href: "#",
+    label: "sidebar.home",
+    href: "/dashboard",
     icon: (
       <IconBrandTabler className="text-neutral-700 dark:text-neutral-200 h-5 w-5 shrink-0" />
     ),
   },
   {
-    label: "Profile",
-    href: "#",
+    label: "sidebar.profile",
+    href: "/dashboard/profile",
     icon: (
       <IconUserBolt className="text-neutral-700 dark:text-neutral-200 h-5 w-5 shrink-0" />
     ),
   },
   {
-    label: "Settings",
-    href: "#",
+    label: "sidebar.settings",
+    href: "/dashboard/settings",
     icon: (
       <IconSettings className="text-neutral-700 dark:text-neutral-200 h-5 w-5 shrink-0" />
     ),
   },
   {
-    label: "Logout",
-    href: "#",
+    label: "sidebar.logout",
+    href: "/login", // Or handle via onClick
     icon: (
       <IconArrowLeft className="text-neutral-700 dark:text-neutral-200 h-5 w-5 shrink-0" />
     ),

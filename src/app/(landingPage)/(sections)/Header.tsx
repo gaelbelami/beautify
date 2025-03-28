@@ -9,7 +9,8 @@ import {
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { useTranslations } from "next-intl";
-import { Link } from "@/i18n/routing";
+import Link from "next/link";
+// import { Link } from "@/i18n/routing";
 
 export const Header = () => {
   const translate = useTranslations("Header");
@@ -32,8 +33,16 @@ export const Header = () => {
       </div> */}
       <div className="container mx-auto py-5">
         <div className="flex items-center justify-between">
-          <div className="">
-            <GrapeIcon className="h-8 w-8 text-primary" />
+          <div className="flex items-center gap-2">
+            <div
+              className="h-9 w-10 bg-black border dark:border-primary/90 rounded-br-xl rounded-tr-sm
+                rounded-tl-xl rounded-bl-sm shrink-0 flex justify-center items-center"
+            >
+              <GrapeIcon className="w-5 h-5 text-primary" />
+            </div>
+            {/* <span className="text-primary font-bold text-2xl">
+              NAME
+            </span> */}
           </div>
           <MenuSquareIcon className="h-5 w-5 md:hidden" />
           <NavigationMenu className="hidden md:block">
@@ -55,7 +64,6 @@ export const Header = () => {
               ))}
             </NavigationMenuList>
           </NavigationMenu>
-
           {/* Mobile Menu Toggle */}
           <Button
             variant="ghost"
@@ -67,15 +75,16 @@ export const Header = () => {
           >
             <Menu className="h-5 w-5" />
           </Button>
-
           {/* Auth Actions */}
           <div className="hidden md:flex items-center gap-4">
             <Link href={"/login"} className="text-foreground/60">
               {translate("login")}
             </Link>
-            <Button className="rounded-full px-6">
-              {translate("getStarted")}
-            </Button>
+            <Link href={"/dashboard"}>
+              <Button className="rounded-full px-6">
+                {translate("getStarted")}
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

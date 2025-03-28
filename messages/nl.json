@@ -180,5 +180,58 @@
       "rememberPassword": "Terug naar login?",
       "loginLink": "Hier inloggen"
     }
+  },
+  "profile": {
+    "firstnameLabel": "Voornaam",
+    "firstnamePlaceholder": "Voer uw voornaam in",
+    "lastnameLabel": "Achternaam",
+    "lastnamePlaceholder": "Voer uw achternaam in",
+    "usernameLabel": "Gebruikersnaam",
+    "usernamePlaceholder": "jan_jansen",
+    "usernameDescription": "Dit is uw publieke weergavenaam. Het kan uw echte naam of een pseudoniem zijn. U kunt dit slechts eenmaal per 30 dagen wijzigen.",
+    "emailLabel": "E-mail",
+    "emailPlaceholder": "Voer uw e-mail in",
+    "emailDescription": "U kunt geverifieerde e-mailadressen beheren in uw e-mailinstellingen.",
+    "bioLabel": "Bio",
+    "bioPlaceholder": "Ik bezit een computer.",
+    "bioDescription": "U kunt andere gebruikers en organisaties noemen met @ om naar ze te linken.",
+    "urlsLabel": "URL's",
+    "urlsPlaceholder": "URL toevoegen",
+    "urlsDescription": "Voeg links toe naar uw website, blog of sociale media-profielen."
+  },
+  "account": {
+    "nameLabel": "Naam",
+    "namePlaceholder": "Jan Jansen",
+    "nameDescription": "Dit is de naam die wordt weergegeven in uw profiel en in e-mails.",
+    "dobLabel": "Geboortedatum",
+    "dobPlaceholder": "JJJJ-MM-DD",
+    "dobDescription": "Uw geboortedatum wordt gebruikt om uw leeftijd te berekenen.",
+    "languageLabel": "Taal",
+    "languagePlaceholder": "Selecteer uw taal",
+    "languageDescription": "Dit is de taal die wordt gebruikt in de applicatie-interface."
+  },
+  "validation": {
+    "username": {
+      "min": "Gebruikersnaam moet minimaal 2 tekens bevatten",
+      "max": "Gebruikersnaam mag niet langer zijn dan 30 tekens"
+    },
+    "email": {
+      "required": "E-mail is verplicht",
+      "invalid": "Ongeldig e-mailadres"
+    },
+    "bio": {
+      "min": "Bio moet minimaal 4 tekens bevatten",
+      "max": "Bio mag niet langer zijn dan 160 tekens"
+    },
+    "url": {
+      "invalid": "Voer een geldige URL in"
+    }
+  },
+  "sidebar": {
+    "home": "Home",
+    "settings": "Instellingen",
+    "profile": "Profiel",
+    "events": "Evenementen",
+    "logout": "Uitloggen"
   }
 }

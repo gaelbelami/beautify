@@ -1357,7 +1357,7 @@ export default function setGlobalThemeColorTheme(
         }
     }
 
-    if (theme.chart) {
+    if (theme?.chart) {
         for (const chartKey in theme.chart) {
             document.documentElement.style.setProperty(
                 `--chart-${chartKey}`,

@@ -1,13 +1,17 @@
 import type { Metadata } from "next";
-import "../globals.css";
+import "./globals.css";
 import { ThemeProvider as NextThemesProvider } from "next-themes";
 import { Roboto } from "next/font/google";
 import ThemeDataProvider from "@/context/theme-data-provider";
 import { NextIntlClientProvider } from "next-intl";
-import { routing } from "@/i18n/routing";
 import { notFound } from "next/navigation";
 import { getLocale, getMessages } from "next-intl/server";
 import { ReactQueryProvider } from "@/react-query/provider";
+import { Locale } from "@/services/locale";
+const jakarta = Roboto({
+  subsets: ["latin"],
+  weight: ["100", "300", "400", "500", "700", "900"],
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -22,16 +26,16 @@ export default async function RootLayout({
 }>) {
   const locale = await getLocale();
   // Ensure that the incoming `locale` is valid
-  if (!routing.locales.includes(locale as any)) {
-    notFound();
-  }
+  // if (Locale   .locales.includes(locale as any)) {
+  //   notFound();
+  // }
 
   // Providing all messages to the client
   const messages = await getMessages();
 
   return (
     <html lang={locale} suppressHydrationWarning>
-      <body className={" dark:bg-black antialiased"}>
+      <body className={`${jakarta.className} dark:bg-black antialiased`}>
         <NextThemesProvider
           attribute="class"
           defaultTheme="dark"

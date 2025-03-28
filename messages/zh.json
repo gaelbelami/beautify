@@ -113,6 +113,17 @@
       },
       "confirmPassword": {
         "match": "密码不匹配"
+      },
+      "username": {
+        "min": "用户名至少2个字符",
+        "max": "用户名不能超过30个字符"
+      },
+      "bio": {
+        "min": "个人简介至少4个字符",
+        "max": "个人简介不能超过160个字符"
+      },
+      "url": {
+        "invalid": "请输入有效的网址"
       }
     },
     "signin": {
@@ -180,5 +191,58 @@
       "rememberPassword": "返回登录？",
       "loginLink": "立即登录"
     }
+  },
+  "profile": {
+    "firstnameLabel": "名字",
+    "firstnamePlaceholder": "输入您的名字",
+    "lastnameLabel": "姓氏",
+    "lastnamePlaceholder": "输入您的姓氏",
+    "usernameLabel": "用户名",
+    "usernamePlaceholder": "张三",
+    "usernameDescription": "这是您的公开显示名称。可以是真实姓名或别名。每30天只能更改一次。",
+    "emailLabel": "电子邮件",
+    "emailPlaceholder": "输入您的电子邮件",
+    "emailDescription": "您可以在电子邮件设置中管理已验证的电子邮件地址。",
+    "bioLabel": "个人简介",
+    "bioPlaceholder": "我有一台电脑。",
+    "bioDescription": "您可以@提及其他用户和组织来链接到他们。",
+    "urlsLabel": "网址",
+    "urlsPlaceholder": "添加网址",
+    "urlsDescription": "添加指向您的网站、博客或社交媒体资料的链接。"
+  },
+  "account": {
+    "nameLabel": "姓名",
+    "namePlaceholder": "张三",
+    "nameDescription": "此名称将显示在您的个人资料和电子邮件中。",
+    "dobLabel": "出生日期",
+    "dobPlaceholder": "年年年年-月月-日日",
+    "dobDescription": "您的出生日期用于计算您的年龄。",
+    "languageLabel": "语言",
+    "languagePlaceholder": "选择您的语言",
+    "languageDescription": "这将是应用程序界面中使用的语言。"
+  },
+  "validation": {
+    "username": {
+      "min": "用户名至少2个字符",
+      "max": "用户名不能超过30个字符"
+    },
+    "email": {
+      "required": "必须填写电子邮件",
+      "invalid": "电子邮件格式无效"
+    },
+    "bio": {
+      "min": "个人简介至少4个字符",
+      "max": "个人简介不能超过160个字符"
+    },
+    "url": {
+      "invalid": "请输入有效的网址"
+    }
+  },
+  "sidebar": {
+    "home": "首页",
+    "settings": "设置",
+    "profile": "个人资料",
+    "events": "活动",
+    "logout": "退出登录"
   }
 }

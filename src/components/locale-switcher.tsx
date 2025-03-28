@@ -11,10 +11,9 @@ import {
 import { useLocale } from "next-intl";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import React, { useTransition } from "react";
+import React, { useEffect, useTransition } from "react";
 import { cn } from "@/lib/utils";
-import { setUserLocale } from "@/services/locale";
-import { Locale } from "@/i18n/routing";
+import { getUserLocale, Locale, setUserLocale } from "@/services/locale";
 
 const availableLocales = ["en", "fr", "de", "nl", "zh"] as const;
 
@@ -22,9 +21,10 @@ const LocalSwitcher = ({ className }: { className: string }) => {
   const [isPending, startTransition] = useTransition();
   const router = useRouter();
   const localActive = useLocale();
-  const onSelectChange = (localActive: Locale) => {
+  const onSelectChange = (localActive: string) => {
     startTransition(() => {
-      setUserLocale(localActive);
+      setUserLocale(localActive as Locale);
+      router.refresh();
     });
   };
   return (
@@ -37,11 +37,11 @@ const LocalSwitcher = ({ className }: { className: string }) => {
         <SelectTrigger
           className={cn(
             `"flex w-[] ring-offset-transparent focus:ring-transparent items-center text-base
-            capitalize rounded-md"`,
+            uppercase rounded-md"`,
             className,
           )}
         >
-          <div className="flex">
+          <div className="flex text-md font-medium">
             <Image
               src={`/flags/${localActive}.svg`}
               alt={localActive}
@@ -73,7 +73,7 @@ const LocalSwitcher = ({ className }: { className: string }) => {
                       height={20}
                     />
                   </div>
-                  <div className="text-base capitalize">{locale}</div>
+                  <div className="uppercase">{locale}</div>
                 </div>
               </SelectItem>
             ))}

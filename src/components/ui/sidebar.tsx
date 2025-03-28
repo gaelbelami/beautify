@@ -79,6 +79,7 @@ export const SidebarBody = (props: React.ComponentProps<typeof motion.div>) => {
   );
 };
 
+// In components/ui/sidebar.tsx
 export const DesktopSidebar = ({
   className,
   children,
@@ -89,15 +90,14 @@ export const DesktopSidebar = ({
     <>
       <motion.div
         className={cn(
-          `h-full px-4 py-4 hidden md:flex md:flex-col bg-neutral-100 dark:bg-neutral-800
-          w-[300px] shrink-0`,
+          `h-full px-4 py-4 hidden md:flex md:flex-col bg-neutral-100 dark:bg-neutral-900
+          rounded-2xl shadow-xl mr-4 w-[300px] shrink-0 relative`, // Added relative for positioning
           className,
         )}
         animate={{
-          width: animate ? (open ? "300px" : "60px") : "300px",
+          width: animate ? (open ? "300px" : "70px") : "300px",
         }}
-        onMouseEnter={() => setOpen(true)}
-        onMouseLeave={() => setOpen(false)}
+        // Remove onMouseEnter and onMouseLeave
         {...props}
       >
         {children}
@@ -160,10 +160,12 @@ export const MobileSidebar = ({
 
 export const SidebarLink = ({
   link,
+  label,
   className,
   ...props
 }: {
   link: Links;
+  label?: string;
   className?: string;
   props?: LinkProps;
 }) => {
@@ -172,7 +174,7 @@ export const SidebarLink = ({
     <Link
       href={link.href}
       className={cn(
-        "flex items-center justify-start gap-2 group/sidebar py-2",
+        "flex items-center justify-start gap-2 group/sidebar py-2 px-1 ",
         className,
       )}
       {...props}
@@ -185,9 +187,10 @@ export const SidebarLink = ({
           opacity: animate ? (open ? 1 : 0) : 1,
         }}
         className="text-neutral-700 dark:text-neutral-200 text-sm group-hover/sidebar:translate-x-1
-          transition duration-150 whitespace-pre inline-block !p-0 !m-0"
+          group-hover/sidebar:font-bold transition duration-150 whitespace-pre
+          inline-block !p-0 !m-0"
       >
-        {link.label}
+        {label}
       </motion.span>
     </Link>
   );

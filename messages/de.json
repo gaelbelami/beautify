@@ -180,5 +180,58 @@
       "rememberPassword": "Zurück zur Anmeldung?",
       "loginLink": "Hier anmelden"
     }
+  },
+  "profile": {
+    "firstnameLabel": "Vorname",
+    "firstnamePlaceholder": "Geben Sie Ihren Vornamen ein",
+    "lastnameLabel": "Nachname",
+    "lastnamePlaceholder": "Geben Sie Ihren Nachnamen ein",
+    "usernameLabel": "Nutzername",
+    "usernamePlaceholder": "max_mustermann",
+    "usernameDescription": "Dies ist Ihr öffentlicher Anzeigename. Es kann Ihr richtiger Name oder ein Pseudonym sein. Sie können dies nur alle 30 Tage ändern.",
+    "emailLabel": "E-Mail",
+    "emailPlaceholder": "Geben Sie Ihre E-Mail ein",
+    "emailDescription": "Sie können bestätigte E-Mail-Adressen in Ihren E-Mail-Einstellungen verwalten.",
+    "bioLabel": "Biografie",
+    "bioPlaceholder": "Ich besitze einen Computer.",
+    "bioDescription": "Sie können andere Benutzer und Organisationen mit @ erwähnen, um auf sie zu verlinken.",
+    "urlsLabel": "URLs",
+    "urlsPlaceholder": "URL hinzufügen",
+    "urlsDescription": "Fügen Sie Links zu Ihrer Website, Ihrem Blog oder Ihren Social-Media-Profilen hinzu."
+  },
+  "account": {
+    "nameLabel": "Name",
+    "namePlaceholder": "Max Mustermann",
+    "nameDescription": "Dies ist der Name, der in Ihrem Profil und in E-Mails angezeigt wird.",
+    "dobLabel": "Geburtsdatum",
+    "dobPlaceholder": "JJJJ-MM-TT",
+    "dobDescription": "Ihr Geburtsdatum wird zur Berechnung Ihres Alters verwendet.",
+    "languageLabel": "Sprache",
+    "languagePlaceholder": "Sprache auswählen",
+    "languageDescription": "Dies ist die Sprache, die in der Anwendungsoberfläche verwendet wird."
+  },
+  "validation": {
+    "username": {
+      "min": "Der Benutzername muss mindestens 2 Zeichen lang sein",
+      "max": "Der Benutzername darf nicht länger als 30 Zeichen sein"
+    },
+    "email": {
+      "required": "E-Mail ist erforderlich",
+      "invalid": "Ungültige E-Mail-Adresse"
+    },
+    "bio": {
+      "min": "Die Biografie muss mindestens 4 Zeichen lang sein",
+      "max": "Die Biografie darf nicht länger als 160 Zeichen sein"
+    },
+    "url": {
+      "invalid": "Bitte geben Sie eine gültige URL ein"
+    }
+  },
+  "sidebar": {
+    "home": "Startseite",
+    "settings": "Einstellungen",
+    "profile": "Profil",
+    "events": "Ereignisse",
+    "logout": "Abmelden"
   }
 }

@@ -114,6 +114,17 @@
       },
       "confirmPassword": {
         "match": "Les mots de passe ne correspondent pas"
+      },
+      "username": {
+        "min": "Le nom d'utilisateur doit contenir au moins 2 caractères",
+        "max": "Le nom d'utilisateur ne doit pas dépasser 30 caractères"
+      },
+      "bio": {
+        "min": "La biographie doit contenir au moins 4 caractères",
+        "max": "La biographie ne doit pas dépasser 160 caractères"
+      },
+      "url": {
+        "invalid": "Veuillez entrer une URL valide"
       }
     },
     "signin": {
@@ -181,5 +192,58 @@
       "rememberPassword": "Retour à la connexion ?",
       "loginLink": "Se connecter ici"
     }
+  },
+  "profile": {
+    "firstnameLabel": "Prénom",
+    "firstnamePlaceholder": "Entrez votre prénom",
+    "lastnameLabel": "Nom de famille",
+    "lastnamePlaceholder": "Entrez votre nom de famille",
+    "usernameLabel": "Nom d'utilisateur",
+    "usernamePlaceholder": "jean_dupont",
+    "usernameDescription": "Ceci est votre nom d'affichage public. Il peut s'agir de votre vrai nom ou d'un pseudonyme. Vous ne pouvez le modifier qu'une fois tous les 30 jours.",
+    "emailLabel": "E-mail",
+    "emailPlaceholder": "Entrez votre e-mail",
+    "emailDescription": "Vous pouvez gérer les adresses e-mail vérifiées dans vos paramètres de messagerie.",
+    "bioLabel": "Biographie",
+    "bioPlaceholder": "Je possède un ordinateur.",
+    "bioDescription": "Vous pouvez mentionner d'autres utilisateurs et organisations avec @ pour les lier.",
+    "urlsLabel": "URLs",
+    "urlsPlaceholder": "Ajouter une URL",
+    "urlsDescription": "Ajoutez des liens vers votre site Web, blog ou profils de réseaux sociaux."
+  },
+  "account": {
+    "nameLabel": "Nom",
+    "namePlaceholder": "Jean Dupont",
+    "nameDescription": "Ce nom sera affiché sur votre profil et dans les e-mails.",
+    "dobLabel": "Date de naissance",
+    "dobPlaceholder": "AAAA-MM-JJ",
+    "dobDescription": "Votre date de naissance est utilisée pour calculer votre âge.",
+    "languageLabel": "Langue",
+    "languagePlaceholder": "Sélectionnez votre langue",
+    "languageDescription": "Ceci est la langue qui sera utilisée dans l'interface de l'application."
+  },
+  "validation": {
+    "username": {
+      "min": "Le nom d'utilisateur doit contenir au moins 2 caractères",
+      "max": "Le nom d'utilisateur ne doit pas dépasser 30 caractères"
+    },
+    "email": {
+      "required": "L'e-mail est requis",
+      "invalid": "Adresse e-mail invalide"
+    },
+    "bio": {
+      "min": "La biographie doit contenir au moins 4 caractères",
+      "max": "La biographie ne doit pas dépasser 160 caractères"
+    },
+    "url": {
+      "invalid": "Veuillez entrer une URL valide"
+    }
+  },
+  "sidebar": {
+    "home": "Accueil",
+    "settings": "Paramètres",
+    "profile": "Profil",
+    "events": "Événements",
+    "logout": "Se déconnecter"
   }
 }
