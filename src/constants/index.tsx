@@ -21,9 +21,12 @@ import {
   SIGN_UP_FORM,
 } from "./forms";
 
+import { SIDEBAR_NAV_ITEMS, SidebarNavItemsProps } from "./sidebar";
+
 type BeautifyConstanstProps = {
   // Other constants
   projectName: string;
+  sideBarNavItems: SidebarNavItemsProps[];
 
   // Authentification forms
   signInForm: AuthFormProps[];
@@ -37,6 +40,7 @@ type BeautifyConstanstProps = {
 export const BEAUTIFY_CONSTANTS: BeautifyConstanstProps = {
   // Other constants
   projectName: "Beautify",
+  sideBarNavItems: SIDEBAR_NAV_ITEMS,
 
   // Authentication forms
   signInForm: SIGN_IN_FORM,

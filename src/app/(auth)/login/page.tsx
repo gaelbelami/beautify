@@ -1,8 +1,8 @@
 "use client";
 import SignInForm from "@/components/forms/sign-in";
+import { VarButton } from "@/components/global/var-button";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Link } from "@/i18n/routing";
 import {
   IconBrandGithubFilled,
   IconBrandGoogleFilled,
@@ -10,6 +10,7 @@ import {
 
 import { AtSign, Grape, KeyRound, Mail } from "lucide-react";
 import { useTranslations } from "next-intl";
+import Link from "next/link";
 import React from "react";
 
 export default function LoginPage() {
@@ -47,7 +48,7 @@ export default function LoginPage() {
       {/* Main Card */}
       <Card
         className="rounded-3xl shadow-xl w-full max-w-lg bg-background/70 backdrop-blur-lg border
-          border-border/20 mx-auto"
+          border-border/50 mx-auto p-8 relative"
       >
         {/* Card Decorative Elements */}
         <div className="absolute -right-20 -top-20 w-48 h-48 bg-primary/5 rounded-full blur-xl" />
@@ -74,6 +75,7 @@ export default function LoginPage() {
 
           {/* Login Form */}
           <SignInForm />
+          {/* <VarButton variant={"destructive"}>Hello</VarButton> */}
 
           {/* Social Login Section */}
           <div className="mt-8">

@@ -6,7 +6,7 @@ import { useTranslations } from "next-intl";
 
 import React from "react";
 import ForgotPasswordForm from "@/components/forms/forgot-password";
-import { Link } from "@/i18n/routing";
+import Link from "next/link";
 
 export default function ForgotPasswordPage() {
   const t = useTranslations("auth.forgotpassword");

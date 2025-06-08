@@ -3,13 +3,13 @@ import { FormGenerator } from "../../global/form-generator";
 import { Button } from "@/components/ui/button";
 import { useAuthStore } from "@/stores/authStore";
 import { useState } from "react";
-import { Link } from "@/i18n/routing";
 import { BEAUTIFY_CONSTANTS } from "@/constants";
 import { useAuthSignUp } from "@/hooks/authentication";
 import { useTranslations } from "next-intl";
 import dynamic from "next/dynamic";
 import { Loader } from "@/components/global/loader";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 const OtpInput = dynamic(
   () =>

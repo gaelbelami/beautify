@@ -9,7 +9,7 @@ import {
 import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 import { cn } from "@/lib/utils";
-import { MenuItems } from "@/constants/sidebar";
+import { MENU_ITEMS } from "@/constants/sidebar";
 import { useTranslations } from "next-intl";
 import { useAuthStore } from "@/stores/authStore";
 import { GrapeIcon } from "lucide-react";
@@ -47,7 +47,7 @@ export function AppSidebar() {
           {open ? <Logo /> : <LogoIcon />}
 
           <div className="mt-8 flex flex-col gap-2">
-            {MenuItems.map((link, idx) => {
+            {MENU_ITEMS.map((link, idx) => {
               // Check if current path starts with link href (for parent routes)
               const isParentActive = pathname.startsWith(link.href);
               // Check exact match for non-parent links

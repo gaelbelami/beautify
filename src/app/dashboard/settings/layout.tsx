@@ -3,34 +3,12 @@ import { Separator } from "@/components/ui/separator";
 import { Metadata } from "next";
 import { SidebarNav } from "./_components/sidebar-nav";
 import { usePathname } from "next/navigation";
+import { BEAUTIFY_CONSTANTS } from "@/constants";
 
 // export const metadata: Metadata = {
 //   title: "Forms",
 //   description: "Advanced form example using react-hook-form and Zod.",
 // };
-
-const sidebarNavItems = [
-  {
-    title: "Profile",
-    href: "/dashboard/settings",
-  },
-  {
-    title: "Account",
-    href: "/dashboard/settings/account",
-  },
-  {
-    title: "Theming",
-    href: "/dashboard/settings/theming",
-  },
-  {
-    title: "Notifications",
-    href: "/dashboard/settings/notifications",
-  },
-  {
-    title: "Display",
-    href: "/dashboard/settings/display",
-  },
-];
 
 interface SettingsLayoutProps {
   children: React.ReactNode;
@@ -54,7 +32,10 @@ export default function SettingsLayout({ children }: SettingsLayoutProps) {
       {/* Added opacity for consistency */}
       <div className="flex flex-col space-y-8 lg:flex-row lg:space-x-12 lg:space-y-0">
         <aside className="-mx-4 lg:w-1/5">
-          <SidebarNav items={sidebarNavItems} pathname={pathname} />
+          <SidebarNav
+            items={BEAUTIFY_CONSTANTS.sideBarNavItems}
+            pathname={pathname}
+          />
         </aside>
         <div className="flex-1 lg:max-w-3xl">
           {" "}

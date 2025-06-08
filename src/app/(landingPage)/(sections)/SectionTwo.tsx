@@ -45,33 +45,36 @@ export const SectionTwo = () => {
               transition={{ duration: 0.8 }}
               className="space-y-4"
             >
-              <span className="inline-flex items-center gap-2 text-sm text-primary font-medium">
+              {/* <span className="inline-flex items-center gap-2 text-sm text-primary font-medium">
                 <Globe className="w-4 h-4" />
                 {t("multiLanguageSupport")}
-              </span>
-              <h2
-                className="text-4xl font-bold tracking-tight bg-clip-text text-transparent
-                  bg-[linear-gradient(45deg,hsl(var(--primary)),hsl(var(--primary)/0.7))]"
-              >
-                {t("globalExperienceLocalized")}
-              </h2>
+              </span> */}
+              <div className="flex gap-4 items-center">
+                {/* <Globe className="w-8 h-8" /> */}
+                <h2
+                  className="text-4xl font-bold tracking-tight bg-clip-text text-transparent
+                    bg-[linear-gradient(45deg,hsl(var(--primary)),hsl(var(--primary)/0.7))]"
+                >
+                  {t("multiLanguageSupport")}
+                </h2>
+              </div>
             </motion.div>
 
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="space-y-6"
+              className="lg:space-y-48 space-y-8"
             >
-              <p className="text-lg text-muted-foreground leading-relaxed">
+              <p className="text-lg font-medium text-muted-foreground leading-relaxed">
                 {t("breakLanguageBarriers")}
               </p>
 
               <div className="space-y-4 text-muted-foreground">
-                <div className="flex items-center gap-3">
+                {/* <div className="flex items-center gap-3">
                   <Languages className="w-5 h-5 text-primary" />
                   <span className="flex-1">{t("breakLanguageBarriers")}</span>
-                </div>
+                </div> */}
                 <div className="flex items-center gap-3">
                   <Globe className="w-5 h-5 text-primary" />
                   <span className="flex-1">

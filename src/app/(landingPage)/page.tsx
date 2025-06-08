@@ -21,7 +21,7 @@ function HomePage() {
 
   return (
     <div id="home-page">
-      <main>
+      <main className="w-full max-w-[100vw] overflow-x-hidden px-4 md:px-8">
         {/* Scrollable container with snap scroll */}
         <section id="section-1" className="items-center justify-center">
           <Header />

@@ -2,7 +2,6 @@
 import SignUpForm from "@/components/forms/sign-up";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Link } from "@/i18n/routing";
 import {
   IconBrandGithubFilled,
   IconBrandGoogleFilled,
@@ -10,6 +9,7 @@ import {
 
 import { AtSign, Grape, KeyRound, Mail } from "lucide-react";
 import { useTranslations } from "next-intl";
+import Link from "next/link";
 import React from "react";
 
 export default function SignUpPage() {

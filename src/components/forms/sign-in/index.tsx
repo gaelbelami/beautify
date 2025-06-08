@@ -5,10 +5,10 @@ import { useAuthStore } from "@/stores/authStore";
 import { useState } from "react";
 import { KeyRound, Mail } from "lucide-react";
 import { Input } from "../../ui/input";
-import { Link } from "@/i18n/routing";
 import { Label } from "../../ui/label";
 import { BEAUTIFY_CONSTANTS } from "@/constants";
 import { useAuthSignIn } from "@/hooks/authentication";
+import Link from "next/link";
 
 const SignInForm = () => {
   const translate = useTranslations("auth.signin");

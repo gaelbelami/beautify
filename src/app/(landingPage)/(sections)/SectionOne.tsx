@@ -1,4 +1,5 @@
 "use client";
+
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Spotlight } from "@/components/ui/spotlight";
@@ -15,6 +16,9 @@ import {
 } from "lucide-react";
 import { useTranslations } from "next-intl";
 import React, { useState } from "react";
+import { TextEffect } from "../../../../components/motion-primitives/text-effect";
+import { AnimatedGroup } from "../../../../components/motion-primitives/animated-group";
+import Image from "next/image";
 
 export const Hero = () => {
   const t = useTranslations("Hero");
@@ -62,9 +66,11 @@ export const Hero = () => {
   };
 
   return (
-    <section className="min-h-[calc(100vh-100px)] px-4 sm:px-6 lg:px-8 py-20 md:py-36 lg:py-44 relative">
-      <Spotlight />
-      {/* Background Glow */}
+    <section className="min-h-screen px-4 sm:px-6 lg:px-40 py-20 relative container">
+      <div>
+        <Spotlight />
+      </div>
+
       <div
         className="absolute inset-0 -z-10 opacity-20
           [mask-image:radial-gradient(ellipse_at_center,white,transparent_70%)]"
@@ -76,48 +82,131 @@ export const Hero = () => {
         />
       </div>
 
-      <div className="container max-w-7xl mx-auto">
-        <div className="flex flex-col lg:flex-row items-center gap-12 xl:gap-16">
-          {/* Left Content */}
-          <div className="flex-1 max-w-3xl text-center lg:text-left">
-            <div
-              className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 text-primary rounded-full
-                text-sm mb-6"
+      <div className="container mx-auto max-w-7xl">
+        <div className="flex flex-col items-center gap-12 xl:gap-16">
+          <div className="max-w-3xl">
+            <AnimatedGroup
+              variants={{
+                container: {
+                  visible: {
+                    transition: {
+                      staggerChildren: 0.05,
+                      delayChildren: 0.75,
+                    },
+                  },
+                },
+                item: {
+                  hidden: { opacity: 0, y: 10, filter: "blur(4px)" },
+                  visible: {
+                    opacity: 1,
+                    y: 0,
+                    filter: "blur(0px)",
+                    transition: {
+                      duration: 1.2,
+                      type: "spring",
+                      bounce: 0.3,
+                    },
+                  },
+                },
+              }}
+              className=""
             >
-              <span>✨</span>
-              <span>{t("versionBadge")}</span>
+              <div
+                className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 text-primary rounded-full
+                  text-sm mb-6 text-left"
+              >
+                <span>✨</span>
+                <span>{t("versionBadge")}</span>
+              </div>
+            </AnimatedGroup>
+            <div className="text-center">
+              <AnimatedGroup
+                variants={{
+                  container: {
+                    visible: {
+                      transition: {
+                        staggerChildren: 0.05,
+                        delayChildren: 0.75,
+                      },
+                    },
+                  },
+                  item: {
+                    hidden: { opacity: 0, y: 15, filter: "blur(4px)" },
+                    visible: {
+                      opacity: 1,
+                      y: 0,
+                      filter: "blur(0px)",
+                      transition: {
+                        duration: 1.2,
+                        type: "spring",
+                        bounce: 0.3,
+                      },
+                    },
+                  },
+                }}
+                className=""
+              >
+                <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold tracking-tight">
+                  <span
+                    className="block md:inline-block md:mr-4 bg-gradient-to-r from-primary to-primary/80
+                      bg-clip-text text-transparent"
+                  >
+                    {t("titlePart1")}
+                  </span>
+                  <span
+                    className="block md:inline-block md:mx-4 text-5xl md:text-6xl lg:text-7xl bg-gradient-to-r
+                      from-secondary to-primary bg-clip-text text-transparent"
+                  >
+                    {t("titlePart2")}
+                  </span>
+                  <span
+                    className="block md:inline-block md:ml-4 mt-2 md:mt-0 bg-gradient-to-r from-primary
+                      to-secondary/80 bg-clip-text text-transparent"
+                  >
+                    {t("titlePart3")}
+                  </span>
+                </h1>
+              </AnimatedGroup>
+
+              <TextEffect
+                per="line"
+                preset="fade-in-blur"
+                speedSegment={0.3}
+                delay={0.3}
+                as="p"
+                className="mt-8 max-w-2xl text-pretty text-lg text-muted-foreground leading-relaxed mx-auto
+                  lg:mx-0"
+              >
+                {t("description")}
+              </TextEffect>
             </div>
 
-            {/* Split Title */}
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight">
-              <span
-                className="block md:inline-block md:mr-4 bg-gradient-to-r from-primary to-primary/80
-                  bg-clip-text text-transparent"
-              >
-                {t("titlePart1")}
-              </span>
-              <span
-                className="block md:inline-block md:mx-4 text-5xl md:text-6xl lg:text-7xl bg-gradient-to-r
-                  from-secondary to-primary bg-clip-text text-transparent"
-              >
-                {t("titlePart2")}
-              </span>
-              <span
-                className="block md:inline-block md:ml-4 mt-2 md:mt-0 bg-gradient-to-r from-primary
-                  to-secondary/80 bg-clip-text text-transparent"
-              >
-                {t("titlePart3")}
-              </span>
-            </h1>
-
-            <p
-              className="text-lg md:text-xl text-muted-foreground mt-6 leading-relaxed max-w-2xl mx-auto
-                lg:mx-0"
+            <AnimatedGroup
+              variants={{
+                container: {
+                  visible: {
+                    transition: {
+                      staggerChildren: 0.05,
+                      delayChildren: 0.75,
+                    },
+                  },
+                },
+                item: {
+                  hidden: { opacity: 0, y: 40, filter: "blur(4px)" },
+                  visible: {
+                    opacity: 1,
+                    y: 0,
+                    filter: "blur(0px)",
+                    transition: {
+                      duration: 1.2,
+                      type: "spring",
+                      bounce: 0.3,
+                    },
+                  },
+                },
+              }}
+              className="mt-12 flex justify-center flex-wrap gap-4"
             >
-              {t("description")}
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-4 mt-8 justify-center lg:justify-start">
               <Button size="lg" className="gap-2">
                 {t("ctaPrimary")}
                 <ArrowRightIcon className="h-4 w-4" />
@@ -125,12 +214,10 @@ export const Hero = () => {
               <Button variant="outline" size="lg">
                 {t("ctaSecondary")}
               </Button>
-            </div>
+            </AnimatedGroup>
           </div>
 
-          {/* Right Content - Interactive Card */}
-          <div className="flex-1 w-full max-w-2xl relative">
-            {/* Oval Glow Behind Card */}
+          {/* <div className="flex-1 w-full max-w-md relative">
             <div className="absolute -inset-8 -z-10">
               <div
                 className="absolute inset-0
@@ -139,12 +226,11 @@ export const Hero = () => {
               />
             </div>
 
-            {/* Transparent Card */}
             <Card
               className="relative bg-background/70 backdrop-blur-xl border border-border/30 rounded-3xl
                 p-6 shadow-2xl hover:shadow-primary/20 transition-shadow duration-300"
             >
-              <div className="grid grid-cols-3 gap-3">
+              <div className="flex gap-6">
                 {features.map((feature, index) => (
                   <Card
                     key={index}
@@ -169,7 +255,6 @@ export const Hero = () => {
                 ))}
               </div>
 
-              {/* Animated Description Panel */}
               <div className="mt-6 pt-4 border-t border-border/20 h-[100px] overflow-hidden">
                 <div className="relative h-full">
                   <div
@@ -185,10 +270,7 @@ export const Hero = () => {
                   </div>
 
                   {activeFeature !== null && (
-                    <div
-                      className={`absolute inset-0 transition-opacity duration-300
-                      ${activeFeature !== null ? "opacity-100" : "opacity-0"}`}
-                    >
+                    <div className="absolute inset-0 transition-opacity duration-300 opacity-100">
                       <h3 className="text-lg font-semibold text-primary">
                         {features[activeFeature].title}
                       </h3>
@@ -200,32 +282,84 @@ export const Hero = () => {
                 </div>
               </div>
             </Card>
-          </div>
+          </div> */}
         </div>
-      </div>
 
-      {/* Scroll indicator button */}
-      <div className="absolute bottom-16 left-1/2 -translate-x-1/2 z-20">
-        <Button
-          variant="ghost"
-          size="icon"
-          onClick={scrollToNext}
-          className="rounded-full h-12 w-12 bg-background/50 border border-border/50
-            hover:border-border hover:bg-background/80 backdrop-blur-lg transition-all
-            hover:scale-110 active:scale-95"
-          aria-label="Scroll down"
+        <AnimatedGroup
+          variants={{
+            container: {
+              visible: {
+                transition: {
+                  staggerChildren: 0.05,
+                  delayChildren: 0.75,
+                },
+              },
+            },
+            item: {
+              hidden: { opacity: 0, y: 40, filter: "blur(4px)" },
+              visible: {
+                opacity: 1,
+                y: 0,
+                filter: "blur(0px)",
+                transition: {
+                  duration: 1.2,
+                  type: "spring",
+                  bounce: 0.3,
+                },
+              },
+            },
+          }}
         >
-          <span className="border border-r-0 border-primary-foreground/10 px-2 rounded-lg text-sm">
-            {t("scrollAria.partOne")}
-          </span>
-          <span>
-            <Mouse className="h-6 w-6" />{" "}
-            <ChevronDown className="h-6 w-6 animate-bounce" />{" "}
-          </span>
-          <span className="border border-l-0 border-primary-foreground/10 px-2 rounded-lg text-sm">
-            {t("scrollAria.partTwo")}
-          </span>
-        </Button>
+          <div className="relative mt-28 md:40 px-2">
+            <div
+              aria-hidden
+              className="absolute inset-0 z-10 bg-gradient-to-b from-transparent dark:via-black/90
+                dark:to-black via-white/95 to-white"
+            />
+            <div
+              className="relative mx-auto max-w-5xl overflow-hidden rounded-2xl border p-4 dark:shadow-lg
+                bg-background"
+            >
+              <Image
+                className="aspect-[15/8] hidden dark:block rounded-2xl"
+                src="/boarding.jpeg"
+                alt="app screen"
+                width={2700}
+                height={1440}
+              />
+              <Image
+                className="aspect-[15/8] block dark:hidden rounded-2xl border"
+                src="/boarding-light.jpeg"
+                alt="app screen"
+                width={2700}
+                height={1440}
+              />
+            </div>
+          </div>
+          {/* Scroll indicator button */}
+          <div className="absolute bottom-32 left-1/2 -translate-x-1/2 z-20">
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={scrollToNext}
+              className="rounded-full h-12 w-12 bg-background/50 border border-border/50
+                hover:border-border hover:bg-background/80 backdrop-blur-lg transition-all
+                hover:scale-110 active:scale-95"
+              aria-label="Scroll down"
+            >
+              <span className="border border-r-0 border-primary-foreground/10 px-2 rounded-lg text-sm">
+                {t("scrollAria.partOne")}
+              </span>
+              <span>
+                <Mouse className="h-6 w-6" />{" "}
+                <ChevronDown className="h-6 w-6 animate-bounce" />{" "}
+              </span>
+              <span className="border border-l-0 border-primary-foreground/10 px-2 rounded-lg text-sm">
+                {t("scrollAria.partTwo")}
+              </span>
+            </Button>
+          </div>
+        </AnimatedGroup>
       </div>
     </section>
   );

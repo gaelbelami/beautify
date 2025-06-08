@@ -77,11 +77,11 @@ export const Header = () => {
           </Button>
           {/* Auth Actions */}
           <div className="hidden md:flex items-center gap-4">
-            <Link href={"/login"} className="text-foreground/60">
+            <Link href={"/login"} className="text-foreground/60 font-bold">
               {translate("login")}
             </Link>
             <Link href={"/dashboard"}>
-              <Button className="rounded-full px-6">
+              <Button className="rounded-md px-4 py-1 text-sm font-bold">
                 {translate("getStarted")}
               </Button>
             </Link>
