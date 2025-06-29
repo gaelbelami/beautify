@@ -2,12 +2,15 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { ThemeProvider as NextThemesProvider } from "next-themes";
 import { Roboto } from "next/font/google";
-import ThemeDataProvider from "@/context/theme-data-provider";
+import { ImprovedThemeProvider } from "@/context/improved-theme-provider";
 import { NextIntlClientProvider } from "next-intl";
 import { notFound } from "next/navigation";
 import { getLocale, getMessages } from "next-intl/server";
 import { ReactQueryProvider } from "@/react-query/provider";
 import { Locale } from "@/services/locale";
+
+// Initialize the new theme system on app start
+import '@/lib/theme-utils';
 const jakarta = Roboto({
   subsets: ["latin"],
   weight: ["100", "300", "400", "500", "700", "900"],
@@ -42,11 +45,11 @@ export default async function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <ThemeDataProvider>
+          <ImprovedThemeProvider>
             <NextIntlClientProvider messages={messages}>
               <ReactQueryProvider>{children}</ReactQueryProvider>
             </NextIntlClientProvider>
-          </ThemeDataProvider>
+          </ImprovedThemeProvider>
         </NextThemesProvider>
       </body>
     </html>

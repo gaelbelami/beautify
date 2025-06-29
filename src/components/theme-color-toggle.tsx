@@ -1,5 +1,9 @@
 "use client";
 
+// Legacy theme toggle - DEPRECATED
+// This file is kept for backward compatibility only
+// New implementations should use @/components/improved-theme-toggle
+
 import * as React from "react";
 import { useTheme } from "next-themes";
 import {
@@ -15,7 +19,10 @@ import { cn } from "./../lib/utils";
 import { useThemeContext } from "./../context/theme-data-provider";
 import ThemeModeToggle from "./theme-mode-toggle";
 import { Palette } from "lucide-react";
+import { ThemeColors } from '@/types/theme-types';
+import { AdvancedThemeToggle, ThemeColorPreview, ThemeSelector } from './improved-theme-toggle';
 
+// Legacy theme colors for backward compatibility
 export const availableThemeColors = [
   { name: "Orange", light: "bg-orange-500", dark: "bg-orange-700" },
   { name: "Slate", light: "bg-slate-500", dark: "bg-slate-700" },
@@ -41,7 +48,19 @@ export const availableThemeColors = [
   { name: "Rose", light: "bg-rose-500", dark: "bg-rose-700" },
 ];
 
+// Legacy component that wraps the new improved theme toggle
 export function ThemeColorToggle({ className }: { className?: string }) {
+  console.warn('ThemeColorToggle is deprecated. Use AdvancedThemeToggle from @/components/improved-theme-toggle instead.');
+  
+  // Use the new improved theme toggle with legacy styling
+  return (
+    <AdvancedThemeToggle className={className} />
+  );
+}
+
+// Legacy implementation kept for reference (commented out)
+/*
+export function LegacyThemeColorToggle({ className }: { className?: string }) {
   const { themeColor, setThemeColor } = useThemeContext();
   const { theme } = useTheme();
 
@@ -62,6 +81,7 @@ export function ThemeColorToggle({ className }: { className?: string }) {
       </SelectItem>
     ));
   };
+  
   return (
     <div>
       <Select
@@ -79,7 +99,6 @@ export function ThemeColorToggle({ className }: { className?: string }) {
               availableThemeColors.find((color) => color.name === themeColor)
                 ?.name
             }
-            {/* <Palette className="w-5 h-5 mr-2" /> */}
           </SelectValue>
         </SelectTrigger>
         <SelectContent className="w-[500px]">
@@ -94,27 +113,9 @@ export function ThemeColorToggle({ className }: { className?: string }) {
         </SelectContent>
       </Select>
     </div>
-    // <div>
-    //   <Select
-    //     onValueChange={(value) => setThemeColor(value as ThemeColors)}
-    //     defaultValue={themeColor}
-    //   >
-    //     <SelectTrigger className="w-[100px] ring-offset-transparent focus:ring-transparent">
-    //       <SelectValue placeholder="Select Color">
-    //         {
-    //           availableThemeColors.find((color) => color.name === themeColor)
-    //             ?.name
-    //         }
-    //       </SelectValue>
-    //     </SelectTrigger>
-    //     <SelectContent className="w-[250px]">
-    //       <SelectGroup>
-    //         <SelectLabel>Theme Color</SelectLabel>
-    //         <div className="grid-cols-3">{createSelectItem()}</div>
-    //       </SelectGroup>
-    //       <ThemeModeToggle />
-    //     </SelectContent>
-    //   </Select>
-    // </div>
   );
 }
+*/
+
+// Re-export new components for easy migration
+export { AdvancedThemeToggle, ThemeColorPreview, ThemeSelector };
