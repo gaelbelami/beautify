@@ -214,7 +214,7 @@ export const createTheme = (
     cardForeground: neutral[50],
     popover: neutral[950],
     popoverForeground: neutral[50],
-    primary: primary[100],
+    primary: primary[500],
     primaryForeground: neutral[900],
     secondary: neutral[800],
     secondaryForeground: neutral[50],
