@@ -1,8 +1,6 @@
-type ThemeColors =
+export type ThemeColors = 
   | "Orange"
   | "Slate"
-  | "Gray"
-  | "Zinc"
   | "Neutral"
   | "Stone"
   | "Red"

@@ -1,16 +1,19 @@
+import "@/lib/polyfills";
+
 import type { Metadata } from "next";
 import "./globals.css";
 import { ThemeProvider as NextThemesProvider } from "next-themes";
 import { Roboto } from "next/font/google";
-import { ImprovedThemeProvider } from "@/context/improved-theme-provider";
+import { ImprovedThemeProvider } from "@/context/theme-provider";
 import { NextIntlClientProvider } from "next-intl";
 import { notFound } from "next/navigation";
 import { getLocale, getMessages } from "next-intl/server";
 import { ReactQueryProvider } from "@/react-query/provider";
 import { Locale } from "@/services/locale";
+import { Toaster } from "sonner";
 
 // Initialize the new theme system on app start
-import '@/lib/theme-utils';
+import "@/lib/theme-utils";
 const jakarta = Roboto({
   subsets: ["latin"],
   weight: ["100", "300", "400", "500", "700", "900"],
@@ -47,7 +50,10 @@ export default async function RootLayout({
         >
           <ImprovedThemeProvider>
             <NextIntlClientProvider messages={messages}>
-              <ReactQueryProvider>{children}</ReactQueryProvider>
+              <ReactQueryProvider>
+                {children}
+                <Toaster richColors position="top-right" />
+              </ReactQueryProvider>
             </NextIntlClientProvider>
           </ImprovedThemeProvider>
         </NextThemesProvider>

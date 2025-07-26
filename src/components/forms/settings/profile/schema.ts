@@ -17,11 +17,4 @@ export const profileFormSchema = z.object({
     }),
   email: z.string().email("auth.validation.email"),
   bio: z.string().max(160, {message: "auth.validation.bio.min"}).min(4, {message: "auth.validation.bio.min"}),
-  urls: z
-    .array(
-      z.object({
-        value: z.string().url({ message: "auth.validation.url" }),
-      })
-    )
-    .optional(),
 })

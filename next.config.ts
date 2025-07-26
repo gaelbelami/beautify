@@ -6,6 +6,11 @@ const withNextIntl = createNextIntlPlugin();
 
 const nextConfig: NextConfig = {
   /* config options here */
+  transpilePackages: [],
+  compiler: {
+    // Remove console logs in production for better performance
+    removeConsole: process.env.NODE_ENV === 'production',
+  },
 };
  
 export default withNextIntl(nextConfig);

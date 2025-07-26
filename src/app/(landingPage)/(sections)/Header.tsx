@@ -10,18 +10,19 @@ import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
+import { EnhancedToggles } from "@/components/enhanced-toggles";
 // import { Link } from "@/i18n/routing";
 
 export const Header = () => {
   const translate = useTranslations("Header");
   const platformLinks = [
-    { name: translate("nav.features"), href: "#features" },
+    { name: translate("nav.features"), href: "/features" },
     { name: translate("nav.docs"), href: "#docs" },
-    { name: translate("nav.pricing"), href: "#pricing" },
-    { name: translate("nav.blog"), href: "#blog" },
+    // { name: translate("nav.pricing"), href: "#pricing" },
+    // { name: translate("nav.blog"), href: "#blog" },
   ];
   return (
-    <header className="backdrop-blur-sm z-20">
+    <header className="fixed top-0 left-0 right-0 backdrop-blur-sm z-20">
       {/* <div className="flex justify-center items-center py-3 bg-black text-white text-sm gap-3">
         <p className="text-white/60 hidden md:block">
           Streamline your workflow and boost your productivity
@@ -35,8 +36,8 @@ export const Header = () => {
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
             <div
-              className="h-9 w-10 bg-black border dark:border-primary/90 rounded-br-xl rounded-tr-sm
-                rounded-tl-xl rounded-bl-sm shrink-0 flex justify-center items-center"
+              className="h-9 w-10 border dark:border-primary/90 rounded-br-xl rounded-tr-sm rounded-tl-xl
+                rounded-bl-sm shrink-0 flex justify-center items-center"
             >
               <GrapeIcon className="w-5 h-5 text-primary" />
             </div>
@@ -75,8 +76,10 @@ export const Header = () => {
           >
             <Menu className="h-5 w-5" />
           </Button>
-          {/* Auth Actions */}
+          {/* Theme Toggles and Auth Actions */}
           <div className="hidden md:flex items-center gap-4">
+            <EnhancedToggles />
+            <div className="h-6 w-px bg-border" />
             <Link href={"/login"} className="text-foreground/60 font-bold">
               {translate("login")}
             </Link>

@@ -184,15 +184,6 @@ export const PROFILE_FORM: ProfileFormProps[] = [
     type: "text",
     placeholder: "profile.bioPlaceholder",
     description: "profile.bioDescription"
-  },
-  {
-    id: "urls",
-    inputType: "array",
-    name: "urls",
-    label: "profile.urlsLabel",
-    type: "url",
-    placeholder: "profile.urlsPlaceholder",
-    description: "profile.urlsDescription"
   }
 ];
 

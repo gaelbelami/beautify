@@ -1,11 +1,4 @@
-import {
-  Icon,
-  IconArrowLeft,
-  IconBrandTabler,
-  IconProps,
-  IconSettings,
-  IconUserBolt,
-} from "@tabler/icons-react";
+import { Icon, IconHome2, IconProps, IconSettings } from "@tabler/icons-react";
 import { ForwardRefExoticComponent, RefAttributes } from "react";
 
 export type SidebarNavItemsProps = {
@@ -48,29 +41,16 @@ export const MENU_ITEMS: MenuItemsProps[] = [
   {
     label: "sidebar.home",
     href: "/dashboard",
-    icon: (
-      <IconBrandTabler className="text-neutral-700 dark:text-neutral-200 h-5 w-5 shrink-0" />
-    ),
+    icon: IconHome2,
   },
-  // {
-  //   label: "sidebar.profile",
-  //   href: "/dashboard/profile",
-  //   icon: (
-  //     <IconUserBolt className="text-neutral-700 dark:text-neutral-200 h-5 w-5 shrink-0" />
-  //   ),
-  // },
   {
     label: "sidebar.settings",
     href: "/dashboard/settings",
-    icon: (
-      <IconSettings className="text-neutral-700 dark:text-neutral-200 h-5 w-5 shrink-0" />
-    ),
+    icon: IconSettings,
   },
-  {
-    label: "sidebar.logout",
-    href: "/login", // Or handle via onClick
-    icon: (
-      <IconArrowLeft className="text-neutral-700 dark:text-neutral-200 h-5 w-5 shrink-0" />
-    ),
-  },
+  // {
+  //   label: "sidebar.logout",
+  //   href: "/login", // Or handle via onClick
+  //   icon: IconArrowLeft,
+  // },
 ];

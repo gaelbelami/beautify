@@ -2,8 +2,6 @@
 export type ThemeColor = string;
 export type ThemeColors = 
   | "Slate"
-  | "Gray"
-  | "Zinc"
   | "Neutral"
   | "Stone"
   | "Red"

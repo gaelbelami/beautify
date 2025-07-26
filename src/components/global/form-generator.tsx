@@ -160,7 +160,7 @@ export const FormGenerator = ({
         <Label htmlFor={`input-${label}`} className="flex flex-col gap-2">
           {label && translate(label)}
           <Textarea
-            className="bg-primary/5 border-primary/20 text-primary-foreground"
+            className="bg-primary/5 border-primary/20"
             id={`input-${label}`}
             placeholder={translate(placeholder)}
             {...register(name)}

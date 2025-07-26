@@ -4,21 +4,29 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Spotlight } from "@/components/ui/spotlight";
 import {
-  ArrowRightIcon,
   Languages,
   LockIcon,
   LogInIcon,
   MoreHorizontalIcon,
   Sun,
   Palette,
-  ChevronDown,
-  Mouse,
+  Terminal,
+  ArrowRight,
+  PlayIcon,
 } from "lucide-react";
 import { useTranslations } from "next-intl";
 import React, { useState } from "react";
 import { TextEffect } from "../../../../components/motion-primitives/text-effect";
 import { AnimatedGroup } from "../../../../components/motion-primitives/animated-group";
-import Image from "next/image";
+import Link from "next/link";
+import { motion } from "motion/react";
+import {
+  Modal,
+  ModalBody,
+  ModalContent,
+  ModalTrigger,
+} from "@/components/ui/animated-modal";
+import { VideoPlayer } from "@/components/global/video-player";
 
 export const Hero = () => {
   const t = useTranslations("Hero");
@@ -66,7 +74,7 @@ export const Hero = () => {
   };
 
   return (
-    <section className="min-h-screen px-4 sm:px-6 lg:px-40 py-20 relative container">
+    <section className="min-h-screen py-20 relative overflow-hidden">
       <div>
         <Spotlight />
       </div>
@@ -180,44 +188,40 @@ export const Hero = () => {
                 {t("description")}
               </TextEffect>
             </div>
-
-            <AnimatedGroup
-              variants={{
-                container: {
-                  visible: {
-                    transition: {
-                      staggerChildren: 0.05,
-                      delayChildren: 0.75,
-                    },
-                  },
-                },
-                item: {
-                  hidden: { opacity: 0, y: 40, filter: "blur(4px)" },
-                  visible: {
-                    opacity: 1,
-                    y: 0,
-                    filter: "blur(0px)",
-                    transition: {
-                      duration: 1.2,
-                      type: "spring",
-                      bounce: 0.3,
-                    },
-                  },
-                },
-              }}
-              className="mt-12 flex justify-center flex-wrap gap-4"
+            {/* CTA Section */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.5 }}
+              className="text-center mt-16"
             >
-              <Button size="lg" className="gap-2">
-                {t("ctaPrimary")}
-                <ArrowRightIcon className="h-4 w-4" />
-              </Button>
-              <Button variant="outline" size="lg">
-                {t("ctaSecondary")}
-              </Button>
-            </AnimatedGroup>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <Link href="/features">
+                  <Button size="lg" className="group">
+                    <Terminal className="w-4 h-4 mr-2" />
+                    {t("ctaPrimary")}
+                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                  </Button>
+                </Link>
+
+                <Modal>
+                  <ModalTrigger className="group/modal-btn">
+                    <Button size="lg" variant="outline" className="group">
+                      <PlayIcon className="w-4 h-4 mr-2 group-hover:translate-x-1 transition-transform" />
+                      {t("ctaSecondary")}
+                    </Button>
+                  </ModalTrigger>
+                  <ModalBody>
+                    <ModalContent>
+                      <VideoPlayer videoSrc={"/leaf.mp4"} />
+                    </ModalContent>
+                  </ModalBody>
+                </Modal>
+              </div>
+            </motion.div>
           </div>
 
-          {/* <div className="flex-1 w-full max-w-md relative">
+          <div className="flex-1 w-full max-w-3xl relative">
             <div className="absolute -inset-8 -z-10">
               <div
                 className="absolute inset-0
@@ -227,7 +231,7 @@ export const Hero = () => {
             </div>
 
             <Card
-              className="relative bg-background/70 backdrop-blur-xl border border-border/30 rounded-3xl
+              className="relative bg-background/70 backdrop-blur-xl border-2 border-border/30 rounded-3xl
                 p-6 shadow-2xl hover:shadow-primary/20 transition-shadow duration-300"
             >
               <div className="flex gap-6">
@@ -282,7 +286,7 @@ export const Hero = () => {
                 </div>
               </div>
             </Card>
-          </div> */}
+          </div>
         </div>
 
         <AnimatedGroup
@@ -310,7 +314,8 @@ export const Hero = () => {
             },
           }}
         >
-          <div className="relative mt-28 md:40 px-2">
+          <div></div>
+          {/* <div className="relative mt-28 md:40 px-2">
             <div
               aria-hidden
               className="absolute inset-0 z-10 bg-gradient-to-b from-transparent dark:via-black/90
@@ -335,9 +340,9 @@ export const Hero = () => {
                 height={1440}
               />
             </div>
-          </div>
+          </div> */}
           {/* Scroll indicator button */}
-          <div className="absolute bottom-32 left-1/2 -translate-x-1/2 z-20">
+          {/* <div className="absolute bottom-32 left-1/2 -translate-x-1/2 z-20">
             <Button
               variant="ghost"
               size="icon"
@@ -358,8 +363,49 @@ export const Hero = () => {
                 {t("scrollAria.partTwo")}
               </span>
             </Button>
-          </div>
+          </div> */}
         </AnimatedGroup>
+        {/* CTA Section */}
+        {/* <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.5 }}
+          className="text-center bottom-0"
+        >
+          <div className="flex flex-col sm:flex-row gap-20 justify-center items-center">
+            <Link href="/features">
+              <div className="group flex items-center text-sm">
+                <Terminal className="w-4 h-4 mr-2" />
+                Explore All Features
+                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+              </div>
+            </Link>
+            <Link href="/docs">
+              <div className="group flex items-center text-sm">
+                View Documentation
+              </div>
+            </Link>
+          </div>
+        </motion.div> */}
+      </div>
+
+      {/* Glowing Half-Arc Background Effect */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        <div
+          className="absolute -bottom-[300px] left-1/2 -translate-x-1/2 w-[1200px] h-[400px]
+            bg-gradient-to-t from-primary/40 via-primary/20 to-transparent rounded-full
+            blur-3xl"
+        />
+        <div
+          className="absolute -bottom-[250px] left-1/2 -translate-x-1/2 w-[1000px] h-[350px]
+            bg-gradient-to-t from-primary/30 via-primary/15 to-transparent rounded-full
+            blur-2xl"
+        />
+        <div
+          className="absolute -bottom-[200px] left-1/2 -translate-x-1/2 w-[800px] h-[300px]
+            bg-gradient-to-t from-primary/20 via-primary/10 to-transparent rounded-full
+            blur-xl"
+        />
       </div>
     </section>
   );

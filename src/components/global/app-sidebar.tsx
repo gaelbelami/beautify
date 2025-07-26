@@ -12,18 +12,41 @@ import { cn } from "@/lib/utils";
 import { MENU_ITEMS } from "@/constants/sidebar";
 import { useTranslations } from "next-intl";
 import { useAuthStore } from "@/stores/authStore";
-import { GrapeIcon } from "lucide-react";
+import { useCurrentUser } from "@/hooks/api/useAuth";
+import { GrapeIcon, LogOut, Settings, User } from "lucide-react";
 import { BEAUTIFY_CONSTANTS } from "@/constants";
 import { usePathname } from "next/navigation";
+import { useRouter } from "next/navigation";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 export function AppSidebar() {
   const pathname = usePathname();
-  console.log(pathname);
-  const { logout } = useAuthStore();
+  const router = useRouter();
+  const { logout, user: authUser } = useAuthStore();
+  const { data: currentUser } = useCurrentUser();
 
-  const handleLogout = () => {
-    logout();
-    // Optionally redirect if not handled by auth store
+  // Use current user data from React Query or fallback to auth store
+  const user = currentUser || authUser;
+
+  const handleLogout = async () => {
+    await logout();
+    router.push("/login");
+  };
+
+  const handleProfileClick = () => {
+    router.push("/dashboard/settings");
+  };
+
+  const handleAccountClick = () => {
+    router.push("/dashboard/settings/account");
   };
   // Initialize state with localStorage value
   const translate = useTranslations("");
@@ -47,22 +70,28 @@ export function AppSidebar() {
           {open ? <Logo /> : <LogoIcon />}
 
           <div className="mt-8 flex flex-col gap-2">
-            {MENU_ITEMS.map((link, idx) => {
+            {MENU_ITEMS.map((item, idx) => {
               // Check if current path starts with link href (for parent routes)
-              const isParentActive = pathname.startsWith(link.href);
+              const isParentActive = pathname.startsWith(item.href);
               // Check exact match for non-parent links
-              const isExactMatch = pathname === link.href;
+              const isExactMatch = pathname === item.href;
 
               const isActive =
-                link.href === "/dashboard/settings"
+                item.href === "/dashboard/settings"
                   ? isParentActive
                   : isExactMatch;
+
+              const linkItem = {
+                label: item.label,
+                href: item.href,
+                icon: item.icon ? <item.icon className="h-5 w-5" /> : undefined,
+              };
 
               return (
                 <SidebarLink
                   key={idx}
-                  link={link}
-                  label={translate(link.label)}
+                  link={linkItem}
+                  label={translate(item.label)}
                   className={cn(
                     "transition-colors hover:text-white",
                     isActive
@@ -75,13 +104,71 @@ export function AppSidebar() {
           </div>
         </div>
         <div>
-          <SidebarLink
-            link={{
-              label: "John Doe",
-              href: "#",
-              icon: <IconUser />,
-            }}
-          />
+          {user ? (
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <div
+                  className="flex items-center space-x-3 p-2 rounded-lg hover:bg-accent cursor-pointer
+                    transition-colors"
+                >
+                  <Avatar className="h-8 w-8">
+                    <AvatarImage src={user.avatar} alt={user.name} />
+                    <AvatarFallback className="bg-primary text-primary-foreground">
+                      {user.name
+                        ?.split(" ")
+                        .map((n) => n[0])
+                        .join("")
+                        .toUpperCase() || "U"}
+                    </AvatarFallback>
+                  </Avatar>
+                  {open && (
+                    <div className="flex flex-col min-w-0">
+                      <span className="text-sm font-medium truncate">
+                        {user.name}
+                      </span>
+                      <span className="text-xs text-muted-foreground truncate">
+                        {user.email}
+                      </span>
+                    </div>
+                  )}
+                </div>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end" className="w-56">
+                <DropdownMenuLabel>
+                  <div className="flex flex-col space-y-1">
+                    <p className="text-sm font-medium leading-none">
+                      {user.name}
+                    </p>
+                    <p className="text-xs leading-none text-muted-foreground">
+                      {user.email}
+                    </p>
+                  </div>
+                </DropdownMenuLabel>
+                <DropdownMenuSeparator />
+                <DropdownMenuItem onClick={handleProfileClick}>
+                  <User className="mr-2 h-4 w-4" />
+                  <span>Profile</span>
+                </DropdownMenuItem>
+                <DropdownMenuItem onClick={handleAccountClick}>
+                  <Settings className="mr-2 h-4 w-4" />
+                  <span>Account Settings</span>
+                </DropdownMenuItem>
+                <DropdownMenuSeparator />
+                <DropdownMenuItem onClick={handleLogout}>
+                  <LogOut className="mr-2 h-4 w-4" />
+                  <span>Log out</span>
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
+          ) : (
+            <SidebarLink
+              link={{
+                label: "Guest User",
+                href: "/login",
+                icon: <IconUser />,
+              }}
+            />
+          )}
         </div>
 
         {/* Floating Toggle Button */}

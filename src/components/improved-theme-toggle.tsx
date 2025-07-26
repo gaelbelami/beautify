@@ -1,8 +1,15 @@
-'use client';
+"use client";
 
-import * as React from 'react';
-import { useTheme } from 'next-themes';
-import { Check, Palette, Download, Upload, RotateCcw, Loader2 } from 'lucide-react';
+import * as React from "react";
+import { useTheme } from "next-themes";
+import {
+  Check,
+  Palette,
+  Download,
+  Upload,
+  RotateCcw,
+  Loader2,
+} from "lucide-react";
 import {
   Select,
   SelectContent,
@@ -11,7 +18,7 @@ import {
   SelectLabel,
   SelectTrigger,
   SelectValue,
-} from '@/components/ui/select';
+} from "@/components/ui/select";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -19,48 +26,47 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { cn } from '@/lib/utils';
-import { useImprovedTheme } from '@/context/improved-theme-provider';
-import { primitiveColors } from '@/lib/design-tokens';
+} from "@/components/ui/dropdown-menu";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { cn } from "@/lib/utils";
+import { useImprovedTheme } from "@/context/theme-provider";
+import { primitiveColors } from "@/lib/design-tokens";
 
 // Theme color preview component
-const ThemeColorPreview = ({ 
-  colorName, 
-  isSelected, 
-  onClick 
-}: { 
+const ThemeColorPreview = ({
+  colorName,
+  isSelected,
+  onClick,
+}: {
   colorName: string;
   isSelected: boolean;
   onClick: () => void;
 }) => {
   const { theme } = useTheme();
   const colorValue = primitiveColors[colorName as keyof typeof primitiveColors];
-  
+
   if (!colorValue) return null;
-  
-  const previewColor = theme === 'dark' ? colorValue[400] : colorValue[600];
-  
+
+  const previewColor = theme === "dark" ? colorValue[400] : colorValue[600];
+
   return (
     <button
       onClick={onClick}
       className={cn(
-        'relative flex items-center gap-3 w-full p-3 rounded-lg border-2 transition-all duration-200 hover:scale-105',
-        isSelected 
-          ? 'border-primary bg-primary/5 shadow-md' 
-          : 'border-border hover:border-primary/50 hover:bg-accent/50'
+        `relative flex items-center gap-3 w-full p-3 rounded-lg border-2 transition-all
+        duration-200 hover:scale-105`,
+        isSelected
+          ? "border-primary bg-primary/5 shadow-md"
+          : "border-border hover:border-primary/50 hover:bg-accent/50",
       )}
     >
-      <div 
+      <div
         className="w-6 h-6 rounded-full border-2 border-white shadow-sm"
         style={{ backgroundColor: previewColor }}
       />
       <span className="font-medium capitalize">{colorName}</span>
-      {isSelected && (
-        <Check className="w-4 h-4 ml-auto text-primary" />
-      )}
+      {isSelected && <Check className="w-4 h-4 ml-auto text-primary" />}
     </button>
   );
 };
@@ -76,28 +82,31 @@ export function ImprovedThemeToggle({ className }: { className?: string }) {
     isLoading,
     resetToDefault,
     exportTheme,
-    importTheme
+    importTheme,
   } = useImprovedTheme();
-  
+
   const [isOpen, setIsOpen] = React.useState(false);
   const [isExporting, setIsExporting] = React.useState(false);
   const fileInputRef = React.useRef<HTMLInputElement>(null);
 
   // Handle theme selection
-  const handleThemeSelect = React.useCallback((themeName: string) => {
-    setThemeColor(themeName as any);
-    setIsOpen(false);
-  }, [setThemeColor]);
+  const handleThemeSelect = React.useCallback(
+    (themeName: string) => {
+      setThemeColor(themeName as any);
+      setIsOpen(false);
+    },
+    [setThemeColor],
+  );
 
   // Handle theme export
   const handleExport = React.useCallback(async () => {
     setIsExporting(true);
     try {
       const themeData = exportTheme();
-      const blob = new Blob([themeData], { type: 'application/json' });
+      const blob = new Blob([themeData], { type: "application/json" });
       const url = URL.createObjectURL(blob);
-      
-      const a = document.createElement('a');
+
+      const a = document.createElement("a");
       a.href = url;
       a.download = `beautify-theme-${themeColor}-${Date.now()}.json`;
       document.body.appendChild(a);
@@ -105,39 +114,42 @@ export function ImprovedThemeToggle({ className }: { className?: string }) {
       document.body.removeChild(a);
       URL.revokeObjectURL(url);
     } catch (error) {
-      console.error('Failed to export theme:', error);
+      console.error("Failed to export theme:", error);
     } finally {
       setIsExporting(false);
     }
   }, [exportTheme, themeColor]);
 
   // Handle theme import
-  const handleImport = React.useCallback((event: React.ChangeEvent<HTMLInputElement>) => {
-    const file = event.target.files?.[0];
-    if (!file) return;
+  const handleImport = React.useCallback(
+    (event: React.ChangeEvent<HTMLInputElement>) => {
+      const file = event.target.files?.[0];
+      if (!file) return;
 
-    const reader = new FileReader();
-    reader.onload = (e) => {
-      const content = e.target?.result as string;
-      if (content) {
-        const success = importTheme(content);
-        if (success) {
-          console.log('Theme imported successfully');
-        } else {
-          console.error('Failed to import theme');
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        const content = e.target?.result as string;
+        if (content) {
+          const success = importTheme(content);
+          if (success) {
+            console.log("Theme imported successfully");
+          } else {
+            console.error("Failed to import theme");
+          }
         }
+      };
+      reader.readAsText(file);
+
+      // Reset file input
+      if (fileInputRef.current) {
+        fileInputRef.current.value = "";
       }
-    };
-    reader.readAsText(file);
-    
-    // Reset file input
-    if (fileInputRef.current) {
-      fileInputRef.current.value = '';
-    }
-  }, [importTheme]);
+    },
+    [importTheme],
+  );
 
   return (
-    <div className={cn('flex items-center gap-2', className)}>
+    <div className={cn("flex items-center gap-2", className)}>
       {/* Simple Select for basic usage */}
       <Select value={themeColor} onValueChange={handleThemeSelect}>
         <SelectTrigger className="w-[140px]">
@@ -150,13 +162,14 @@ export function ImprovedThemeToggle({ className }: { className?: string }) {
           <SelectGroup>
             <SelectLabel>Color Themes</SelectLabel>
             {availableThemes.map((theme) => {
-              const colorValue = primitiveColors[theme as keyof typeof primitiveColors];
+              const colorValue =
+                primitiveColors[theme as keyof typeof primitiveColors];
               return (
                 <SelectItem key={theme} value={theme}>
                   <div className="flex items-center gap-2">
-                    <div 
+                    <div
                       className="w-3 h-3 rounded-full border"
-                      style={{ backgroundColor: colorValue?.[500] || '#000' }}
+                      style={{ backgroundColor: colorValue?.[500] || "#000" }}
                     />
                     <span className="capitalize">{theme}</span>
                   </div>
@@ -188,19 +201,19 @@ export function ImprovedThemeToggle({ className }: { className?: string }) {
             )}
           </DropdownMenuLabel>
           <DropdownMenuSeparator />
-          
+
           <DropdownMenuItem onClick={handleExport} disabled={isExporting}>
             <Download className="w-4 h-4 mr-2" />
-            {isExporting ? 'Exporting...' : 'Export Theme'}
+            {isExporting ? "Exporting..." : "Export Theme"}
           </DropdownMenuItem>
-          
+
           <DropdownMenuItem onClick={() => fileInputRef.current?.click()}>
             <Upload className="w-4 h-4 mr-2" />
             Import Theme
           </DropdownMenuItem>
-          
+
           <DropdownMenuSeparator />
-          
+
           <DropdownMenuItem onClick={resetToDefault}>
             <RotateCcw className="w-4 h-4 mr-2" />
             Reset to Default
@@ -225,19 +238,27 @@ export function ThemeColorGrid({ className }: { className?: string }) {
   const { themeColor, setThemeColor, availableThemes } = useImprovedTheme();
 
   return (
-    <div className={cn('space-y-4', className)}>
+    <div className={cn("space-y-4", className)}>
       <div className="flex items-center gap-2">
         <Palette className="w-5 h-5" />
         <h3 className="font-semibold">Choose Theme Color</h3>
       </div>
-      
+
       <div className="grid grid-cols-2 gap-3">
         {availableThemes.map((theme) => (
           <ThemeColorPreview
             key={theme}
             colorName={theme}
             isSelected={themeColor === theme}
-            onClick={() => setThemeColor(theme)}
+            onClick={() => {
+              console.log("🎨 Advanced Theme Toggle Clicked (Grid):", {
+                selectedTheme: theme,
+                currentTheme: themeColor,
+                source: "AdvancedThemeToggle-Grid",
+                timestamp: new Date().toISOString(),
+              });
+              setThemeColor(theme);
+            }}
           />
         ))}
       </div>
@@ -249,15 +270,17 @@ export function ThemeColorGrid({ className }: { className?: string }) {
 export function CompactThemeToggle({ className }: { className?: string }) {
   const { themeColor, setThemeColor, availableThemes } = useImprovedTheme();
   const { theme } = useTheme();
-  
-  const currentColor = primitiveColors[themeColor as keyof typeof primitiveColors];
-  const displayColor = theme === 'dark' ? currentColor?.[400] : currentColor?.[600];
+
+  const currentColor =
+    primitiveColors[themeColor as keyof typeof primitiveColors];
+  const displayColor =
+    theme === "dark" ? currentColor?.[400] : currentColor?.[600];
 
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="ghost" size="sm" className={cn('gap-2', className)}>
-          <div 
+        <Button variant="ghost" size="sm" className={cn("gap-2", className)}>
+          <div
             className="w-4 h-4 rounded-full border-2 border-white shadow-sm"
             style={{ backgroundColor: displayColor }}
           />
@@ -268,16 +291,26 @@ export function CompactThemeToggle({ className }: { className?: string }) {
         <DropdownMenuLabel>Theme Colors</DropdownMenuLabel>
         <DropdownMenuSeparator />
         {availableThemes.map((theme) => {
-          const colorValue = primitiveColors[theme as keyof typeof primitiveColors];
-          const previewColor = theme === 'dark' ? colorValue?.[400] : colorValue?.[600];
-          
+          const colorValue =
+            primitiveColors[theme as keyof typeof primitiveColors];
+          const previewColor =
+            theme === "dark" ? colorValue?.[400] : colorValue?.[600];
+
           return (
             <DropdownMenuItem
               key={theme}
-              onClick={() => setThemeColor(theme)}
+              onClick={() => {
+                console.log("🎨 Advanced Theme Toggle Clicked (Dropdown):", {
+                  selectedTheme: theme,
+                  currentTheme: themeColor,
+                  source: "AdvancedThemeToggle-Dropdown",
+                  timestamp: new Date().toISOString(),
+                });
+                setThemeColor(theme);
+              }}
               className="flex items-center gap-2"
             >
-              <div 
+              <div
                 className="w-4 h-4 rounded-full border"
                 style={{ backgroundColor: previewColor }}
               />

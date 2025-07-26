@@ -9,12 +9,34 @@ class ThemeManager {
   private themeCache = new Map<string, ThemeConfig>();
   private isApplying = false;
   private pendingTheme: string | null = null;
+  private isSafariBrowser: boolean;
+
+  constructor() {
+    // Detect Safari browser for compatibility adjustments
+    this.isSafariBrowser = typeof window !== 'undefined' && 
+      /Safari/.test(navigator.userAgent) && !/Chrome/.test(navigator.userAgent);
+  }
 
   static getInstance(): ThemeManager {
     if (!ThemeManager.instance) {
       ThemeManager.instance = new ThemeManager();
     }
     return ThemeManager.instance;
+  }
+
+  // Edge-compatible DOM ready check
+  private isDOMReady(): boolean {
+    return document.readyState === 'complete' || document.readyState === 'interactive';
+  }
+
+  // Safari-compatible requestAnimationFrame
+  private safeRequestAnimationFrame(callback: () => void): void {
+    if (typeof requestAnimationFrame !== 'undefined') {
+      requestAnimationFrame(callback);
+    } else {
+      // Fallback for older Safari versions
+      setTimeout(callback, 16); // ~60fps
+    }
   }
 
   // Batch DOM updates for better performance
@@ -24,7 +46,14 @@ class ThemeManager {
     }
     
     this.isApplying = true;
-    requestAnimationFrame(() => {
+    
+    // Ensure DOM is ready before applying updates
+    const applyUpdates = () => {
+      if (!this.isDOMReady()) {
+        setTimeout(applyUpdates, 10);
+        return;
+      }
+      
       updates();
       this.isApplying = false;
       
@@ -34,7 +63,9 @@ class ThemeManager {
         this.pendingTheme = null;
         this.applyTheme(pendingTheme, 'light'); // Default to light, will be corrected by theme provider
       }
-    });
+    };
+    
+    this.safeRequestAnimationFrame(applyUpdates);
   }
 
   // Convert color values to HSL format if needed
@@ -42,6 +73,21 @@ class ThemeManager {
     // If already in HSL format, return as is
     if (value.includes('%')) {
       return value;
+    }
+    
+    // For Safari browser, ensure proper color format handling
+    if (this.isSafariBrowser) {
+      // Safari sometimes has issues with certain color formats
+      if (value.startsWith('#')) {
+        const hsl = this.hexToHSL(value);
+        // Ensure HSL values are properly formatted for Safari
+        return hsl.replace(/\s+/g, ' ').trim();
+      }
+      
+      // Handle rgb/rgba values for Safari
+      if (value.startsWith('rgb')) {
+        return this.rgbToHSL(value);
+      }
     }
     
     // Convert hex to HSL if needed (simplified for common cases)
@@ -52,16 +98,21 @@ class ThemeManager {
     return value;
   }
 
-  // Simple hex to HSL conversion
-  private hexToHSL(hex: string): string {
-    // Remove # if present
-    hex = hex.replace('#', '');
+  // Convert RGB/RGBA to HSL for Edge compatibility
+  private rgbToHSL(rgb: string): string {
+    // Extract RGB values from rgb() or rgba() string
+    const match = rgb.match(/rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*([\d.]+))?\)/);
+    if (!match) return rgb;
     
-    // Convert to RGB
-    const r = parseInt(hex.substr(0, 2), 16) / 255;
-    const g = parseInt(hex.substr(2, 2), 16) / 255;
-    const b = parseInt(hex.substr(4, 2), 16) / 255;
+    const r = parseInt(match[1]) / 255;
+    const g = parseInt(match[2]) / 255;
+    const b = parseInt(match[3]) / 255;
     
+    return this.rgbValuesToHSL(r, g, b);
+  }
+
+  // Convert RGB values to HSL
+  private rgbValuesToHSL(r: number, g: number, b: number): string {
     const max = Math.max(r, g, b);
     const min = Math.min(r, g, b);
     let h = 0;
@@ -83,6 +134,47 @@ class ThemeManager {
     return `${Math.round(h * 360)} ${Math.round(s * 100)}% ${Math.round(l * 100)}%`;
   }
 
+  // Simple hex to HSL conversion
+  private hexToHSL(hex: string): string {
+    // Remove # if present
+    hex = hex.replace('#', '');
+    
+    // Convert to RGB using substring instead of deprecated substr
+    const r = parseInt(hex.substring(0, 2), 16) / 255;
+    const g = parseInt(hex.substring(2, 4), 16) / 255;
+    const b = parseInt(hex.substring(4, 6), 16) / 255;
+    
+    return this.rgbValuesToHSL(r, g, b);
+  }
+
+  // Safari-compatible CSS property setter
+  private setCustomProperty(element: HTMLElement, property: string, value: string): void {
+    try {
+      // Primary method - modern browsers
+      if (element.style.setProperty) {
+        element.style.setProperty(property, value);
+        return;
+      }
+      
+      // Fallback for older Safari versions
+      const propertyName = property.startsWith('--') ? property : `--${property}`;
+      (element.style as any)[propertyName] = value;
+    } catch (error) {
+      console.warn(`Failed to set CSS property ${property}:`, error);
+      
+      // Last resort - direct style manipulation
+      try {
+        const styleSheet = document.styleSheets[0] || document.head.appendChild(document.createElement('style')).sheet;
+        if (styleSheet) {
+          const rule = `:root { ${property}: ${value}; }`;
+          (styleSheet as CSSStyleSheet).insertRule(rule, (styleSheet as CSSStyleSheet).cssRules.length);
+        }
+      } catch (fallbackError) {
+        console.error(`All CSS property setting methods failed for ${property}:`, fallbackError);
+      }
+    }
+  }
+
   // Apply theme colors to CSS custom properties
   applyTheme(themeName: string, mode: 'light' | 'dark', themeConfig?: ThemeConfig): void {
     if (this.isApplying) {
@@ -101,25 +193,33 @@ class ThemeManager {
       const colors = themeConfig.colors[mode];
       
       // Apply semantic colors
-      Object.entries(colors).forEach(([key, value]) => {
-        if (key === 'chart') {
-          // Handle chart colors separately
-          Object.entries(value as ChartColors).forEach(([chartKey, chartValue]) => {
-            root.style.setProperty(`--chart-${chartKey.replace('chart', '')}`, this.normalizeColorValue(chartValue));
-          });
-        } else {
-          // Convert camelCase to kebab-case for CSS variables
-          const cssKey = key.replace(/([A-Z])/g, '-$1').toLowerCase();
-          root.style.setProperty(`--${cssKey}`, this.normalizeColorValue(value as string));
-        }
-      });
+      if (colors && typeof colors === 'object') {
+        Object.entries(colors).forEach(([key, value]) => {
+          if (key === 'chart') {
+            // Handle chart colors separately
+            if (value && typeof value === 'object') {
+              Object.entries(value as ChartColors).forEach(([chartKey, chartValue]) => {
+                const normalizedValue = this.normalizeColorValue(chartValue);
+                this.setCustomProperty(root, `--chart-${chartKey.replace('chart', '')}`, normalizedValue);
+              });
+            }
+          } else {
+            // Convert camelCase to kebab-case for CSS variables
+            const cssKey = key.replace(/([A-Z])/g, '-$1').toLowerCase();
+            const normalizedValue = this.normalizeColorValue(value as string);
+            this.setCustomProperty(root, `--${cssKey}`, normalizedValue);
+          }
+        });
+      }
       
       // Apply border radius
       if (themeConfig.radius) {
-        root.style.setProperty('--radius', themeConfig.radius);
+        this.setCustomProperty(root, '--radius', themeConfig.radius);
+        console.log(`Set --radius: ${themeConfig.radius}`);
       }
       
       this.currentTheme = themeName;
+      console.log(`Theme applied successfully: ${themeName}`);
     });
   }
 
@@ -171,16 +271,20 @@ export const themeUtils = {
     const colors = themeConfig.colors[mode];
     const variables: string[] = [];
     
-    Object.entries(colors).forEach(([key, value]) => {
-      if (key === 'chart') {
-        Object.entries(value as ChartColors).forEach(([chartKey, chartValue]) => {
-          variables.push(`--chart-${chartKey.replace('chart', '')}: ${chartValue};`);
-        });
-      } else {
-        const cssKey = key.replace(/([A-Z])/g, '-$1').toLowerCase();
-        variables.push(`--${cssKey}: ${value};`);
-      }
-    });
+    if (colors && typeof colors === 'object') {
+      Object.entries(colors).forEach(([key, value]) => {
+        if (key === 'chart') {
+          if (value && typeof value === 'object') {
+            Object.entries(value as ChartColors).forEach(([chartKey, chartValue]) => {
+              variables.push(`--chart-${chartKey.replace('chart', '')}: ${chartValue};`);
+            });
+          }
+        } else {
+          const cssKey = key.replace(/([A-Z])/g, '-$1').toLowerCase();
+          variables.push(`--${cssKey}: ${value};`);
+        }
+      });
+    }
     
     if (themeConfig.radius) {
       variables.push(`--radius: ${themeConfig.radius};`);

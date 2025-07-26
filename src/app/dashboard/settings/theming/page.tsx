@@ -1,4 +1,5 @@
 "use client";
+import { EnhancedColorToggle } from "@/components/enhanced-toggles";
 import { Separator } from "@/components/ui/separator";
 import { useTheme } from "next-themes";
 
@@ -75,6 +76,11 @@ export default function SettingsThemingPage() {
             </span>
           </button>
         </div>
+      </div>
+      <Separator />
+      <p>Select your prefered Theme Color.</p>
+      <div>
+        <EnhancedColorToggle className="w-10 h-10" />
       </div>
     </div>
   );

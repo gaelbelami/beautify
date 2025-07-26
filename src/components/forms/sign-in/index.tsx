@@ -1,83 +1,64 @@
 import { useTranslations } from "next-intl";
 import { FormGenerator } from "../../global/form-generator";
 import { Button } from "@/components/ui/button";
-import { useAuthStore } from "@/stores/authStore";
-import { useState } from "react";
-import { KeyRound, Mail } from "lucide-react";
-import { Input } from "../../ui/input";
-import { Label } from "../../ui/label";
 import { BEAUTIFY_CONSTANTS } from "@/constants";
 import { useAuthSignIn } from "@/hooks/authentication";
+import { useLogin } from "@/hooks/api/useAuth";
+import { useRouter } from "next/navigation";
 import Link from "next/link";
+import type { LoginRequest } from "@/types/api";
 
 const SignInForm = () => {
   const translate = useTranslations("auth.signin");
-  const { register, errors } = useAuthSignIn();
-  const { login } = useAuthStore();
-  const [isLoading, setIsLoading] = useState(false);
-  const [credentials, setCredentials] = useState({
-    email: "",
-    password: "",
-  });
+  const { register, errors, handleSubmit, getValues } = useAuthSignIn();
+  const router = useRouter();
+  const loginMutation = useLogin();
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsLoading(true);
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    login({ id: "1", name: "Demo User", email: credentials.email });
-    setIsLoading(false);
+  const onSubmit = async (data: LoginRequest) => {
+    try {
+      await loginMutation.mutateAsync(data);
+      router.push("/dashboard");
+    } catch (error) {
+      console.error("Login failed:", error);
+    }
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6">
-      {BEAUTIFY_CONSTANTS.signInForm.map((field) => (
-        <FormGenerator
-          {...field}
-          key={field.id}
-          register={register}
-          errors={errors}
-        />
-      ))}
-      {/* <div className="space-y-4">
-        <Label htmlFor="email" className="flex items-center gap-2 font-medium">
-          <Mail className="w-5 h-5 text-primary" />
-          {translate("emailLabel")}
-        </Label>
-        <Input
-          id="email"
-          type="email"
-          placeholder={translate("emailPlaceholder")}
-          className="h-12 text-base"
-        />
-      </div>
+    <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+      {BEAUTIFY_CONSTANTS.signInForm.map((field) => {
+        const fieldProps = {
+          ...field,
+          options: Array.isArray(field.options) ? field.options : undefined,
+          icon: field.icon ? <field.icon className="h-5 w-5" /> : undefined,
+        };
+        return (
+          <FormGenerator
+            key={field.id}
+            {...fieldProps}
+            label={field.label}
+            register={register}
+            errors={errors}
+          />
+        );
+      })}
 
-      <div className="space-y-4">
-        <Label
-          htmlFor="password"
-          className="flex items-center gap-2 font-medium"
-        >
-          <KeyRound className="w-5 h-5 text-primary" />
-          {translate("passwordLabel")}
-        </Label>
-        <Input
-          id="password"
-          type="password"
-          placeholder={translate("passwordPlaceholder")}
-          className="h-12 text-base"
-        />
-      </div>
-*/}
       <Button
         type="submit"
         className="w-full h-12 text-base font-medium transition-all"
-        disabled={isLoading}
+        disabled={loginMutation.isPending}
       >
-        {isLoading ? (
+        {loginMutation.isPending ? (
           <span className="animate-pulse">{translate("loading")}</span>
         ) : (
           translate("submitButton")
         )}
       </Button>
+
+      {loginMutation.error && (
+        <div className="text-sm text-red-600 text-center">
+          {loginMutation.error.message || "Login failed. Please try again."}
+        </div>
+      )}
 
       <div className="text-center text-sm text-muted-foreground">
         <Link
