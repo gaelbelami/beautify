@@ -2,24 +2,25 @@
 import { EnhancedColorToggle } from "@/components/enhanced-toggles";
 import { Separator } from "@/components/ui/separator";
 import { useTheme } from "next-themes";
+import { useTranslations } from "next-intl";
 
 export default function SettingsThemingPage() {
   const { theme, setTheme } = useTheme();
+  const t = useTranslations("settings.pages.theming");
 
   return (
     <div className="space-y-6">
       <div>
-        <h3 className="text-lg font-medium">Theming</h3>
+        <h3 className="text-lg font-medium">{t("title")}</h3>
         <p className="text-sm text-muted-foreground">
-          Customize the appearance of the app. Automatically switch between day
-          and night themes.
+          {t("description")}
         </p>
       </div>
       <Separator />
       <div>
-        <div className="font-medium">Theme</div>
+        <div className="font-medium">{t("themeLabel")}</div>
         <p className="text-sm my-2">
-          Select the theme you want to use in the dashboard
+          {t("themeDescription")}
         </p>
         <div className="flex gap-8">
           <button
@@ -44,7 +45,7 @@ export default function SettingsThemingPage() {
               </div>
             </div>
             <span className="block w-full p-2 text-center font-normal">
-              Light
+              {t("lightTheme")}
             </span>
           </button>
 
@@ -72,13 +73,13 @@ export default function SettingsThemingPage() {
               </div>
             </div>
             <span className="block w-full p-2 text-center font-normal">
-              Dark
+              {t("darkTheme")}
             </span>
           </button>
         </div>
       </div>
       <Separator />
-      <p>Select your prefered Theme Color.</p>
+      <p>{t("colorLabel")}</p>
       <div>
         <EnhancedColorToggle className="w-10 h-10" />
       </div>

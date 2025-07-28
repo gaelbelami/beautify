@@ -7,7 +7,7 @@ import {
   IconBrandGoogleFilled,
 } from "@tabler/icons-react";
 
-import { AtSign, Grape, KeyRound, Mail } from "lucide-react";
+import { Grape } from "lucide-react";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 import React from "react";

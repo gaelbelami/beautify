@@ -23,21 +23,11 @@ function HomePage() {
           <Header />
           <Hero />
         </section>
-
-        {/* Features Overview Section */}
-        {/* <section id="section-2">
-        
-        </section> */}
-        {/* <Footer /> */}
-
-        {/* Progress bar */}
         <motion.div
           className="fixed top-0 left-0 right-0 h-1 bg-primary z-50 origin-left"
           style={{ scaleX }}
         />
       </main>
-
-      {/* Footer */}
     </div>
   );
 }

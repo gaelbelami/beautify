@@ -106,6 +106,11 @@
         "min": "Achternaam moet minimaal 3 tekens bevatten"
       },
       "email": "Geef een geldig e-mailadres op",
+      "phone": {
+        "min": "Telefoonnummer moet minimaal 10 cijfers bevatten",
+        "max": "Telefoonnummer mag maximaal 15 cijfers bevatten",
+        "format": "Voer een geldig telefoonnummer in"
+      },
       "password": {
         "min": "Wachtwoord moet minimaal 8 tekens lang zijn",
         "max": "Wachtwoord mag maximaal 64 tekens lang zijn",
@@ -203,12 +208,81 @@
     "nameLabel": "Naam",
     "namePlaceholder": "Jan Jansen",
     "nameDescription": "Dit is de naam die wordt weergegeven in uw profiel en in e-mails.",
+    "emailLabel": "E-mailadres",
+    "emailPlaceholder": "jan@voorbeeld.nl",
+    "emailDescription": "Uw primaire e-mailadres voor accountmeldingen en inloggen.",
+    "phoneLabel": "Telefoonnummer",
+    "phonePlaceholder": "+31 6 12345678",
+    "phoneDescription": "Uw telefoonnummer voor accountbeveiliging en tweefactorauthenticatie.",
     "dobLabel": "Geboortedatum",
     "dobPlaceholder": "JJJJ-MM-DD",
     "dobDescription": "Uw geboortedatum wordt gebruikt om uw leeftijd te berekenen.",
+    "timezoneLabel": "Tijdzone",
+    "timezonePlaceholder": "Selecteer uw tijdzone",
+    "timezoneDescription": "Uw tijdzone wordt gebruikt om datum en tijd correct weer te geven.",
+    "timezones": {
+      "utc": "UTC (Gecoördineerde Wereldtijd)",
+      "et": "Oostelijke Tijd (ET)",
+      "ct": "Centrale Tijd (CT)",
+      "mt": "Bergtijd (MT)",
+      "pt": "Pacifische Tijd (PT)",
+      "gmt": "Greenwich Gemiddelde Tijd (GMT)",
+      "cet": "Midden-Europese Tijd (CET)",
+      "cetBerlin": "Midden-Europese Tijd (CET)",
+      "jst": "Japan Standaardtijd (JST)",
+      "cst": "China Standaardtijd (CST)",
+      "ist": "India Standaardtijd (IST)",
+      "aet": "Australische Oostelijke Tijd (AET)"
+    },
     "languageLabel": "Taal",
     "languagePlaceholder": "Selecteer uw taal",
-    "languageDescription": "Dit is de taal die wordt gebruikt in de applicatie-interface."
+    "languageDescription": "Dit is de taal die wordt gebruikt in de applicatie-interface.",
+    "button": {
+      "update": "Account bijwerken",
+      "updating": "Bezig met bijwerken..."
+    },
+    "toast": {
+      "success": {
+        "title": "Account succesvol bijgewerkt!",
+        "description": "Uw accountinstellingen zijn opgeslagen."
+      },
+      "error": {
+        "title": "Account bijwerken mislukt",
+        "description": "Probeer het opnieuw of neem contact op met de ondersteuning als het probleem aanhoudt."
+      }
+    },
+    "countryLabel": "Land",
+    "countryPlaceholder": "Selecteer uw land",
+    "countryDescription": "Uw land voor lokalisatiefuncties",
+    "jobTitleLabel": "Functietitel",
+    "jobTitlePlaceholder": "Voer uw functietitel in",
+    "jobTitleDescription": "Uw huidige positie of rol",
+    "companyLabel": "Bedrijf",
+    "companyPlaceholder": "Voer uw bedrijfsnaam in",
+    "companyDescription": "Uw huidige werkplek of organisatie",
+    "countries": {
+      "us": "Verenigde Staten",
+      "ca": "Canada",
+      "gb": "Verenigd Koninkrijk",
+      "de": "Duitsland",
+      "fr": "Frankrijk",
+      "nl": "Nederland",
+      "cn": "China",
+      "jp": "Japan",
+      "au": "Australië",
+      "in": "India"
+    },
+    "profilePicture": {
+      "title": "Profielfoto",
+      "description": "Upload een profielfoto om uw account te personaliseren",
+      "dragDrop": "Sleep een afbeelding hierheen of klik om te selecteren",
+      "formats": "Ondersteunt JPEG, PNG, WebP (max 5MB)",
+      "choose": "Bestand kiezen",
+      "remove": "Verwijderen"
+    },
+    "profilePictureLabel": "Profielfoto",
+    "profilePicturePlaceholder": "Upload uw profielfoto",
+    "profilePictureDescription": "Kies een profielfoto om uzelf te vertegenwoordigen"
   },
   "validation": {
     "username": {
@@ -225,6 +299,25 @@
     },
     "url": {
       "invalid": "Voer een geldige URL in"
+    },
+    "dob": {
+      "required": "Een geboortedatum is vereist."
+    },
+    "timezone": {
+      "required": "Selecteer een tijdzone."
+    },
+    "language": {
+      "required": "Selecteer een taal."
+    },
+    "jobTitle": {
+      "max": "Functietitel moet minder dan 100 tekens bevatten"
+    },
+    "company": {
+      "max": "Bedrijfsnaam moet minder dan 100 tekens bevatten"
+    },
+    "profilePicture": {
+      "size": "Profielfoto moet kleiner zijn dan 5MB",
+      "type": "Profielfoto moet in JPEG-, PNG- of WebP-formaat zijn"
     }
   },
   "sidebar": {
@@ -233,5 +326,35 @@
     "profile": "Profiel",
     "events": "Evenementen",
     "logout": "Uitloggen"
+  },
+  "settings": {
+    "title": "Instellingen",
+    "description": "Beheer uw accountinstellingen en stel e-mailvoorkeuren in.",
+    "navigation": {
+      "profile": "Profiel",
+      "account": "Account",
+      "theming": "Thema's",
+      "notifications": "Meldingen",
+      "display": "Weergave"
+    },
+    "pages": {
+      "profile": {
+        "title": "Profiel",
+        "description": "Zo zullen anderen u op de site zien."
+      },
+      "account": {
+        "title": "Account",
+        "description": "Werk uw accountinstellingen bij. Stel uw voorkeurstaal en tijdzone in."
+      },
+      "theming": {
+        "title": "Thema's",
+        "description": "Pas het uiterlijk van de app aan. Schakel automatisch tussen dag- en nachtthema's.",
+        "themeLabel": "Thema",
+        "themeDescription": "Selecteer het thema dat u wilt gebruiken in het dashboard",
+        "lightTheme": "Licht",
+        "darkTheme": "Donker",
+        "colorLabel": "Selecteer uw voorkeur themakleur."
+      }
+    }
   }
 }

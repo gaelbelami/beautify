@@ -107,6 +107,11 @@
         "min": "Le nom doit contenir au moins 3 caractères"
       },
       "email": "Veuillez fournir une adresse e-mail valide",
+      "phone": {
+        "min": "Le numéro de téléphone doit contenir au moins 10 chiffres",
+        "max": "Le numéro de téléphone ne peut dépasser 15 chiffres",
+        "format": "Veuillez entrer un numéro de téléphone valide"
+      },
       "password": {
         "min": "Le mot de passe doit contenir au moins 8 caractères",
         "max": "Le mot de passe ne peut dépasser 64 caractères",
@@ -215,12 +220,81 @@
     "nameLabel": "Nom",
     "namePlaceholder": "Jean Dupont",
     "nameDescription": "Ce nom sera affiché sur votre profil et dans les e-mails.",
+    "emailLabel": "Adresse e-mail",
+    "emailPlaceholder": "jean@exemple.fr",
+    "emailDescription": "Votre adresse e-mail principale pour les notifications de compte et la connexion.",
+    "phoneLabel": "Numéro de téléphone",
+    "phonePlaceholder": "+33 1 23 45 67 89",
+    "phoneDescription": "Votre numéro de téléphone pour la sécurité du compte et l'authentification à deux facteurs.",
     "dobLabel": "Date de naissance",
     "dobPlaceholder": "AAAA-MM-JJ",
     "dobDescription": "Votre date de naissance est utilisée pour calculer votre âge.",
+    "timezoneLabel": "Fuseau horaire",
+    "timezonePlaceholder": "Sélectionnez votre fuseau horaire",
+    "timezoneDescription": "Votre fuseau horaire est utilisé pour afficher correctement les dates et heures.",
+    "timezones": {
+      "utc": "UTC (Temps universel coordonné)",
+      "et": "Heure de l'Est (ET)",
+      "ct": "Heure du Centre (CT)",
+      "mt": "Heure des Montagnes (MT)",
+      "pt": "Heure du Pacifique (PT)",
+      "gmt": "Temps moyen de Greenwich (GMT)",
+      "cet": "Heure d'Europe centrale (CET)",
+      "cetBerlin": "Heure d'Europe centrale (CET)",
+      "jst": "Heure standard du Japon (JST)",
+      "cst": "Heure standard de Chine (CST)",
+      "ist": "Heure standard de l'Inde (IST)",
+      "aet": "Heure de l'Est australien (AET)"
+    },
     "languageLabel": "Langue",
     "languagePlaceholder": "Sélectionnez votre langue",
-    "languageDescription": "Ceci est la langue qui sera utilisée dans l'interface de l'application."
+    "languageDescription": "Ceci est la langue qui sera utilisée dans l'interface de l'application.",
+    "button": {
+      "update": "Mettre à jour le compte",
+      "updating": "Mise à jour..."
+    },
+    "toast": {
+      "success": {
+        "title": "Compte mis à jour avec succès !",
+        "description": "Vos paramètres de compte ont été sauvegardés."
+      },
+      "error": {
+        "title": "Échec de la mise à jour du compte",
+        "description": "Veuillez réessayer ou contacter le support si le problème persiste."
+      }
+    },
+    "countryLabel": "Pays",
+    "countryPlaceholder": "Sélectionnez votre pays",
+    "countryDescription": "Votre pays pour les fonctionnalités de localisation",
+    "jobTitleLabel": "Titre du poste",
+    "jobTitlePlaceholder": "Entrez votre titre de poste",
+    "jobTitleDescription": "Votre position ou rôle actuel",
+    "companyLabel": "Entreprise",
+    "companyPlaceholder": "Entrez le nom de votre entreprise",
+    "companyDescription": "Votre lieu de travail ou organisation actuel",
+    "countries": {
+      "us": "États-Unis",
+      "ca": "Canada",
+      "gb": "Royaume-Uni",
+      "de": "Allemagne",
+      "fr": "France",
+      "nl": "Pays-Bas",
+      "cn": "Chine",
+      "jp": "Japon",
+      "au": "Australie",
+      "in": "Inde"
+    },
+    "profilePicture": {
+      "title": "Photo de profil",
+      "description": "Téléchargez une photo de profil pour personnaliser votre compte",
+      "dragDrop": "Glissez-déposez une image ici, ou cliquez pour sélectionner",
+      "formats": "Supporte JPEG, PNG, WebP (max 5MB)",
+      "choose": "Choisir un fichier",
+      "remove": "Supprimer"
+    },
+    "profilePictureLabel": "Photo de profil",
+    "profilePicturePlaceholder": "Téléchargez votre photo de profil",
+    "profilePictureDescription": "Choisissez une photo de profil pour vous représenter"
   },
   "validation": {
     "username": {
@@ -237,6 +311,25 @@
     },
     "url": {
       "invalid": "Veuillez entrer une URL valide"
+    },
+    "dob": {
+      "required": "Une date de naissance est requise."
+    },
+    "timezone": {
+      "required": "Veuillez sélectionner un fuseau horaire."
+    },
+    "language": {
+      "required": "Veuillez sélectionner une langue."
+    },
+    "jobTitle": {
+      "max": "Le titre du poste doit contenir moins de 100 caractères"
+    },
+    "company": {
+      "max": "Le nom de l'entreprise doit contenir moins de 100 caractères"
+    },
+    "profilePicture": {
+      "size": "La photo de profil doit faire moins de 5MB",
+      "type": "La photo de profil doit être au format JPEG, PNG ou WebP"
     }
   },
   "sidebar": {
@@ -245,5 +338,35 @@
     "profile": "Profil",
     "events": "Événements",
     "logout": "Se déconnecter"
+  },
+  "settings": {
+    "title": "Paramètres",
+    "description": "Gérez les paramètres de votre compte et définissez vos préférences de messagerie.",
+    "navigation": {
+      "profile": "Profil",
+      "account": "Compte",
+      "theming": "Thèmes",
+      "notifications": "Notifications",
+      "display": "Affichage"
+    },
+    "pages": {
+      "profile": {
+        "title": "Profil",
+        "description": "C'est ainsi que les autres vous verront sur le site."
+      },
+      "account": {
+        "title": "Compte",
+        "description": "Mettez à jour les paramètres de votre compte. Définissez votre langue et fuseau horaire préférés."
+      },
+      "theming": {
+        "title": "Thèmes",
+        "description": "Personnalisez l'apparence de l'application. Basculez automatiquement entre les thèmes jour et nuit.",
+        "themeLabel": "Thème",
+        "themeDescription": "Sélectionnez le thème que vous souhaitez utiliser dans le tableau de bord",
+        "lightTheme": "Clair",
+        "darkTheme": "Sombre",
+        "colorLabel": "Sélectionnez votre couleur de thème préférée."
+      }
+    }
   }
 }

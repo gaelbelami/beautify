@@ -116,41 +116,69 @@ export const MobileSidebar = ({
     <>
       <div
         className={cn(
-          `h-10 px-4 py-4 flex flex-row md:hidden items-center justify-between
-          bg-neutral-100 dark:bg-neutral-800 w-full`,
+          `h-14 px-4 py-2 flex flex-row md:hidden items-center justify-between
+          bg-neutral-100 dark:bg-neutral-800 w-full border-b border-neutral-200 dark:border-neutral-700`,
         )}
         {...props}
       >
-        <div className="flex justify-end z-20 w-full">
-          <IconMenu2
-            className="text-neutral-800 dark:text-neutral-200"
+        <div className="flex justify-between items-center z-20 w-full">
+          <div className="flex items-center space-x-2">
+            <div className="h-6 w-7 bg-black dark:bg-white rounded-br-lg rounded-tr-sm rounded-tl-lg rounded-bl-sm shrink-0 flex justify-center items-center">
+              <div className="w-2.5 h-2.5 bg-white dark:bg-black rounded-full" />
+            </div>
+            <span className="font-medium text-black dark:text-white text-sm">
+              Beautify
+            </span>
+          </div>
+          <button
+            className="p-2 rounded-lg hover:bg-neutral-200 dark:hover:bg-neutral-700 transition-colors"
             onClick={() => setOpen(!open)}
-          />
+            aria-label="Toggle menu"
+          >
+            <IconMenu2
+              className="h-5 w-5 text-neutral-800 dark:text-neutral-200"
+            />
+          </button>
         </div>
         <AnimatePresence>
           {open && (
-            <motion.div
-              initial={{ x: "-100%", opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              exit={{ x: "-100%", opacity: 0 }}
-              transition={{
-                duration: 0.3,
-                ease: "easeInOut",
-              }}
-              className={cn(
-                `fixed h-full w-full inset-0 bg-white dark:bg-neutral-900 p-10 z-[100] flex
-                flex-col justify-between`,
-                className,
-              )}
-            >
-              <div
-                className="absolute right-10 top-10 z-50 text-neutral-800 dark:text-neutral-200"
-                onClick={() => setOpen(!open)}
+            <>
+              {/* Backdrop */}
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.2 }}
+                className="fixed inset-0 bg-black/50 z-[90]"
+                onClick={() => setOpen(false)}
+              />
+              {/* Sidebar */}
+              <motion.div
+                initial={{ x: "-100%", opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                exit={{ x: "-100%", opacity: 0 }}
+                transition={{
+                  duration: 0.3,
+                  ease: "easeInOut",
+                }}
+                className={cn(
+                  `fixed left-0 top-0 h-full w-80 bg-white dark:bg-neutral-900 p-6 z-[100] flex
+                  flex-col justify-between shadow-2xl border-r border-neutral-200 dark:border-neutral-700`,
+                  className,
+                )}
               >
-                <IconX />
-              </div>
-              {children}
-            </motion.div>
+                <button
+                  className="absolute right-4 top-4 z-50 p-2 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
+                  onClick={() => setOpen(!open)}
+                  aria-label="Close menu"
+                >
+                  <IconX className="h-5 w-5 text-neutral-800 dark:text-neutral-200" />
+                </button>
+                <div className="mt-8">
+                  {children}
+                </div>
+              </motion.div>
+            </>
           )}
         </AnimatePresence>
       </div>

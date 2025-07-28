@@ -126,7 +126,7 @@ export function EnhancedColorToggle({ className }: { className?: string }) {
     return (
       <Button
         variant="outline"
-        size="lg"
+        size="sm"
         className={cn("w-10 h-10 p-0", className)}
         disabled
       >
@@ -277,24 +277,22 @@ export function EnhancedLocaleSwitcher({ className }: { className?: string }) {
           Language
         </DropdownMenuLabel>
         <DropdownMenuSeparator />
-        {localeData && typeof localeData === "object"
-          ? Object.entries(localeData).map(([locale, data]) => (
-              <DropdownMenuItem
-                key={locale}
-                onClick={() => handleLocaleChange(locale)}
-                className={cn(
-                  "flex items-center justify-between cursor-pointer",
-                  currentLocale === locale && "bg-accent",
-                )}
-              >
-                <div className="flex items-center gap-3">
-                  <span className="text-lg">{data.flag}</span>
-                  <span className="font-medium">{data.name}</span>
-                </div>
-                {currentLocale === locale && <Check className="w-4 h-4" />}
-              </DropdownMenuItem>
-            ))
-          : null}
+        {localeData && typeof localeData === 'object' ? Object.entries(localeData).map(([locale, data]) => (
+          <DropdownMenuItem
+            key={locale}
+            onClick={() => handleLocaleChange(locale)}
+            className={cn(
+              "flex items-center justify-between cursor-pointer",
+              currentLocale === locale && "bg-accent",
+            )}
+          >
+            <div className="flex items-center gap-3">
+              <span className="text-lg">{data.flag}</span>
+              <span className="font-medium">{data.name}</span>
+            </div>
+            {currentLocale === locale && <Check className="w-4 h-4" />}
+          </DropdownMenuItem>
+        )) : null}
       </DropdownMenuContent>
     </DropdownMenu>
   );

@@ -26,7 +26,7 @@ import {
 } from "../ui/select";
 
 type FormGeneratorProps = {
-  type?: "text" | "email" | "password" | "number" | "date";
+  type?: "text" | "email" | "password" | "number" | "date" | "tel";
   inputType:
     | "select"
     | "input"
@@ -105,44 +105,36 @@ export const FormGenerator = ({
       return (
         <Label htmlFor={`select-${label}`} className="flex flex-col gap-2">
           {label && translate(label)}
-
-          <Select
-            // id={`select-${label}`}
-            // className="w-full bg-transparent border-[1px] p-3 rounded-lg"
-            {...register(name)}
-          >
-            {options?.length &&
-              options.map((option) => (
-                <option
-                  value={option.value}
-                  key={option.label}
-                  className="dark:bg-muted"
-                >
-                  {translate(option.label)}
-                </option>
-              ))}
-          </Select>
-          <Select>
-            <SelectTrigger className="w-[180px]">
-              <SelectValue placeholder={translate(placeholder)} />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectGroup>
-                {/* <SelectLabel>{translate(label)}</SelectLabel> */}
-                {options?.length &&
-                  options.map((option) => (
-                    <SelectItem
-                      value={option.value}
-                      key={option.label}
-                      className="dark:bg-muted"
-                    >
-                      {option.label}
-                    </SelectItem>
-                  ))}
-              </SelectGroup>
-            </SelectContent>
-          </Select>
-
+          <Controller
+            name={name}
+            control={control}
+            render={({ field }) => (
+              <Select onValueChange={field.onChange} value={field.value}>
+                <SelectTrigger className="w-full">
+                  <SelectValue placeholder={translate(placeholder)} />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectGroup>
+                    {options?.length &&
+                      options.map((option) => (
+                        <SelectItem
+                          value={option.value}
+                          key={option.value}
+                          className="dark:bg-muted"
+                        >
+                          {translate(option.label)}
+                        </SelectItem>
+                      ))}
+                  </SelectGroup>
+                </SelectContent>
+              </Select>
+            )}
+          />
+          {description && (
+            <div className="my-1 text-xs text-muted-foreground">
+              {translate(description)}
+            </div>
+          )}
           <ErrorMessage
             errors={errors}
             name={name}

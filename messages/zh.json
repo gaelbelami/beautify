@@ -106,6 +106,11 @@
         "min": "姓氏必须至少包含3个字符"
       },
       "email": "请输入有效的电子邮件地址",
+      "phone": {
+        "min": "电话号码至少包含10位数字",
+        "max": "电话号码最多包含15位数字",
+        "format": "请输入有效的电话号码"
+      },
       "password": {
         "min": "密码长度至少为8个字符",
         "max": "密码长度不能超过64个字符",
@@ -214,12 +219,81 @@
     "nameLabel": "姓名",
     "namePlaceholder": "张三",
     "nameDescription": "此名称将显示在您的个人资料和电子邮件中。",
+    "emailLabel": "电子邮件地址",
+    "emailPlaceholder": "zhang@example.com",
+    "emailDescription": "您的主要电子邮件地址，用于账户通知和登录。",
+    "phoneLabel": "电话号码",
+    "phonePlaceholder": "+86 138 0013 8000",
+    "phoneDescription": "您的电话号码用于账户安全和双因素身份验证。",
     "dobLabel": "出生日期",
     "dobPlaceholder": "年年年年-月月-日日",
     "dobDescription": "您的出生日期用于计算您的年龄。",
+    "timezoneLabel": "时区",
+    "timezonePlaceholder": "选择您的时区",
+    "timezoneDescription": "您的时区用于正确显示日期和时间。",
+    "timezones": {
+      "utc": "UTC（协调世界时）",
+      "et": "东部时间（ET）",
+      "ct": "中部时间（CT）",
+      "mt": "山地时间（MT）",
+      "pt": "太平洋时间（PT）",
+      "gmt": "格林威治标准时间（GMT）",
+      "cet": "中欧时间（CET）",
+      "cetBerlin": "中欧时间（CET）",
+      "jst": "日本标准时间（JST）",
+      "cst": "中国标准时间（CST）",
+      "ist": "印度标准时间（IST）",
+      "aet": "澳大利亚东部时间（AET）"
+    },
     "languageLabel": "语言",
     "languagePlaceholder": "选择您的语言",
-    "languageDescription": "这将是应用程序界面中使用的语言。"
+    "languageDescription": "这是应用程序界面中使用的语言。",
+    "button": {
+      "update": "更新账户",
+      "updating": "更新中..."
+    },
+    "toast": {
+      "success": {
+        "title": "账户更新成功！",
+        "description": "您的账户设置已保存。"
+      },
+      "error": {
+        "title": "账户更新失败",
+        "description": "请重试或联系客服，如果问题持续存在。"
+      }
+    },
+    "countryLabel": "国家",
+    "countryPlaceholder": "选择您的国家",
+    "countryDescription": "您的国家，用于本地化功能",
+    "jobTitleLabel": "职位",
+    "jobTitlePlaceholder": "输入您的职位",
+    "jobTitleDescription": "您当前的职位或角色",
+    "companyLabel": "公司",
+    "companyPlaceholder": "输入您的公司名称",
+    "companyDescription": "您当前的工作单位或组织",
+    "countries": {
+      "us": "美国",
+      "ca": "加拿大",
+      "gb": "英国",
+      "de": "德国",
+      "fr": "法国",
+      "nl": "荷兰",
+      "cn": "中国",
+      "jp": "日本",
+      "au": "澳大利亚",
+      "in": "印度"
+    },
+    "profilePicture": {
+      "title": "头像",
+      "description": "上传头像以个性化您的账户",
+      "dragDrop": "拖拽图片到此处，或点击选择",
+      "formats": "支持 JPEG、PNG、WebP 格式（最大 5MB）",
+      "choose": "选择文件",
+      "remove": "移除"
+    },
+    "profilePictureLabel": "头像",
+    "profilePicturePlaceholder": "上传您的头像",
+    "profilePictureDescription": "选择头像来代表您"
   },
   "validation": {
     "username": {
@@ -236,6 +310,25 @@
     },
     "url": {
       "invalid": "请输入有效的网址"
+    },
+    "dob": {
+      "required": "出生日期是必填项。"
+    },
+    "timezone": {
+      "required": "请选择时区。"
+    },
+    "language": {
+      "required": "请选择语言。"
+    },
+    "jobTitle": {
+      "max": "职位必须少于100个字符"
+    },
+    "company": {
+      "max": "公司名称必须少于100个字符"
+    },
+    "profilePicture": {
+      "size": "头像文件大小必须小于5MB",
+      "type": "头像必须是JPEG、PNG或WebP格式"
     }
   },
   "sidebar": {
@@ -244,5 +337,35 @@
     "profile": "个人资料",
     "events": "活动",
     "logout": "退出登录"
+  },
+  "settings": {
+    "title": "设置",
+    "description": "管理您的账户设置并设置电子邮件偏好。",
+    "navigation": {
+      "profile": "个人资料",
+      "account": "账户",
+      "theming": "主题",
+      "notifications": "通知",
+      "display": "显示"
+    },
+    "pages": {
+      "profile": {
+        "title": "个人资料",
+        "description": "这是其他人在网站上看到您的方式。"
+      },
+      "account": {
+        "title": "账户",
+        "description": "更新您的账户设置。设置您的首选语言和时区。"
+      },
+      "theming": {
+        "title": "主题",
+        "description": "自定义应用程序的外观。在日间和夜间主题之间自动切换。",
+        "themeLabel": "主题",
+        "themeDescription": "选择您想在仪表板中使用的主题",
+        "lightTheme": "浅色",
+        "darkTheme": "深色",
+        "colorLabel": "选择您偏好的主题颜色。"
+      }
+    }
   }
 }

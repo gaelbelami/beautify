@@ -315,32 +315,6 @@ export const Hero = () => {
           }}
         >
           <div></div>
-          {/* <div className="relative mt-28 md:40 px-2">
-            <div
-              aria-hidden
-              className="absolute inset-0 z-10 bg-gradient-to-b from-transparent dark:via-black/90
-                dark:to-black via-white/95 to-white"
-            />
-            <div
-              className="relative mx-auto max-w-5xl overflow-hidden rounded-2xl border p-4 dark:shadow-lg
-                bg-background"
-            >
-              <Image
-                className="aspect-[15/8] hidden dark:block rounded-2xl"
-                src="/boarding.jpeg"
-                alt="app screen"
-                width={2700}
-                height={1440}
-              />
-              <Image
-                className="aspect-[15/8] block dark:hidden rounded-2xl border"
-                src="/boarding-light.jpeg"
-                alt="app screen"
-                width={2700}
-                height={1440}
-              />
-            </div>
-          </div> */}
           {/* Scroll indicator button */}
           {/* <div className="absolute bottom-32 left-1/2 -translate-x-1/2 z-20">
             <Button

@@ -1,18 +1,20 @@
-import { AccountForm } from "@/components/forms/settings/account";
-import { Separator } from "@/components/ui/separator";
+import { Separator } from "@/components/ui/separator"
+import { AccountForm } from "@/components/forms/settings/account"
+import { useTranslations } from "next-intl"
 
 export default function SettingsAccountPage() {
+  const t = useTranslations("settings.pages.account")
+  
   return (
     <div className="space-y-6">
       <div>
-        <h3 className="text-2xl font-semibold tracking-tight">Account</h3>
+        <h3 className="text-lg font-medium">{t("title")}</h3>
         <p className="text-sm text-muted-foreground">
-          Update your account settings. Set your preferred language and
-          timezone.
+          {t("description")}
         </p>
       </div>
       <Separator />
       <AccountForm />
     </div>
-  );
+  )
 }

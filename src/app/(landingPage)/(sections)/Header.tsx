@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ArrowRight, GrapeIcon, Menu, MenuSquareIcon } from "lucide-react";
+import { GrapeIcon, Menu, MenuSquareIcon } from "lucide-react";
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -11,27 +11,15 @@ import { Button } from "@/components/ui/button";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { EnhancedToggles } from "@/components/enhanced-toggles";
-// import { Link } from "@/i18n/routing";
 
 export const Header = () => {
   const translate = useTranslations("Header");
   const platformLinks = [
     { name: translate("nav.features"), href: "/features" },
     { name: translate("nav.docs"), href: "#docs" },
-    // { name: translate("nav.pricing"), href: "#pricing" },
-    // { name: translate("nav.blog"), href: "#blog" },
   ];
   return (
     <header className="fixed top-0 left-0 right-0 backdrop-blur-sm z-20">
-      {/* <div className="flex justify-center items-center py-3 bg-black text-white text-sm gap-3">
-        <p className="text-white/60 hidden md:block">
-          Streamline your workflow and boost your productivity
-        </p>
-        <div className="inline-flex gap-1 items-center">
-          <p className="">Get Started for free</p>
-          <ArrowRight className="h-4 w-4 inline-flex justify-center items-center" />
-        </div>
-      </div> */}
       <div className="container mx-auto py-5">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">

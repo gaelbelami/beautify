@@ -16,25 +16,25 @@ export type MenuItemsProps = {
 
 export const SIDEBAR_NAV_ITEMS: SidebarNavItemsProps[] = [
   {
-    title: "Profile",
+    title: "settings.navigation.profile",
     href: "/dashboard/settings",
   },
   {
-    title: "Account",
+    title: "settings.navigation.account",
     href: "/dashboard/settings/account",
   },
   {
-    title: "Theming",
+    title: "settings.navigation.theming",
     href: "/dashboard/settings/theming",
   },
   {
-    title: "Notifications",
+    title: "settings.navigation.notifications",
     href: "/dashboard/settings/notifications",
   },
-  {
-    title: "Display",
-    href: "/dashboard/settings/display",
-  },
+  // {
+  //   title: "settings.navigation.display",
+  //   href: "/dashboard/settings/display",
+  // },
 ];
 
 export const MENU_ITEMS: MenuItemsProps[] = [

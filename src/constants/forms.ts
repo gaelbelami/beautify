@@ -31,9 +31,9 @@ export type ProfileFormProps = {
 
 export type AccountFormProps = {
     id: string
-    type: "text" | "date"
+    type: "text" | "date" | "email" | "tel"
     inputType: "select" | "input" | "textarea" | "radio" | "array" | "date" | "date-range" | "date-preset";
-    options?: { value: string; label: string; id: string }
+    options?: { value: string; label: string }[]
     label?: string
     placeholder: string
     description?: string
@@ -198,6 +198,24 @@ export const ACCOUNT_FORM: AccountFormProps[] = [
     description: "account.nameDescription"
   },
   {
+    id: "email",
+    inputType: "input",
+    name: "email",
+    label: "account.emailLabel",
+    type: "email",
+    placeholder: "account.emailPlaceholder",
+    description: "account.emailDescription"
+  },
+  {
+    id: "phone",
+    inputType: "input",
+    name: "phone",
+    label: "account.phoneLabel",
+    type: "text",
+    placeholder: "account.phonePlaceholder",
+    description: "account.phoneDescription"
+  },
+  {
     id: "dob",
     inputType: "date",
     name: "dob",
@@ -206,6 +224,69 @@ export const ACCOUNT_FORM: AccountFormProps[] = [
     placeholder: "account.dobPlaceholder",
     description: "account.dobDescription"
   },
+  {
+    id: "timezone",
+    inputType: "select",
+    name: "timezone",
+    label: "account.timezoneLabel",
+    type: "text",
+    placeholder: "account.timezonePlaceholder",
+    description: "account.timezoneDescription",
+    options: [
+      { value: "UTC", label: "account.timezones.utc" },
+      { value: "America/New_York", label: "account.timezones.et" },
+      { value: "America/Chicago", label: "account.timezones.ct" },
+      { value: "America/Denver", label: "account.timezones.mt" },
+      { value: "America/Los_Angeles", label: "account.timezones.pt" },
+      { value: "Europe/London", label: "account.timezones.gmt" },
+      { value: "Europe/Paris", label: "account.timezones.cet" },
+      { value: "Europe/Berlin", label: "account.timezones.cetBerlin" },
+      { value: "Asia/Tokyo", label: "account.timezones.jst" },
+      { value: "Asia/Shanghai", label: "account.timezones.cst" },
+      { value: "Asia/Kolkata", label: "account.timezones.ist" },
+      { value: "Australia/Sydney", label: "account.timezones.aet" }
+    ]
+  },
+  // Phase 2: Profile Enhancement Fields
+  {
+    id: "country",
+    inputType: "select",
+    name: "country",
+    label: "account.countryLabel",
+    type: "text",
+    placeholder: "account.countryPlaceholder",
+    description: "account.countryDescription",
+    options: [
+      { value: "US", label: "account.countries.us" },
+      { value: "CA", label: "account.countries.ca" },
+      { value: "GB", label: "account.countries.gb" },
+      { value: "DE", label: "account.countries.de" },
+      { value: "FR", label: "account.countries.fr" },
+      { value: "NL", label: "account.countries.nl" },
+      { value: "CN", label: "account.countries.cn" },
+      { value: "JP", label: "account.countries.jp" },
+      { value: "AU", label: "account.countries.au" },
+      { value: "IN", label: "account.countries.in" }
+    ]
+  },
+  {
+    id: "jobTitle",
+    inputType: "input",
+    name: "jobTitle",
+    label: "account.jobTitleLabel",
+    type: "text",
+    placeholder: "account.jobTitlePlaceholder",
+    description: "account.jobTitleDescription"
+  },
+  {
+    id: "company",
+    inputType: "input",
+    name: "company",
+    label: "account.companyLabel",
+    type: "text",
+    placeholder: "account.companyPlaceholder",
+    description: "account.companyDescription"
+  }
   // {
   //   id: "language",
   //   inputType: "select",
@@ -215,4 +296,17 @@ export const ACCOUNT_FORM: AccountFormProps[] = [
   //   placeholder: "account.languagePlaceholder",
   //   description: "account.languageDescription"
   // }
+];
+
+// Phase 2: Profile Picture Upload Form (separate component)
+export const PROFILE_PICTURE_FORM: AccountFormProps[] = [
+  {
+    id: "profilePicture",
+    inputType: "input",
+    name: "profilePicture",
+    label: "account.profilePictureLabel",
+    type: "text", // Will be handled as file input in component
+    placeholder: "account.profilePicturePlaceholder",
+    description: "account.profilePictureDescription"
+  }
 ];

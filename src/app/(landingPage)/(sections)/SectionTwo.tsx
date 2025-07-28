@@ -11,7 +11,6 @@ import {
 } from "lucide-react";
 import { motion, useInView } from "framer-motion";
 import React, { useRef, useState } from "react";
-// import LocaleSwitcher from "@/components/locale-switcher";
 import { useTranslations } from "next-intl";
 import { AnimatedGroup } from "../../../../components/motion-primitives/animated-group";
 import { TextEffect } from "../../../../components/motion-primitives/text-effect";

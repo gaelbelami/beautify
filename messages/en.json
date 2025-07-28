@@ -108,6 +108,11 @@
         "min": "Last name must be at least 3 characters"
       },
       "email": "You must give a valid email",
+      "phone": {
+        "min": "Phone number must be at least 10 digits",
+        "max": "Phone number cannot be longer than 15 digits",
+        "format": "Please enter a valid phone number"
+      },
       "password": {
         "min": "Your password must be at least 8 characters long",
         "max": "Your password cannot be longer than 64 characters",
@@ -126,6 +131,15 @@
       },
       "url": {
         "invalid": "Please enter a valid URL"
+      },
+      "dob": {
+        "required": "A date of birth is required."
+      },
+      "timezone": {
+        "required": "Please select a timezone."
+      },
+      "language": {
+        "required": "Please select a language."
       }
     },
     "signin": {
@@ -216,12 +230,81 @@
     "nameLabel": "Name",
     "namePlaceholder": "John Doe",
     "nameDescription": "This is the name that will be displayed on your profile and in emails.",
+    "emailLabel": "Email Address",
+    "emailPlaceholder": "john@example.com",
+    "emailDescription": "This is your primary email address for account notifications and login.",
+    "phoneLabel": "Phone Number",
+    "phonePlaceholder": "+1 (555) 123-4567",
+    "phoneDescription": "Your phone number for account security and two-factor authentication.",
     "dobLabel": "Date of Birth",
     "dobPlaceholder": "Pick a date",
     "dobDescription": "Your date of birth is used to calculate your age.",
+    "timezoneLabel": "Timezone",
+    "timezonePlaceholder": "Select your timezone",
+    "timezoneDescription": "Your timezone is used to display dates and times correctly.",
+    "timezones": {
+      "utc": "UTC (Coordinated Universal Time)",
+      "et": "Eastern Time (ET)",
+      "ct": "Central Time (CT)",
+      "mt": "Mountain Time (MT)",
+      "pt": "Pacific Time (PT)",
+      "gmt": "Greenwich Mean Time (GMT)",
+      "cet": "Central European Time (CET)",
+      "cetBerlin": "Central European Time (CET)",
+      "jst": "Japan Standard Time (JST)",
+      "cst": "China Standard Time (CST)",
+      "ist": "India Standard Time (IST)",
+      "aet": "Australian Eastern Time (AET)"
+    },
     "languageLabel": "Language",
     "languagePlaceholder": "Select your language",
-    "languageDescription": "This is the language that will be used in the application interface."
+    "languageDescription": "This is the language that will be used in the application interface.",
+    "button": {
+      "update": "Update account",
+      "updating": "Updating..."
+    },
+    "toast": {
+      "success": {
+        "title": "Account updated successfully!",
+        "description": "Your account settings have been saved."
+      },
+      "error": {
+        "title": "Failed to update account",
+        "description": "Please try again or contact support if the problem persists."
+      }
+    },
+    "countryLabel": "Country",
+    "countryPlaceholder": "Select your country",
+    "countryDescription": "Your country for localization features",
+    "jobTitleLabel": "Job Title",
+    "jobTitlePlaceholder": "Enter your job title",
+    "jobTitleDescription": "Your current position or role",
+    "companyLabel": "Company",
+    "companyPlaceholder": "Enter your company name",
+    "companyDescription": "Your current workplace or organization",
+    "countries": {
+      "us": "United States",
+      "ca": "Canada",
+      "gb": "United Kingdom",
+      "de": "Germany",
+      "fr": "France",
+      "nl": "Netherlands",
+      "cn": "China",
+      "jp": "Japan",
+      "au": "Australia",
+      "in": "India"
+    },
+    "profilePicture": {
+      "title": "Profile Picture",
+      "description": "Upload a profile picture to personalize your account",
+      "dragDrop": "Drag and drop an image here, or click to select",
+      "formats": "Supports JPEG, PNG, WebP (max 5MB)",
+      "choose": "Choose File",
+      "remove": "Remove"
+    },
+    "profilePictureLabel": "Profile Picture",
+    "profilePicturePlaceholder": "Upload your profile picture",
+    "profilePictureDescription": "Choose a profile picture to represent yourself"
   },
   "validation": {
     "username": {
@@ -238,6 +321,25 @@
     },
     "url": {
       "invalid": "Please enter a valid URL"
+    },
+    "dob": {
+      "required": "Date of birth is required"
+    },
+    "timezone": {
+      "required": "Timezone is required"
+    },
+    "language": {
+      "required": "Language is required"
+    },
+    "jobTitle": {
+      "max": "Job title must be less than 100 characters"
+    },
+    "company": {
+      "max": "Company name must be less than 100 characters"
+    },
+    "profilePicture": {
+      "size": "Profile picture must be less than 5MB",
+      "type": "Profile picture must be JPEG, PNG, or WebP format"
     }
   },
   "sidebar": {
@@ -250,6 +352,36 @@
   "dashboard": {
     "welcome": "Welcome to Your Dashboard",
     "description": "Manage your account and activities here"
+  },
+  "settings": {
+    "title": "Settings",
+    "description": "Manage your account settings and set e-mail preferences.",
+    "navigation": {
+      "profile": "Profile",
+      "account": "Account",
+      "theming": "Theming",
+      "notifications": "Notifications",
+      "display": "Display"
+    },
+    "pages": {
+      "profile": {
+        "title": "Profile",
+        "description": "This is how others will see you on the site."
+      },
+      "account": {
+        "title": "Account",
+        "description": "Update your account settings. Set your preferred language and timezone."
+      },
+      "theming": {
+        "title": "Theming",
+        "description": "Customize the appearance of the app. Automatically switch between day and night themes.",
+        "themeLabel": "Theme",
+        "themeDescription": "Select the theme you want to use in the dashboard",
+        "lightTheme": "Light",
+        "darkTheme": "Dark",
+        "colorLabel": "Select your preferred Theme Color."
+      }
+    }
   }
 
 }

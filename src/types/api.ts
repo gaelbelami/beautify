@@ -37,6 +37,8 @@ export interface User {
       lat: string;
       lng: string;
     };
+    // Phase 2: Profile Enhancement
+    country?: string;
   };
   phone: string;
   website: string;
@@ -44,6 +46,8 @@ export interface User {
     name: string;
     catchPhrase: string;
     bs: string;
+    // Phase 2: Profile Enhancement
+    jobTitle?: string;
   };
   // Additional fields for our app
   avatar?: string;
@@ -56,6 +60,7 @@ export interface User {
   urls?: { value: string }[];
   dateOfBirth?: string;
   language?: string;
+  timezone?: string;
 }
 
 export interface UserPreferences {
