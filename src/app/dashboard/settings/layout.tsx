@@ -35,7 +35,7 @@ export default function SettingsLayout({ children }: SettingsLayoutProps) {
           />
         </aside>
         <div className="flex-1 lg:max-w-3xl">
-          <div className="space-y-6 rounded-xl border bg-background/5 p-4 md:p-6 backdrop-blur-lg">
+          <div className="space-y-6 rounded-xl border border-white/20 dark:border-white/10 bg-white/30 dark:bg-black/20 p-4 md:p-6 backdrop-blur-lg shadow-lg">
             {children}
           </div>
         </div>

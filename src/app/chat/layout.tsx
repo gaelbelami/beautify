@@ -2,7 +2,7 @@
 import { AppSidebar } from "@/components/global/app-sidebar";
 import { cn } from "@/lib/utils";
 
-export default function DashboardLayout({
+export default function ChatLayout({
   children,
 }: {
   children: React.ReactNode;
@@ -10,7 +10,7 @@ export default function DashboardLayout({
   return (
     <div
       className={cn(
-        "flex flex-col md:flex-row w-full flex-1 mx-auto overflow-hidden relative",
+        "relative flex flex-col md:flex-row w-full flex-1 mx-auto overflow-hidden",
         "h-screen md:p-2 md:rounded-md",
       )}
     >
@@ -30,15 +30,13 @@ export default function DashboardLayout({
             rounded-full blur-3xl"
         />
       </div>
-
       {/* Content */}
       <div className="relative z-10 flex flex-col md:flex-row w-full flex-1">
         <AppSidebar />
         <main className="flex flex-1 flex-col md:flex-row pb-4">
           <div
-            className="p-4 md:p-10 md:rounded-2xl bg-white/40 dark:bg-neutral-900/70 backdrop-blur-xl
-              flex flex-col gap-2 flex-1 w-full h-full overflow-auto shadow-xl shadow-black/5
-              dark:shadow-black/20"
+            className="md:rounded-2xl bg-white/40 dark:bg-neutral-900/70 backdrop-blur-xl shadow-lg
+              flex flex-col gap-2 flex-1 w-full h-full overflow-hidden"
           >
             {children}
           </div>

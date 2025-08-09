@@ -347,6 +347,7 @@
     "settings": "Settings",
     "profile": "Profile",
     "events": "Events",
+    "chat": "Chat",
     "logout": "Log Out"
   },
   "dashboard": {

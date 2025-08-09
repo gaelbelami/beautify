@@ -31,7 +31,7 @@ export const authService = {
         zipcode: '92998-3874',
         geo: { lat: '-37.3159', lng: '81.1496' }
       },
-      phone: '1-770-736-8031 x56442',
+      phone: '1-212-555-0123',
       website: 'hildegard.org',
       company: {
         name: 'Romaguera-Crona',

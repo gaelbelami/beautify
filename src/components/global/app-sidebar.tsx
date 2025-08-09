@@ -65,7 +65,10 @@ export function AppSidebar() {
 
   return (
     <Sidebar open={open} setOpen={setOpen}>
-      <SidebarBody className="justify-between gap-10">
+      <SidebarBody
+        className="justify-between gap-10 bg-white/40 dark:bg-neutral-900/60 border-white/20
+          dark:border-white/10"
+      >
         <div className="flex flex-col flex-1 overflow-y-auto overflow-x-hidden">
           {open ? <Logo /> : <LogoIcon />}
 
@@ -93,7 +96,7 @@ export function AppSidebar() {
                   link={linkItem}
                   label={translate(item.label)}
                   className={cn(
-                    "transition-colors hover:text-white",
+                    "transition-colors hover:text-primary",
                     isActive
                       ? "text-primary bg-primary/10 rounded-md p-2"
                       : "text-muted-foreground",

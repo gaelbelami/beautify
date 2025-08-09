@@ -70,7 +70,7 @@ export default function ForgotPasswordPage() {
           <p className="mt-8 text-center text-sm text-muted-foreground">
             {t("rememberPassword")}{" "}
             <Link
-              href="/reset-password"
+              href="/login"
               className="text-primary hover:underline font-medium"
             >
               {t("loginLink")}

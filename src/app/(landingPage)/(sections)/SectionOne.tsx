@@ -206,9 +206,11 @@ export const Hero = () => {
 
                 <Modal>
                   <ModalTrigger className="group/modal-btn">
-                    <Button size="lg" variant="outline" className="group">
-                      <PlayIcon className="w-4 h-4 mr-2 group-hover:translate-x-1 transition-transform" />
-                      {t("ctaSecondary")}
+                    <Button size="lg" variant="outline" className="group" asChild>
+                      <span>
+                        <PlayIcon className="w-4 h-4 mr-2 group-hover:translate-x-1 transition-transform" />
+                        {t("ctaSecondary")}
+                      </span>
                     </Button>
                   </ModalTrigger>
                   <ModalBody>

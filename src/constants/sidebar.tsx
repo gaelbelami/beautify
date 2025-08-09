@@ -1,4 +1,10 @@
-import { Icon, IconHome2, IconProps, IconSettings } from "@tabler/icons-react";
+import {
+  Icon,
+  IconBubble,
+  IconHome2,
+  IconProps,
+  IconSettings,
+} from "@tabler/icons-react";
 import { ForwardRefExoticComponent, RefAttributes } from "react";
 
 export type SidebarNavItemsProps = {
@@ -48,9 +54,9 @@ export const MENU_ITEMS: MenuItemsProps[] = [
     href: "/dashboard/settings",
     icon: IconSettings,
   },
-  // {
-  //   label: "sidebar.logout",
-  //   href: "/login", // Or handle via onClick
-  //   icon: IconArrowLeft,
-  // },
+  {
+    label: "sidebar.chat",
+    href: "/chat",
+    icon: IconBubble,
+  },
 ];
